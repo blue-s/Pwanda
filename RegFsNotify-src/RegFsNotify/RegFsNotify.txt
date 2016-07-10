@@ -1,0 +1,4 @@
+Monitoring HKEY 80000002\Software
+Monitoring HKEY 80000001\Software
+[REGISTRY] \Count
+[REMOVED] C:\Users\kosta\Desktop\test\.git\index.lock
