@@ -30,10 +30,14 @@ void ProcessChange(int idx)
 			memcpy(szFile, pNotify->FileName, 
 				pNotify->FileNameLength);
 
+			// 플래그 설정
 			if (IsWhitelisted(szFile)) {
-				continue;
+				flag = 1;
 			}
-
+			else {
+				flag = 0;
+			}
+			
 			switch (pNotify->Action)
 			{
 			case FILE_ACTION_ADDED:
@@ -45,8 +49,7 @@ void ProcessChange(int idx)
 					_T("[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
 				break;
 			case FILE_ACTION_MODIFIED: 
-				Output(0, _T("[MODIFIED] %s%s\n"), 
-					g_szDrives[idx], szFile);
+				Output(0, _T("[MODIFIED] %s%s\n"), g_szDrives[idx], szFile);
 				break;
 			case FILE_ACTION_RENAMED_OLD_NAME:
 				Output(0, _T("[RENAMED (OLD)] %s%s"), 

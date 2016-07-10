@@ -1,6 +1,6 @@
 #include "mon.h"
 
- HANDLE g_hFile;
+ HANDLE g_hFile, onlyFile;
  HANDLE g_hStopEvent;
  HANDLE g_hRegWatch[2];
 
@@ -11,7 +11,7 @@ USHORT GetConsoleTextAttribute(HANDLE hConsole)
     return(csbi.wAttributes);
 }
 
-void Output(USHORT Color, LPTSTR format, ... )
+void Output(USHORT Color, LPTSTR format, int flag ...)
 {
 	va_list args;
 	int len;
@@ -29,7 +29,7 @@ void Output(USHORT Color, LPTSTR format, ... )
 
 	_vstprintf_s(buffer, len, format, args);
 
-	if (g_hFile != INVALID_HANDLE_VALUE) {
+	if (g_hFile != INVALID_HANDLE_VALUE) {// || (onlyFile != INVALID_HANDLE_VALUE)) {
 #ifdef _UNICODE
 		LPSTR str = new CHAR[len + 1];
 		if (str) { 
@@ -38,12 +38,24 @@ void Output(USHORT Color, LPTSTR format, ... )
 			WideCharToMultiByte(CP_ACP, 0, 
 				buffer, -1, str, len, NULL, NULL);
 
-			WriteFile(g_hFile, str, strlen(str), &cb, NULL);
+			//flag에 해당되는지 여부 구분
+			/*if(flag == 0){
+				WriteFile(g_hFile, str, strlen(str), &cb, NULL);
+			}
+			else{*/
+				WriteFile(onlyFile, str, strlen(str), &cb, NULL);
+			//}
 
 			delete[] str;
 		}
 #else 
-	WriteFile(g_hFile, buffer, strlen(buffer), &cb, NULL);
+	//flag에 해당되는지 여부 구분
+	/*if(flag == 0){
+		WriteFile(g_hFile, buffer, strlen(buffer), &cb, NULL);
+	}
+	else(flag == 1){*/
+		WriteFile(onlyFile, buffer, strlen(buffer), &cb, NULL);
+	//}
 #endif
 	} 
 
@@ -96,18 +108,22 @@ void _tmain(int argc, TCHAR *argv[])
 		FILE_SHARE_READ, 0,
 		CREATE_ALWAYS, 0, NULL);
 
-	HANDLE hThread[2];
+	// 파일 변화만 기록
+	onlyFile = CreateFile(_T("onlyFile.txt"), 
+		GENERIC_WRITE,	
+		FILE_SHARE_READ, 0,
+		CREATE_ALWAYS, 0, NULL);
 
-	hThread[0] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartFileMonitor, NULL, 0, NULL);
-	hThread[1] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartRegistryMonitor, NULL, 0, NULL);
-	
-	WaitForMultipleObjects(2, (const HANDLE*)&hThread, TRUE, INFINITE);		// WinBash.h
-	
-	TerminateThread(g_hRegWatch[0], 0);
-	TerminateThread(g_hRegWatch[1], 0);
+	// 파일 탐지 전용
+	HANDLE hThread;
+	hThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartFileMonitor, NULL, 0, NULL);
+	WaitForMultipleObjects(1, (const HANDLE*)&hThread, TRUE, INFINITE);
+
+	TerminateThread(g_hRegWatch, 0);
 	
 	CloseHandle(g_hStopEvent);
 	CloseHandle(g_hFile);
+	CloseHandle(onlyFile);	// 핸들 중지
 	
 	_tprintf(_T("Program terminating.\n"));
 }
