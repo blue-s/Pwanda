@@ -1,4 +1,6 @@
-Monitoring HKEY 80000002\Software
-Monitoring HKEY 80000001\Software
-[REGISTRY] \Count
-[REMOVED] C:\Users\kosta\Desktop\test\.git\index.lock
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_5GRISfYVFQsct5J
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Windows\Prefetch\MSPDBSRV.EXE-AD82916A.pf
+[MODIFIED] C:\Windows\Prefetch\MSPDBSRV.EXE-AD82916A.pf

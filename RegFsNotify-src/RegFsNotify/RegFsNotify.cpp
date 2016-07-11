@@ -96,18 +96,25 @@ void _tmain(int argc, TCHAR *argv[])
 		FILE_SHARE_READ, 0,
 		CREATE_ALWAYS, 0, NULL);
 
-	HANDLE hThread[2];
+	// 파일만 출력하도록 변경
+	//HANDLE hThread[2];
 
-	hThread[0] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartFileMonitor, NULL, 0, NULL);
-	hThread[1] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartRegistryMonitor, NULL, 0, NULL);
-	
-	WaitForMultipleObjects(2, (const HANDLE*)&hThread, TRUE, INFINITE);		// WinBash.h
-	
-	TerminateThread(g_hRegWatch[0], 0);
-	TerminateThread(g_hRegWatch[1], 0);
-	
+	//hThread[0] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartFileMonitor, NULL, 0, NULL);
+	//hThread[1] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartRegistryMonitor, NULL, 0, NULL);
+	//
+	//WaitForMultipleObjects(2, (const HANDLE*)&hThread, TRUE, INFINITE);		// WinBash.h
+	//
+	//TerminateThread(g_hRegWatch[0], 0);
+	//TerminateThread(g_hRegWatch[1], 0);
+	//
+	//CloseHandle(g_hStopEvent);
+	//CloseHandle(g_hFile);
+
+	HANDLE hThread;
+	hThread = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)StartFileMonitor, NULL, 0, NULL);
+	WaitForMultipleObjects(1, (const HANDLE*)&hThread, TRUE, INFINITE);
 	CloseHandle(g_hStopEvent);
 	CloseHandle(g_hFile);
-	
+
 	_tprintf(_T("Program terminating.\n"));
 }

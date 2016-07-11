@@ -2,6 +2,7 @@
 
 #include <windows.h>
 #include <tchar.h>
+#include <stdio.h>	// 테스트를 위한 추가
 
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
 
