@@ -20,14 +20,18 @@ void StartFileMonitor(void);
 void StartRegistryMonitor(void);
 
 extern HANDLE  g_hStopEvent;
-extern HANDLE  g_hFile, onlyFile;	// 파일 핸들 추가
+extern HANDLE  g_hFile;
 extern HANDLE  g_hRegWatch[2];
 
-static int flag;	// 경로에 해당되는지 구분을 위한 플래그 선언
-
-// 임의의 경로 설정 : 해당 경로의 파일만 따로 뽑아냄
 static LPTSTR g_szAllow[] = {
-	_T("\\Users\Win7\Desktop\test"),
+	_T("WINDOWS\\system32\\config\\"),
+	_T("\\ntuser.dat.LOG"),
+	_T("UsrClass.dat.LOG"),
+	_T("RegFsNotify.txt"),
+	_T("_restore"),
+	_T("CatRoot2"),
+	_T("\\Microsoft\\Cryptography\\RNG"),
+	_T("\\Microsoft\\WBEM"),
 };
 
 static BOOL IsWhitelisted(LPTSTR szFile)
