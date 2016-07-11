@@ -17,7 +17,7 @@
 #include "mon.h"
 
 // global variable for time keeping 
-ULARGE_INTEGER g_tmStart;	// WinNT.h
+ULARGE_INTEGER g_tmStart;
 
 #define MAX_KEY_LENGTH 255
 #define MAX_VALUE_NAME 16383
@@ -56,7 +56,7 @@ typedef NTSTATUS (WINAPI *ZWQUERYKEY)(
 	ULONG, 
 	PULONG);
 
-ZWQUERYKEY ZwQueryKey;	// 레지스트리 키에대한 정보
+ZWQUERYKEY ZwQueryKey;
 
 void GetKeyName(HKEY hKey, LPWSTR szName)
 {
@@ -91,7 +91,7 @@ void GetRegistryChanges(HKEY hKey)
 	TCHAR    szName[MAX_KEY_LENGTH];
  
     // get the number of subkeys 
-    ret = RegQueryInfoKey(		// WinReg.h
+    ret = RegQueryInfoKey(
         hKey,                   
         NULL, NULL, NULL,               
         &cSubKeys,              
@@ -104,7 +104,7 @@ void GetRegistryChanges(HKEY hKey)
     { 
         cbName = MAX_KEY_LENGTH;
 
-        ret = RegEnumKeyEx(		// WinReg.h
+        ret = RegEnumKeyEx(
 					hKey, i, szKey, &cbName, 
 					NULL, NULL, NULL, &ftWrite); 
 
@@ -120,7 +120,7 @@ void GetRegistryChanges(HKEY hKey)
 				memset(szName, 0, sizeof(szName));
 				GetKeyName(hKey, szName);
 
-				_tcscat(szName, _T("\\"));	// 문자열 추가 strcat_s
+				_tcscat(szName, _T("\\"));
 				_tcscat(szName, szKey);
 				
 				if (!IsWhitelisted(szName)) { 
@@ -163,18 +163,6 @@ DWORD WatchKey(PREGMON p)
 	Output(0, _T("Monitoring HKEY %x\\%s\n"), 
 		p->hMainKey, p->szSubkey);
 
-	/*
-		WinReg.h
-	RegOpenKeyEx :
-	Opens the specified registry key.
-	Note that key names are not case sensitive.
-	To perform transacted registry operations on a key,
-	call the RegOpenKeyTransacted function.
-
-	RegOpenKeyTransacted :
-	Opens the specified registry key and associates it with a transaction.
-	Note that key names are not case sensitive.
-	*/
 	ret = RegOpenKeyEx(
 		p->hMainKey, 
 		p->szSubkey, 
@@ -230,35 +218,20 @@ DWORD WatchKey(PREGMON p)
 void StartRegistryMonitor(void)
 {
 	HMODULE hNtdll = GetModuleHandle(_T("ntdll.dll"));
-	/* 
-	http://tip.daum.net/question/2920822
-	일반적으로 컴퓨터는 유저모드 (사용자 공간)와 커널모드 (기계공간)으로 존재한다.
-	ntdll.dll 파일은 유저모드에서 장치드라이버에 동작을 요청 시 거치게 된다.
-	드라이버는 커널 모드에 존재하므로 커널 모드로 진입하게 해주는 라이브러리다.
-	*/
 	ZwQueryKey = (ZWQUERYKEY)GetProcAddress(hNtdll, "NtQueryKey");
-	/*
-	NtQueryKey :
-	NtQueryKey and ZwQueryKey are two versions of the same Windows Native System Services routine.
-	The NtQueryKey routine in the Windows kernel is not directly accessible to kernel-mode drives.
-	However, kernel-mode drivers can access this routine indirectly by calling the ZwQueryKey routine.
 
-	ZwQueryKey :
-	The ZwQueryKey routine provides information about the class of a registry key, and the number and sizes of its subkeys.
-	*/
-
-	PREGMON p[2];		// HKEY 관리할 배열
+	PREGMON p[2];
 	p[0] = new REGMON;
 	p[1] = new REGMON;
 
-	p[0]->hMainKey = HKEY_LOCAL_MACHINE;	// WinReg.h
+	p[0]->hMainKey = HKEY_LOCAL_MACHINE;
 	p[0]->szSubkey = _T("Software");
 	
 	// one thread for HKLM\\Software
 	g_hRegWatch[0] = CreateThread(NULL, 0, 
 	    (LPTHREAD_START_ROUTINE)WatchKey, p[0], 0, NULL);
 
-	p[1]->hMainKey = HKEY_CURRENT_USER;		// WinReg.h
+	p[1]->hMainKey = HKEY_CURRENT_USER;
 	p[1]->szSubkey = _T("Software");
 	
 	// one thread for HKCU\\Software

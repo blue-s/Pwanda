@@ -15,15 +15,15 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 #include "mon.h"
-
+#include <stdio.h>
 // maximum number of drives to monitor 
 #define MAX_DRIVES 24
 
 // global variables for change notifications
-HANDLE  g_ChangeHandles[MAX_DRIVES];	// 변경된 핸들
-HANDLE  g_DirHandles[MAX_DRIVES];		// 핸들 디렉토리
-LPTSTR  g_szDrives[MAX_DRIVES];			// 드라이브 사이즈
-DWORD   g_idx = 0;		// 인덱스
+HANDLE  g_ChangeHandles[MAX_DRIVES];
+HANDLE  g_DirHandles[MAX_DRIVES];
+LPTSTR  g_szDrives[MAX_DRIVES];
+DWORD   g_idx = 0;
 
 void ProcessChange(int idx)
 {
@@ -39,23 +39,6 @@ void ProcessChange(int idx)
 	if (ReadDirectoryChangesW(g_DirHandles[idx], buf, 
 		sizeof(buf), TRUE, 
 		FILE_CHANGE_FLAGS, &cb, NULL, NULL))
-		/*
-		#if(_WIN32_WINNT >= 0x0400)
-		WINBASEAPI
-		BOOL
-		WINAPI
-		ReadDirectoryChangesW(
-			__in        HANDLE hDirectory,
-			__out_bcount_part(nBufferLength, *lpBytesReturned) LPVOID lpBuffer,
-			__in        DWORD nBufferLength,
-			__in        BOOL bWatchSubtree,
-			__in        DWORD dwNotifyFilter,
-			__out_opt   LPDWORD lpBytesReturned,
-			__inout_opt LPOVERLAPPED lpOverlapped,
-			__in_opt    LPOVERLAPPED_COMPLETION_ROUTINE lpCompletionRoutine
-			);
-		#endif  _WIN32_WINNT >= 0x0400 
-		*/
 	{
 		// parse the array of file information structs
 		do {
@@ -66,9 +49,9 @@ void ProcessChange(int idx)
 
 			memcpy(szFile, pNotify->FileName, 
 				pNotify->FileNameLength);
-
+			
 			// if the file is whitelisted, go to the next
-			if (IsWhitelisted(szFile)) {
+			if (!(IsWhitelisted(szFile))) {
 				continue;
 			}
 
@@ -107,7 +90,7 @@ void StartFileMonitor(void)
 {
 	DWORD dwWaitStatus;
 	BOOL  bOK = FALSE;
-	TCHAR   pszList[1024];		// typedef WCHAR TCHAR, *PTCHAR;
+	TCHAR   pszList[1024];
 	DWORD   ddType;
 	LPTSTR  pStart = NULL;
 	HANDLE  hChange, hDir;
@@ -115,73 +98,21 @@ void StartFileMonitor(void)
 	// get a list of logical drives
 	memset(pszList, 0, sizeof(pszList));
 	GetLogicalDriveStrings(sizeof(pszList), pszList);
-	/*
-	GetLogicalDriveStrings :
-	Fills a buffer with strings that specify valid drives in the system.
-	Each string in the buffer may be used wherever a root directory is required,
-	such as for the GetDriveType and GetDiskFreeSpace functions.
-
-	#define GetLogicalDriveStrings  GetLogicalDriveStringsW
-
-	DWORD WINAPI GetLogicalDriveStrings(
-		_In_  DWORD  nBufferLength,	
-				// The maximum size of the buffer pointed to by lpBuffer, in TCHARs
-		_Out_ LPTSTR lpBuffer
-				// A pointer to a buffer that receives a series of null-terminated strings,
-				// one for each valid drive in the system, plus with an additional null character.
-	);
-	*/
 
 	// parse the list of null-terminated drive strings
-	// (LPTSTR  pStart = NULL;)
-	// Null로 종료되는 드라이브 문자열 목록을 구문 분석
-	pStart = pszList;		// 배열의 시작 오프셋 저장
-	while(_tcslen(pStart))	// = strlen
+	pStart = pszList;
+	while(_tcslen(pStart)) 
 	{
 		ddType = GetDriveType(pStart);
-		/*
-		GetDriveType :
-		Determines whether a disk drive is a removable, fixed, CD-ROM, RAM disk, or network drive.
-		To determine whether a drive is a USB-type drive,
-		call SetupDiGetDeviceRegistryProperty and specify the SPDRP_REMOVAL_POLICY property.
-
-		UINT WINAPI GetDriveType( _In_opt_ LPCTSTR lpRootPathName );
-				// The root directory for the drive.
-				// NULL : the function uses the root of the current directory.
-		*/
 
 		// only monitor local and removable (i.e. USB) drives
 		if ((ddType == DRIVE_FIXED || ddType == DRIVE_REMOVABLE) && 
 			_tcscmp(pStart, _T("A:\\")) != 0)
-					/*
-					// = strcmp : 스트링을 비교하는 함수
-					
-					DRIVE_REMOVABLE : The drive has removable media
-					DRIVE_FIXED : The drive has fixed media
-					
-					모니터링하는 드라이브 조건 지정 : 로컬 및 이동식 드라이브
-					드라이브의 종류가 하드디스크 또는 이동식 드라이버 또는 A:\\ 중 하나라도 참이면 다음 단계를 수행
-					*/
 		{
 			hChange = FindFirstChangeNotification(pStart,
 									TRUE, /* watch subtree */
 								    FILE_CHANGE_FLAGS);
-			/*
-			*** FindFirstChangeNotification
-			Creates a change notification handle and sets up initial change notification filter conditions.
-			A wait on a notification handle succeeds
-			when a change matching the filter conditions occurs in the specified directory or subtree.
-			The function does not report changes to the specified directory itself.
 
-			HANDLE WINAPI FindFirstChangeNotification(
-				_In_ LPCTSTR lpPathName,
-				_In_ BOOL    bWatchSubtree,
-				_In_ DWORD   dwNotifyFilter
-			);
-			*/
-
-
-			// #define INVALID_HANDLE_VALUE ((HANDLE)(LONG_PTR)-1)
 			if (hChange == INVALID_HANDLE_VALUE)
 				continue;
 
@@ -194,20 +125,11 @@ void StartFileMonitor(void)
 				NULL);
 
 			if (hDir == INVALID_HANDLE_VALUE) {
-				FindCloseChangeNotification(hChange);	// WinBash.h
-				/* 
-				*** FindCloseChangeNotification
-				Stops change notification handle monitoring.
-				
-				WINBASEAPI
-				BOOL
-				WINAPI
-				FindCloseChangeNotification( __in HANDLE hChangeHandle );
-				*/
+				FindCloseChangeNotification(hChange);
 				continue;
 			}
 
-			_tprintf(_T("Monitoring %s\n"), pStart);	// Start
+			_tprintf(_T("Monitoring %s\n"), pStart);
 
 			// save the handles and drive letter 
 			g_szDrives[g_idx]      = _tcsdup(pStart);
@@ -223,25 +145,9 @@ void StartFileMonitor(void)
 	while(WaitForSingleObject(g_hStopEvent, 1) != WAIT_OBJECT_0) 
 	{
 		dwWaitStatus = WaitForMultipleObjects(
-			g_idx,				// nCount
-			g_ChangeHandles,	// *lpHandles
-			FALSE, INFINITE);	// bWaitAll, dwMilliseconds
-		/*
-		*** WaitForSingleObject
-		Waits until one or all of the specified objects are in the signaled state or the time-out interval elapses.
-		To enter an alertable wait state, use the WaitForMultipleObjectsEx function.
-
-		WINBASEAPI
-		DWORD
-		WINAPI
-		WaitForMultipleObjects(
-			__in DWORD nCount,
-			__in_ecount(nCount) CONST HANDLE *lpHandles,
-			__in BOOL bWaitAll,
-			__in DWORD dwMilliseconds
-			);
-		*/
-
+			g_idx, 
+			g_ChangeHandles, 
+			FALSE, INFINITE); 
 
 		bOK = FALSE;
 
@@ -252,15 +158,7 @@ void StartFileMonitor(void)
 			{
 				bOK = TRUE;
 				ProcessChange(i);
-				
 				if (!FindNextChangeNotification(g_ChangeHandles[i])) 
-					/*
-					*** FindNextChangeNotification
-					https://msdn.microsoft.com/ko-kr/library/windows/desktop/aa364427(v=vs.85).aspx
-					
-					Requests that the operating system signal a change notification handle the next time it detects an appropriate change.
-					After the FindNextChangeNotification function returns successfully, the application can wait for notification that a change has occurred by using the wait functions.
-					*/
 				{
 					SetEvent(g_hStopEvent);
 					break;
