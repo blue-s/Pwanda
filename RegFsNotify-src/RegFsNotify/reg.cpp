@@ -147,10 +147,10 @@ void GetRegistryChanges(HKEY hKey)
 		ret = RegEnumKeyEx(
 			hKey,
 			i,
-			szKey, //***서브키명을 담는 변수***
+			szKey, //***서브키명을 담는 변수*** 서브키의 이름만 카ㅣ
 			&cbName, //szKey의 사이즈를 담는 변수
 			NULL, NULL, NULL, 
-			&ftWrite); //최종 기입 시간
+			&ftWrite); //마지막으로 작성된 시간 저장, FILETIME 구조체 변수의 주소를 전달
 
 		//성공시
 		if (ret == ERROR_SUCCESS) 
@@ -178,8 +178,8 @@ void GetRegistryChanges(HKEY hKey)
 
 					Output(FOREGROUND_GREEN, _T("[cValues] %d \n"), cValues);
 
-					if(cValues) //서브키내에 값이 존재하면
-					{
+					//if(cValues) //서브키내에 값이 존재하면
+					//{
 						for(j=0, ret=ERROR_SUCCESS; j<cValues; j++)
 						{
 							cchValue = MAX_VALUE_NAME; 
@@ -198,8 +198,8 @@ void GetRegistryChanges(HKEY hKey)
 							}
 							printf("[cValues Count] %d\n", cValues);
 						}
-					}
-					else{ _tprintf(_T("Value Failed!! \n")); }
+					//}
+					//else{ _tprintf(_T("Value Failed!! \n")); }
 				}
 			}
 

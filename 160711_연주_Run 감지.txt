@@ -19,9 +19,25 @@ Software\Microsoft\Windows\CurrentVersion\Run 			→ 확실히 건드림
 
 Software인 서브키를 Software\Microsoft\Windows\CurrentVersion\Run 로 변경 -> X
 
-RegEnumValue 함수를 추가하여 서브키 내의 값 이름을 불러오기 -> X
+	RegEnumValue 함수를 추가하여 서브키 내의 값 이름을 불러오기
+	-> 서브키의 의미??
+		문자열 값을 추가할 땐 값들이 보이지 않음 
+		키를 생성하면 값들이 제대로 보임
+		-> RegEnumValue 함수가 실행되는 위치 때문???
+		-> 레지스트리가 변경되었는지 감지하는 
+			tmWrite.HighPart = ftWrite.dwHighDateTime
+			tmWrite.LowPart  = ftWrite.dwLowDateTime;
+			tmWrite.QuadPart > g_tmStart.QuadPart
+		부분이 서브키를 열거하는 RegEnumKeyEx 함수의 매개변수 &ftWrite에서 비롯됨
+		&ftWrite
+		-> 레지스트리의 서브키의 마지막 작성 시간을 저장하는 FILETIEM 구조체 변수의 주소를 전달
+		-> 서브키의 시간의 변경을 키 생성에선 감지하고, 값 생성에선 감지?
+		-> (실제 실행 파일에선 보임)
 
-RegQueryValueEx 함수를 추가하여 서브키 내의 값 이름과 데이터 불러오기 -> X
+	-> 실행파일에선 잘 감지하는데??
+
+
+	RegQueryValueEx 함수를 추가하여 서브키 내의 값 이름과 데이터 불러오기 -> X
 
 -----------------------------------------------------------------------------------------
 

@@ -1,4 +1,4 @@
-﻿빌드 시작: 2016-07-12 오전 2:04:49
+﻿빌드 시작: 2016-07-12 오전 2:35:20
      1>2 노드의 "D:\Pwanda\RegFsNotify-src\RegFsNotify\RegFsNotify.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\RegFsNotify.unsuccessfulbuild"을(를) 만들고 있습니다.
@@ -31,4 +31,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.25
+경과 시간: 00:00:02.13
