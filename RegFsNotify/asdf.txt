@@ -1,10 +1,31 @@
-[REMOVED] C:\Users\kosta\Desktop\asdf\새 폴더[REMOVED] C:\Users\kosta\Desktop\asdf\새 텍스트 문서.[ADDED] C:\Users\kosta\Desktop\asdf\새 폴더[RENAMED (OLD)] C:\Users\kosta\Desktop\asdf\새 폴더[RENAMED (NEW)] C:\Users\kosta\Desktop\asdf\asdf
-[ADDED] C:\Users\kosta\Desktop\asdf\새 텍스트 문서.[RENAMED (OLD)] C:\Users\kosta\Desktop\asdf\새 텍스트 문서.[RENAMED (NEW)] C:\Users\kosta\Desktop\asdf\asdf.txt
+[REMOVED] C:\Users\kosta\Desktop\asdf\asdf
+[REMOVED] C:\Users\kosta\Desktop\asdf\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
 [REMOVED] C:\Users\kosta\AppData\Roaming\Microsoft\Windows\Recent\asdf.txt.lnk
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
 [ADDED] C:\Users\kosta\AppData\Roaming\Microsoft\Windows\Recent\asdf.txt.lnk
 [MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\Windows\Recent\asdf.txt.lnk
-[REMOVED] C:\Users\kosta\AppData\Roaming\Microsoft\Windows\Recent\asdf.lnk
-[ADDED] C:\Users\kosta\AppData\Roaming\Microsoft\Windows\Recent\asdf.lnk
-[MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\Windows\Recent\asdf.lnk
-[MODIFIED] C:\Users\kosta\Desktop\asdf\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
+[MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt
 [MODIFIED] C:\Users\kosta\Documents\Pwanda\RegFsNotify\asdf.txt

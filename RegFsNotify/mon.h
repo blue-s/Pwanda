@@ -15,8 +15,8 @@
 #define REG_CHANGE_FLAGS REG_NOTIFY_CHANGE_NAME |\
 					 REG_NOTIFY_CHANGE_LAST_SET
 
-void Output_asdf(USHORT Color, LPTSTR format, ... );
-void Output_qwer(USHORT Color, LPTSTR format, ... );
+void Output_Roaming(USHORT Color, LPTSTR format, ... );
+void Output_Prefetch(USHORT Color, LPTSTR format, ... );
 void StartFileMonitor(void);
 void StartRegistryMonitor(void);
 
@@ -25,36 +25,35 @@ extern HANDLE  g_hFile;
 extern HANDLE  g_hRegWatch[2];
 
 // whitelisted filenames or paths
-static LPTSTR asdf_szAllow[] = {       //asdf폴더 화이트리스트
-	_T("Users\kosta\Desktop\asdf"),
-	_T("Desktop\asdf"),
-	_T("asdf"),
+//화이트리스트
+static LPTSTR Roaming_szAllow[] = {       //asdf_szAllow -->Roaming_szAllow[] 
+	_T("Roaming\\"),
+	_T("AppData\Roaming\\"),
+	
 };
 
-static LPTSTR qwer_szAllow[] = {      //qwer폴더 화이트리스트
-	_T("Users\kosta\Desktop\qwer"),
-	_T("Desktop\qwer"),
-	_T("qwer"),
+static LPTSTR Prefetch_szAllow[] = {      //qwer_szAllow --> Prefetch_szAllow[]
+	_T("Windows\Prefetch\\"),
+	_T("Prefetch\\"),
 };
 
 // return true if szFile is in the g_szAllow list
 
-static BOOL asdfWhitelisted(LPTSTR szFile)              
+static BOOL RoamingWhitelisted(LPTSTR szFile)              
 {
-	for(int i=0; i<sizeof(asdf_szAllow)/sizeof(LPTSTR); i++)
+	for(int i=0; i<sizeof(Roaming_szAllow)/sizeof(LPTSTR); i++)
 	{
-		if (_tcsstr(szFile, asdf_szAllow[i]) != NULL) //화이트 리스트와 일치하면 값이 있어서, NULL이 아니니까 참
+		if (_tcsstr(szFile, Roaming_szAllow[i]) != NULL) //화이트 리스트와 일치하면 값이 있어서, NULL이 아니니까 참
 			return TRUE;							// 일치하지 않으면, NULL이니까 거짓.
 	}
 	return FALSE;
 }
 
-//IsWhitelisted --> qwer폴더만 변화감지
-static BOOL qwerWhitelisted(LPTSTR szFile)                
+static BOOL PrefetchWhitelisted(LPTSTR szFile)                
 {
-	for(int i=0; i<sizeof(qwer_szAllow)/sizeof(LPTSTR); i++)
+	for(int i=0; i<sizeof(Prefetch_szAllow)/sizeof(LPTSTR); i++)
 	{
-		if (_tcsstr(szFile, qwer_szAllow[i]) != NULL) 
+		if (_tcsstr(szFile, Prefetch_szAllow[i]) != NULL) 
 			return TRUE;
 	}
 	return FALSE;

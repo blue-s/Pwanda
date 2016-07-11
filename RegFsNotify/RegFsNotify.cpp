@@ -1,7 +1,7 @@
 #include "mon.h"
 
- HANDLE g_hFile_asdf;   //asdf에 대한 출력 결과 파일을 만드는 핸들 생성
- HANDLE g_hFile_qwer;   //qwer에 대한 출력 결과 파일을 만드는 핸들 생성
+ HANDLE g_hFile_Roaming;   //g_hFile_asdf-> g_hFile_Roaming
+ HANDLE g_hFile_Prefetch;   //g_hFile_qwer-> g_hFile_Prefetch
  HANDLE g_hStopEvent;
  HANDLE g_hRegWatch[2];
 
@@ -12,7 +12,7 @@ USHORT GetConsoleTextAttribute(HANDLE hConsole)
     return(csbi.wAttributes);
 }
 
-void Output_asdf(USHORT Color, LPTSTR format, ... )  //asdf.txt를 출력하기 위한 함수 output
+void Output_Roaming(USHORT Color, LPTSTR format, ... )  //asdf.txt를 출력하기 위한 함수 output
 {
 	va_list args;
 	int len;
@@ -29,18 +29,18 @@ void Output_asdf(USHORT Color, LPTSTR format, ... )  //asdf.txt를 출력하기 위한 
 
 	_vstprintf_s(buffer, len, format, args);
 
-	if (g_hFile_asdf != INVALID_HANDLE_VALUE) {
+	if (g_hFile_Roaming != INVALID_HANDLE_VALUE) {
 #ifdef _UNICODE
 		LPSTR str = new CHAR[len + 1];
 		if (str) { 
 			memset(str, 0, len + 1);
 			WideCharToMultiByte(CP_ACP, 0, 
 				buffer, -1, str, len, NULL, NULL);
-			WriteFile(g_hFile_asdf, str, strlen(str), &cb, NULL);
+			WriteFile(g_hFile_Roaming, str, strlen(str), &cb, NULL);
 			delete[] str;
 		}
 #else 
-	WriteFile(g_hFile_asdf, buffer, strlen(buffer), &cb, NULL);
+	WriteFile(g_hFile_Roaming, buffer, strlen(buffer), &cb, NULL);
 #endif
 	}
 	HANDLE Handle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -59,7 +59,7 @@ void Output_asdf(USHORT Color, LPTSTR format, ... )  //asdf.txt를 출력하기 위한 
    delete[] buffer;
 }
  
-void Output_qwer(USHORT Color, LPTSTR format, ... )  //qwer.txt를 출력하기 위한 함수 output
+void Output_Prefetch(USHORT Color, LPTSTR format, ... )  //qwer.txt를 출력하기 위한 함수 output
 {
 	va_list args;
 	int len;
@@ -76,18 +76,18 @@ void Output_qwer(USHORT Color, LPTSTR format, ... )  //qwer.txt를 출력하기 위한 
 
 	_vstprintf_s(buffer, len, format, args);
 
-	if (g_hFile_qwer != INVALID_HANDLE_VALUE) {
+	if (g_hFile_Prefetch != INVALID_HANDLE_VALUE) {
 #ifdef _UNICODE
 		LPSTR str = new CHAR[len + 1];
 		if (str) { 
 			memset(str, 0, len + 1);
 			WideCharToMultiByte(CP_ACP, 0, 
 				buffer, -1, str, len, NULL, NULL);
-			WriteFile(g_hFile_qwer, str, strlen(str), &cb, NULL);
+			WriteFile(g_hFile_Prefetch, str, strlen(str), &cb, NULL);
 			delete[] str;
 		}
 #else 
-	WriteFile(g_hFile_qwer, buffer, strlen(buffer), &cb, NULL);
+	WriteFile(g_hFile_Prefetch, buffer, strlen(buffer), &cb, NULL);
 #endif
 	}
 	HANDLE Handle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -133,12 +133,12 @@ void _tmain(int argc, TCHAR *argv[])
 	g_hStopEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 	SetConsoleCtrlHandler((PHANDLER_ROUTINE)CtrlHandler, TRUE);
 
-	g_hFile_qwer = CreateFile(_T("qwer.txt"),    //qwer 파일을 만드는 부분
+	g_hFile_Prefetch = CreateFile(_T("Prefetch.txt"),    //qwer 파일을 만드는 부분
 		GENERIC_WRITE, 
 		FILE_SHARE_READ, 0, 
 		CREATE_ALWAYS, 0, NULL);
 	
-	g_hFile_asdf = CreateFile(_T("asdf.txt"),     // asdf 파일을 만드는 부분
+	g_hFile_Roaming = CreateFile(_T("Roaming.txt"),     // asdf 파일을 만드는 부분
 		GENERIC_WRITE, 
 		FILE_SHARE_READ, 0, 
 		CREATE_ALWAYS, 0, NULL);
@@ -150,7 +150,7 @@ void _tmain(int argc, TCHAR *argv[])
 	WaitForMultipleObjects(1, (const HANDLE*)&hThread, TRUE, INFINITE);  //레지스트리 부분의 스레드 사용안함.
 
 	CloseHandle(g_hStopEvent);
-	CloseHandle(g_hFile_asdf);
-	CloseHandle(g_hFile_qwer);
+	CloseHandle(g_hFile_Roaming);
+	CloseHandle(g_hFile_Prefetch);
 	_tprintf(_T("Program terminating.\n"));
 }

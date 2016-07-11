@@ -40,12 +40,12 @@ void ProcessChange(int idx)
 			if (!(asdfWhitelisted(szFile))) {    
 				continue;
 			}
-		*/  //위와 같은 경우에
+		    //위와 같은 경우에
 			//목록에 있으면 출력, 없으면 출력안하고 다음 값으로 넘어감.
 			// 반환값이 참일 경우는 화이트리스트와 일치를 한다는 뜻.
 			// 화이트 리스트와 일치하면, 참인데 앞에 "!" 있어서 거짓으로 됨. 그래서 출력,
 			// 일치하지 않으면, 출력을 안함.
-		/*	
+			
 			if (asdfWhitelisted(szFile)) {    
 				continue;
 			}
@@ -53,59 +53,59 @@ void ProcessChange(int idx)
 			//화이트 리스트에 있는것은 건너뛰고 나머지를 출력한다는 뜻임.
 			// 따라서 참 부분에 switch 부분을 가지고 와서 출력을 시키고, 나머지 부분을 continue로 바꿔야함.
 		
-			if (asdfWhitelisted(szFile)) {    
+			if (RoamingWhitelisted(szFile)) {    
 					switch (pNotify->Action)
 				{
 					case FILE_ACTION_ADDED:
-						Output_asdf(FOREGROUND_GREEN, 
+						Output_Roaming(FOREGROUND_GREEN, 
 							_T("[ADDED] %s%s\n"), g_szDrives[idx], szFile);
 					break;
 					case FILE_ACTION_REMOVED: 
-						Output_asdf(FOREGROUND_RED, 
+						Output_Roaming(FOREGROUND_RED, 
 							_T("[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
 						break;
 					case FILE_ACTION_MODIFIED: 
-						Output_asdf(0, _T("[MODIFIED] %s%s\n"), 
+						Output_Roaming(0, _T("[MODIFIED] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break;
 					case FILE_ACTION_RENAMED_OLD_NAME:
-						Output_asdf(0, _T("[RENAMED (OLD)] %s%s\n"), 
+						Output_Roaming(0, _T("[RENAMED (OLD)] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break; 
 					case FILE_ACTION_RENAMED_NEW_NAME:
-						Output_asdf(0,_T("[RENAMED (NEW)] %s%s\n"), 
+						Output_Roaming(0,_T("[RENAMED (NEW)] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break;
 					default:
-						Output_asdf(0,_T("[??] %s%s\n"), 
+						Output_Roaming(0,_T("[??] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break;
 				}; //end of switch
-			}else if(qwerWhitelisted(szFile)){
+			}else if(PrefetchWhitelisted(szFile)){
 					switch (pNotify->Action)
 				{
 					case FILE_ACTION_ADDED:
-						Output_qwer(FOREGROUND_GREEN, 
+						Output_Prefetch(FOREGROUND_GREEN, 
 							_T("[ADDED] %s%s\n"), g_szDrives[idx], szFile);
 					break;
 					case FILE_ACTION_REMOVED: 
-						Output_qwer(FOREGROUND_RED, 
+						Output_Prefetch(FOREGROUND_RED, 
 							_T("[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
 						break;
 					case FILE_ACTION_MODIFIED: 
-						Output_qwer(0, _T("[MODIFIED] %s%s\n"), 
+						Output_Prefetch(0, _T("[MODIFIED] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break;
 					case FILE_ACTION_RENAMED_OLD_NAME:
-						Output_qwer(0, _T("[RENAMED (OLD)] %s%s\n"), 
+						Output_Prefetch(0, _T("[RENAMED (OLD)] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break; 
 					case FILE_ACTION_RENAMED_NEW_NAME:
-						Output_qwer(0,_T("[RENAMED (NEW)] %s%s\n"), 
+						Output_Prefetch(0,_T("[RENAMED (NEW)] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break;
 					default:
-						Output_qwer(0,_T("[??] %s%s\n"), 
+						Output_Prefetch(0,_T("[??] %s%s\n"), 
 							g_szDrives[idx], szFile);
 						break;
 				}; //end of switch

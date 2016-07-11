@@ -1,0 +1,14 @@
+[MODIFIED] C:\Windows\Prefetch\CONHOST.EXE-0C6456FB.pf
+[MODIFIED] C:\Windows\Prefetch\CONHOST.EXE-0C6456FB.pf
+[MODIFIED] C:\Windows\Prefetch\MSBUILD.EXE-93EB9DCE.pf
+[MODIFIED] C:\Windows\Prefetch\MSBUILD.EXE-93EB9DCE.pf
+[MODIFIED] C:\Windows\Prefetch\SEARCHFILTERHOST.EXE-44162447.pf
+[MODIFIED] C:\Windows\Prefetch\SEARCHFILTERHOST.EXE-44162447.pf
+[MODIFIED] C:\Windows\Prefetch\MSPDBSRV.EXE-AD82916A.pf
+[MODIFIED] C:\Windows\Prefetch\MSPDBSRV.EXE-AD82916A.pf
+[MODIFIED] C:\Windows\Prefetch\REGFSNOTIFY.EXE-195EBEAC.pf
+[MODIFIED] C:\Windows\Prefetch\REGFSNOTIFY.EXE-195EBEAC.pf
+[ADDED] C:\Windows\Prefetch\새 폴더[RENAMED (OLD)] C:\Windows\Prefetch\새 폴더[RENAMED (NEW)] C:\Windows\Prefetch\qwer
+[ADDED] C:\Windows\Prefetch\qwer\새 텍스트 문서.[RENAMED (OLD)] C:\Windows\Prefetch\qwer\새 텍스트 문서.[RENAMED (NEW)] C:\Windows\Prefetch\qwer\rrrr.txt
+[REMOVED] C:\Windows\Prefetch\qwer\rrrr.txt
+[REMOVED] C:\Windows\Prefetch\qwer
