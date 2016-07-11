@@ -1,36 +1,27 @@
-/*
-# Copyright (C) 2010 Michael Ligh
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
+//HKEY_CLASSES_ROOT			= (0x80000000)
+//HKEY_CURRENT_USER			= (0x80000001)
+//HKEY_LOCAL_MACHINE		= (0x80000002)
+//HKEY_USERS				= (0x80000003)
+//HKEY_PERFORMANCE_DATA		= (0x80000004)
+//HKEY_CURRENT_CONFIG		= (0x80000005)
+//HKEY_DYN_DATA				= (0x80000006)
+
+
 #include "mon.h"
 
-// global variable for time keeping 
+///////////////////////////////////////////////////////
+
 ULARGE_INTEGER g_tmStart;
 
 #define MAX_KEY_LENGTH 255
 #define MAX_VALUE_NAME 16383
 
-// associate HKEYs with key names
+///////////////////////////////////////////////////////
+
 typedef struct REGMON { 
 	HKEY   hMainKey;
 	LPTSTR szSubkey;
 } REGMON, *PREGMON;
-
-//////////////////////////////////////////////////
-// these are for calling ZwQueryKey which we use to 
-// resolve a key name from a given HKEY 
 
 typedef struct _KEY_NAME_INFORMATION {
   ULONG NameLength;
@@ -58,27 +49,43 @@ typedef NTSTATUS (WINAPI *ZWQUERYKEY)(
 
 ZWQUERYKEY ZwQueryKey;
 
+///////////////////////////////////////////////////////
+
+//[4]
 void GetKeyName(HKEY hKey, LPWSTR szName)
 {
+	//typedef struct _KEY_NAME_INFORMATION {
+	//	ULONG NameLength;
+	//	WCHAR Name[4096];
+	//} KEY_NAME_INFORMATION, *PKEY_NAME_INFORMATION;
+
 	KEY_NAME_INFORMATION info;
 	DWORD dwLen;
 	NTSTATUS n;
 
 	memset(&info, 0, sizeof(info));
+
+	//hkey의 KeyNameInformation을 info에 저장
+	//레지스트리 키의 클래스, 하위키의 수와 크기에 대한 정보를 제공를 받아와 info에 저장
 	if (ZwQueryKey != NULL) {
 		n = ZwQueryKey(hKey, KeyNameInformation,
 		    &info, sizeof(info), &dwLen);
+
 		if (n == STATUS_SUCCESS &&
 			info.NameLength > 0 &&
 			info.NameLength < MAX_KEY_LENGTH) 
 		{ 
+			//szName를 info.Name에 복사
 			wcscpy(szName, info.Name);
+			//마지막 값은 \x00
 			szName[info.NameLength-1] = L'\x00';
 		}
 	}
 }
-//////////////////////////////////////////////////
 
+///////////////////////////////////////////////////////
+
+//[3]
 void GetRegistryChanges(HKEY hKey) 
 { 
     TCHAR    szKey[MAX_KEY_LENGTH];  
@@ -88,47 +95,56 @@ void GetRegistryChanges(HKEY hKey)
     DWORD    i, ret; 
 	HKEY     hNewKey;
 	ULARGE_INTEGER tmWrite;
-	TCHAR    szName[MAX_KEY_LENGTH];
+	TCHAR    szName[MAX_KEY_LENGTH]; //
  
-    // get the number of subkeys 
+    //하위키의 번호를 얻음 ????? 
     ret = RegQueryInfoKey(
-        hKey,                   
+        hKey, //조사하고자 하는 키의 핸들                  
         NULL, NULL, NULL,               
-        &cSubKeys,              
+        &cSubKeys,  //서브키의 개수            
         NULL, NULL, NULL, NULL, 
 		NULL, NULL, NULL);      
     
-    // for each subkey, see if it changed based on its
-    // last write timestamp
+	//서브키의 개수만큼 반복
     for (i=0; i<cSubKeys; i++) 
     { 
         cbName = MAX_KEY_LENGTH;
 
+		//서브키 열거
         ret = RegEnumKeyEx(
-					hKey, i, szKey, &cbName, 
-					NULL, NULL, NULL, &ftWrite); 
+					hKey, //키의 핸들
+					i, //키의 인덱스
+					szKey, //***서브키명을 담는 변수***
+					&cbName, //szKey의 사이즈를 담는 변수
+					NULL, NULL, NULL, 
+					&ftWrite); //최종 기입 시간
 
+		//성공시
         if (ret == ERROR_SUCCESS) 
         {
 			tmWrite.HighPart = ftWrite.dwHighDateTime;
 			tmWrite.LowPart  = ftWrite.dwLowDateTime;
 
-            // it changed if the last write is greater than 
-            // our start time
+			//
 			if (tmWrite.QuadPart > g_tmStart.QuadPart)
 			{
+				//szName 초기화
 				memset(szName, 0, sizeof(szName));
-				GetKeyName(hKey, szName);
 
+				GetKeyName(hKey, szName); // -> GetKeyName()
+
+				//두문자 이어 붙이기
 				_tcscat(szName, _T("\\"));
 				_tcscat(szName, szKey);
 				
 				if (!IsWhitelisted(szName)) { 
-					Output(FOREGROUND_BLUE, _T("[REGISTRY] %s\n"), szName);
+					Output(FOREGROUND_BLUE, _T("[REGISTRY] %s OOOO  %s\n"), szName, szKey);
 				}
 			}
 
+			//레지스트리 오픈
 			ret = RegOpenKeyEx(hKey, szKey, 0, KEY_READ, &hNewKey);
+
 
 			if (ret == ERROR_SUCCESS) 
 			{ 
@@ -139,8 +155,8 @@ void GetRegistryChanges(HKEY hKey)
     }
 }
 
-// call this once after each change to update the start time
-// otherwise we'll print duplicates over and over
+///////////////////////////////////////////////////////
+
 void UpdateTime(void)
 {
 	SYSTEMTIME st;
@@ -153,88 +169,110 @@ void UpdateTime(void)
 	g_tmStart.LowPart  = ft.dwLowDateTime;	
 }
 
-// main thread for monitoring keys 
+///////////////////////////////////////////////////////
+
+//[2]
 DWORD WatchKey(PREGMON p)
 {
 	HANDLE hEvent;
 	HKEY   hKey;
 	LONG   ret;
 
+	//처음 출력 부분
 	Output(0, _T("Monitoring HKEY %x\\%s\n"), 
-		p->hMainKey, p->szSubkey);
+		p->hMainKey, p->szSubkey); //아래 StartRegistryMonitor에서 설정한 메인키, 서브키 출력
 
+	//레지스트리 Key 오픈
 	ret = RegOpenKeyEx(
 		p->hMainKey, 
 		p->szSubkey, 
 		0, 
-		KEY_READ | KEY_NOTIFY, 
+		KEY_READ | KEY_NOTIFY | KEY_ALL_ACCESS, 
 		&hKey);
 
+	//에러 처리
 	if (ret != ERROR_SUCCESS)
 	{
 		return -1;
 	}
 
-	// create an event that will get signaled by the system
-	// when a change is made to the monitored key
+	//시스템에 의해 신호를 얻을 이벤트를 생성
 	hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
+
+	//에러 처리
 	if (hEvent == NULL)
 	{
 		return -1;
 	}
 
-    // this event gets signaled if a user enters CTRL+C to stop
+    //mon.h : HANDLE g_hStopEvent;
+	//특정 스레드가 종료할 때까지 대기
 	while(WaitForSingleObject(g_hStopEvent, 1) != WAIT_OBJECT_0)
 	{
 		UpdateTime();
 		
-		// register to receive change notification 
+		//변경 알림을 받을 수 있도록 등록 -> 나중에 
 		ret = RegNotifyChangeKeyValue(hKey, 
 									  TRUE, 
 									  REG_CHANGE_FLAGS, 
 									  hEvent, 
 									  TRUE);
+		//에러 처리
 		if (ret != ERROR_SUCCESS)
 		{
+			_tprintf(_T("Registry Open Failed!! \n"));
 			break;
 		}
 
+		//에러처리
 		if (WaitForSingleObject(hEvent, INFINITE) == WAIT_FAILED)
 		{
 			break;
 		}
 
-		GetRegistryChanges(hKey);
+		GetRegistryChanges(hKey); // -> GetRegistryChanges()
 	}
 
+	//스레드 종료가 되면 프로그램이 끝났음을 출력
 	Output(0, _T("Closing HKEY %x\\%s\n"), 
 		p->hMainKey, p->szSubkey);
 
 	RegCloseKey(hKey);
 	CloseHandle(hEvent);
+
 	return 0;
 }
 
+///////////////////////////////////////////////////////
+
+//[1]
 void StartRegistryMonitor(void)
 {
 	HMODULE hNtdll = GetModuleHandle(_T("ntdll.dll"));
 	ZwQueryKey = (ZWQUERYKEY)GetProcAddress(hNtdll, "NtQueryKey");
 
+	//typedef struct REGMON { 
+	//	HKEY   hMainKey;
+	//	LPTSTR szSubkey;
+	//} REGMON, *PREGMON;
+
 	PREGMON p[2];
+
 	p[0] = new REGMON;
 	p[1] = new REGMON;
 
+	//경로 지정할 경우 여기서 메인키, 서브키 설정
 	p[0]->hMainKey = HKEY_LOCAL_MACHINE;
 	p[0]->szSubkey = _T("Software");
 	
-	// one thread for HKLM\\Software
+	//mon.h : HANDLE g_hRegWatch[2];
 	g_hRegWatch[0] = CreateThread(NULL, 0, 
-	    (LPTHREAD_START_ROUTINE)WatchKey, p[0], 0, NULL);
+	    (LPTHREAD_START_ROUTINE)WatchKey, p[0], 0, NULL); // -> WatchKey()
 
 	p[1]->hMainKey = HKEY_CURRENT_USER;
 	p[1]->szSubkey = _T("Software");
 	
-	// one thread for HKCU\\Software
 	g_hRegWatch[1] = CreateThread(NULL, 0, 
-	    (LPTHREAD_START_ROUTINE)WatchKey, p[1], 0, NULL);
+	    (LPTHREAD_START_ROUTINE)WatchKey, p[1], 0, NULL); // -> WatchKey()
+
 }

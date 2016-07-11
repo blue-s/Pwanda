@@ -54,7 +54,7 @@ void ProcessChange(int idx)
 			if (IsWhitelisted(szFile)) {
 				continue;
 			}
-
+			/*
 			switch (pNotify->Action)
 			{
 			case FILE_ACTION_ADDED:
@@ -82,6 +82,7 @@ void ProcessChange(int idx)
 					g_szDrives[idx], szFile);
 				break;
 			};
+			*/
 		} while (pNotify->NextEntryOffset != 0);
 	}
 }
