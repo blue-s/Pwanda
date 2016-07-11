@@ -155,6 +155,7 @@ void GetRegistryChanges(HKEY hKey)
 		//성공시
 		if (ret == ERROR_SUCCESS) 
 		{
+
 			tmWrite.HighPart = ftWrite.dwHighDateTime;
 			tmWrite.LowPart  = ftWrite.dwLowDateTime;
 
@@ -181,7 +182,8 @@ void GetRegistryChanges(HKEY hKey)
 					{
 						for(j=0, ret=ERROR_SUCCESS; j<cValues; j++)
 						{
-							memset(achValue, 0, sizeof(achValue));
+							cchValue = MAX_VALUE_NAME; 
+							achValue[0] = '\0';
 
 							ret = RegEnumValue( //지정한 키가 가지고 있는 모든 값의 이름들
 								hKey,             
@@ -194,6 +196,7 @@ void GetRegistryChanges(HKEY hKey)
 							{
 								Output(FOREGROUND_RED, _T("[Value %d] %s \n"), j+1, achValue);
 							}
+							printf("[cValues Count] %d\n", cValues);
 						}
 					}
 					else{ _tprintf(_T("Value Failed!! \n")); }
@@ -259,6 +262,8 @@ DWORD WatchKey(PREGMON p)
 	{
 		return -1;
 	}
+	else
+		printf("RegOpenKeyEx() is OK.\n");
 
 	//시스템에 의해 신호를 얻을 이벤트를 생성
 	hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);

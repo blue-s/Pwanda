@@ -1,4 +1,4 @@
-﻿빌드 시작: 2016-07-12 오전 1:15:57
+﻿빌드 시작: 2016-07-12 오전 2:04:49
      1>2 노드의 "D:\Pwanda\RegFsNotify-src\RegFsNotify\RegFsNotify.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\RegFsNotify.unsuccessfulbuild"을(를) 만들고 있습니다.
@@ -7,9 +7,9 @@
          reg.cpp
      1>d:\pwanda\regfsnotify-src\regfsnotify\reg.cpp(101): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(283) : 'wcscpy' 선언을 참조하십시오.
-     1>d:\pwanda\regfsnotify-src\regfsnotify\reg.cpp(170): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(276) : 'wcscat' 선언을 참조하십시오.
      1>d:\pwanda\regfsnotify-src\regfsnotify\reg.cpp(171): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(276) : 'wcscat' 선언을 참조하십시오.
+     1>d:\pwanda\regfsnotify-src\regfsnotify\reg.cpp(172): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(276) : 'wcscat' 선언을 참조하십시오.
        ManifestResourceCompile:
          모든 출력이 최신 상태입니다.
@@ -31,4 +31,4 @@
 
 빌드했습니다.
 
-경과 시간: 00:00:01.55
+경과 시간: 00:00:01.25

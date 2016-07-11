@@ -1,30 +1,48 @@
 Monitoring HKEY 80000001\SOFTWARE
 Monitoring HKEY 80000002\SOFTWARE
-[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig 
-[Subkey] PropertyStore 
-[REGISTRY] \PropertyStore 
-[cValues] 0 
-[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0 
-[Subkey] {219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F} 
-[REGISTRY] \{219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F} 
-[cValues] 1 
-[Value 1]  
-[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersionegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0 
-[szName] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersionegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0 
+[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
+[szName] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
 [Subkey] Run 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersionegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0\Run 
+[REGISTRY] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
 [cValues] 0 
-[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig43} 
-[Subkey] PropertyStore 
-[REGISTRY] \PropertyStore 
+[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Runer\CodeIdentifiers 
+[szName] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Runer\CodeIdentifiers 
+[Subkey] tetstetst 
+[REGISTRY] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Runer\CodeIdentifiers\tetstetst 
+[cValues] 2 
+[Value 1] KakaoTalk 
+[Value 2] RESTART_STICKY_NOTES 
+[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VSCommon\10.0\SQM\PIDs 
+[szName] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VSCommon\10.0\SQM\PIDs 
+[Subkey] 8588 
+[REGISTRY] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VSCommon\10.0\SQM\PIDs\8588 
 [cValues] 0 
-[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Internet Explorer\LowRegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0 
-[Subkey] {219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F} 
-[REGISTRY] \{219ED5A0-9CBF-4F3A-B927-37C9E5C5F14F} 
-[cValues] 1 
-[Value 1]  
-[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersionegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0 
-[szName] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersionegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0 
-[Subkey] Run 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\Windows\CurrentVersionegistry\Audio\PolicyConfig\PropertyStore\b3c264d8_0\Run 
+[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VisualStudion 
+[szName] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VisualStudion 
+[Subkey] 10.0 
+[REGISTRY] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VisualStudion\10.0 
 [cValues] 0 
+[info.Name] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VisualStudio\10.0 
+[szName] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VisualStudio\10.0 
+[Subkey] FileMRUList 
+[REGISTRY] \REGISTRY\USER\S-1-5-21-4198834896-2506664028-2079478559-1001\SOFTWARE\Microsoft\VisualStudio\10.0\FileMRUList 
+[cValues] 19 
+[Value 1] EditCfgData 
+[Value 2] VisualStudioProjectsLocation 
+[Value 3] UserItemTemplatesLocation 
+[Value 4] UserProjectTemplatesLocation 
+[Value 5] MyDocumentsLocation 
+[Value 6] VisualStudioLocation 
+[Value 7] DefaultNewProjectLocation 
+[Value 8] DefaultOpenProjectLocation 
+[Value 9] DefaultOpenSolutionLocation 
+[Value 10] DefaultNewProjItemLocation 
+[Value 11] DefaultOpenProjItemLocation 
+[Value 12] DefaultFileOpenLocation 
+[Value 13] DefaultBrowseComponentLocation 
+[Value 14] MainWindow 
+[Value 15] FullScreen 
+[Value 16] UpgradeCheckScheduledTimestamp 
+[Value 17] LastLoadedSolution 
+[Value 18] ToolboxReadSuccess 
+[Value 19] PFrameWindow 
