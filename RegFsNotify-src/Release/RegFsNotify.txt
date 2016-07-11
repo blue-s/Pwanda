@@ -1,0 +1,813 @@
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[ADDED] C:\Windows\Prefetch\SETHC.EXE-1E0D0DA0.pf
+[MODIFIED] C:\Windows\Prefetch\SETHC.EXE-1E0D0DA0.pf
+[MODIFIED] C:\Windows\Logs\NetSetup\service.0.etl
+[ADDED] C:\Windows\Prefetch\NVTRAY.EXE-39D19720.pf
+[MODIFIED] C:\Windows\Prefetch\NVTRAY.EXE-39D19720.pf
+[ADDED] C:\Windows\Prefetch\ATBROKER.EXE-5CD29207.pf
+[MODIFIED] C:\Windows\Prefetch\ATBROKER.EXE-5CD29207.pf
+[MODIFIED] C:\Windows\Prefetch\ATBROKER.EXE-5CD29207.pf
+[MODIFIED] C:\Windows\Prefetch\ATBROKER.EXE-5CD29207.pf
+[RENAMED (OLD)] C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\~FontCache-S-1-5-18.dat[RENAMED (NEW)] C:\Windows\ServiceProfiles\LocalService\AppData\Local\FontCache\FontCache-S-1-5-18.dat[MODIFIED] C:\Windows\Prefetch\LOGONUI.EXE-F639BD7E.pf
+[MODIFIED] C:\Windows\Prefetch\LOGONUI.EXE-F639BD7E.pf
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F17F.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F17F.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F17F.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cdef0c.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cdef0c.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F17F.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cdef0c.TMP
+[MODIFIED] C:\Windows\Prefetch\NVTRAY.EXE-39D19720.pf
+[MODIFIED] C:\Windows\Prefetch\NVTRAY.EXE-39D19720.pf
+[MODIFIED] C:\Windows\Prefetch\CONSENT.EXE-40419367.pf
+[MODIFIED] C:\Windows\Prefetch\CONSENT.EXE-40419367.pf
+[ADDED] C:\Windows\Prefetch\LAUNCHTM.EXE-8587CF19.pf
+[MODIFIED] C:\Windows\Prefetch\LAUNCHTM.EXE-8587CF19.pf
+[MODIFIED] C:\Windows\Logs\NetSetup\service.0.etl
+[MODIFIED] C:\Windows\Prefetch\REGFSNOTIFY.EXE-781C04DF.pf
+[MODIFIED] C:\Windows\Prefetch\REGFSNOTIFY.EXE-781C04DF.pf
+[MODIFIED] C:\Windows\Prefetch\CONHOST.EXE-0C6456FB.pf
+[MODIFIED] C:\Windows\Prefetch\CONHOST.EXE-0C6456FB.pf
+[MODIFIED] C:\Windows\Prefetch\DLLHOST.EXE-F99091EF.pf
+[MODIFIED] C:\Windows\Prefetch\DLLHOST.EXE-F99091EF.pf
+[MODIFIED] C:\Windows\Prefetch\DLLHOST.EXE-F99091EF.pf
+[MODIFIED] C:\Windows\Prefetch\DLLHOST.EXE-F99091EF.pf
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2012.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2012.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2012.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5ce1d30.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5ce1d30.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2012.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5ce1d30.TMP
+[MODIFIED] C:\Windows\Prefetch\TASKMGR.EXE-4C8500BA.pf
+[MODIFIED] C:\Windows\Prefetch\TASKMGR.EXE-4C8500BA.pf
+[MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\VisualStudio\10.0\Design_2k13twzz.1b4.winprf
+[MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\VisualStudio\10.0\Design_2k13twzz.1b4.winprf
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Csd Whitelist_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download Whitelist_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Inclusion Whitelist_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Extension Blacklist_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing IP Blacklist_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Module Whitelist_new
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Resource Blacklist_new
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download_new
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom_new
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom Prefix Set
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Bloom Prefix Set
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Csd Whitelist_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Csd Whitelist
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Csd Whitelist_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Csd Whitelist[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download Whitelist_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download Whitelist
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download Whitelist_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Download Whitelist[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Inclusion Whitelist_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Inclusion Whitelist
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Inclusion Whitelist_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Inclusion Whitelist[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Extension Blacklist_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Extension Blacklist
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Extension Blacklist_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Extension Blacklist[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing IP Blacklist_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing IP Blacklist
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing IP Blacklist_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing IP Blacklist[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List_new
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List Prefix Set
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing UwS List Prefix Set
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Module Whitelist_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Module Whitelist
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Module Whitelist_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Module Whitelist[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Resource Blacklist_new
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Resource Blacklist
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Resource Blacklist_new[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Resource Blacklist[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_Y9EGOXyUYFC3A8m
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_Y9EGOXyUYFC3A8m
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\1689.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\1689.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\1689.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cf13a6.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cf13a6.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\1689.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cf13a6.TMP
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_6ZyDwb4LDhHvmLz
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_6ZyDwb4LDhHvmLz
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\61AC.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\61AC.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\61AC.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cf5ed8.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cf5ed8.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\61AC.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5cf5ed8.TMP
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_zagDqS0al7hL5Dh
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_zagDqS0al7hL5Dh
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\D9EB.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Temp\D9EB.tmp
+[REMOVED] C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{69041BBC-DD52-461D-B41A-53AF0B06D5BC}\{D463C3A2-A994-4AC7-A8B3-5E7CFEBC1721}.xml
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_docs.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_docs.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_docs.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_Fg1dQxMGDf0uql5
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_Fg1dQxMGDf0uql5
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\D9EB.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\CA76.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\CA76.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\CA76.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State~RF5d0c79f.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State~RF5d0c79f.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\CA76.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State~RF5d0c79f.TMP
+[ADDED] C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{69041BBC-DD52-461D-B41A-53AF0B06D5BC}\{B7E2614A-E7D5-4ACC-A140-2FA81547B86D}.xml
+[MODIFIED] C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{69041BBC-DD52-461D-B41A-53AF0B06D5BC}\{B7E2614A-E7D5-4ACC-A140-2FA81547B86D}.xml
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_sQ5lah0UcxmfxdY
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_sQ5lah0UcxmfxdY
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\cache
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\cache
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\log\event\2016-07-11.log
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.cab
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.cab
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.ayu
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.ayu
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.ayu
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.dat
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.dat
+[REMOVED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.ayu
+[REMOVED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\update.cab
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\log\event\2016-07-11.log
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\cache
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\cache
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\alyac\x64\ver.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\alyac\x64\ver.zip
+[REMOVED] C:\ProgramData\ESTsoft\ALYac\update\alyac\x64\ver
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\alyac\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\alyac\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\se\x64\ver.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\se\x64\ver.zip
+[REMOVED] C:\ProgramData\ESTsoft\ALYac\update\se\x64\ver
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\se\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\se\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\ver.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\ver.zip
+[REMOVED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\ver
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\see\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\ve\x64\ver.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\ve\x64\ver.zip
+[REMOVED] C:\ProgramData\ESTsoft\ALYac\update\ve\x64\ver
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\ve\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\ve\x64\ver
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\alyac\x64\config.dat
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\alyac\x64\config.dat
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\log\event\2016-07-11.log
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\spindex.dat
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\spindex.dat
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\free264_ayt.zip
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_plus.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_plus.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_plus.google.com_0.localstorage-journal
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\free264_ayt.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\free264.ayt
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\free264.ayt
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\se64_ayt.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\se64_ayt.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\se64.ayt
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\se64.ayt
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\se64.ayt
+[ADDED] C:\ProgramData\ESTsoft\ALYac\update\ve64_ayt.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\ve64_ayt.zip
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\ve64.ayt
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\ve64.ayt
+[MODIFIED] C:\ProgramData\ESTsoft\ALYac\update\ve64.ayt
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F5A9.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F5A9.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F5A9.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d1f2d1.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d1f2d1.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\F5A9.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d1f2d1.TMP
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Safe Browsing Cookies-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_pBsycjvHvsC8AE3
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_pBsycjvHvsC8AE3
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Windows\Prefetch\GIT.EXE-F9B09F69.pf
+[MODIFIED] C:\Windows\Prefetch\GIT.EXE-F9B09F69.pf
+[MODIFIED] C:\Windows\Prefetch\GIT.EXE-3A918019.pf
+[MODIFIED] C:\Windows\Prefetch\GIT.EXE-3A918019.pf
+[MODIFIED] C:\Windows\Prefetch\CONHOST.EXE-0C6456FB.pf
+[MODIFIED] C:\Windows\Prefetch\CONHOST.EXE-0C6456FB.pf
+[MODIFIED] C:\Users\kosta\Desktop\Pwanda\.git\FETCH_HEAD
+[MODIFIED] C:\Windows\Prefetch\GIT.EXE-56692DC6.pf
+[MODIFIED] C:\Windows\Prefetch\GIT.EXE-56692DC6.pf
+[MODIFIED] C:\Users\kosta\Desktop\Pwanda\.git\FETCH_HEAD
+[MODIFIED] C:\Windows\Prefetch\GIT-REMOTE-HTTPS.EXE-83CF97B3.pf
+[MODIFIED] C:\Windows\Prefetch\GIT-REMOTE-HTTPS.EXE-83CF97B3.pf
+[MODIFIED] C:\Windows\Prefetch\SEARCHPROTOCOLHOST.EXE-69C456C3.pf
+[MODIFIED] C:\Windows\Prefetch\SEARCHPROTOCOLHOST.EXE-69C456C3.pf
+[MODIFIED] C:\Windows\Prefetch\SEARCHFILTERHOST.EXE-44162447.pf
+[MODIFIED] C:\Windows\Prefetch\SEARCHFILTERHOST.EXE-44162447.pf
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\A6AA.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\A6AA.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\A6AA.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d2a3c2.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d2a3c2.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\A6AA.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d2a3c2.TMP
+[MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\VisualStudio\10.0\Design_2k13twzz.1b4.winprf
+[MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\VisualStudio\10.0\Design_2k13twzz.1b4.winprf
+[REMOVED] C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{69041BBC-DD52-461D-B41A-53AF0B06D5BC}\{D3142A82-7C7B-49E7-88F8-1FE594623C90}.xml
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_jjxt8ZWzhs7apOs
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_jjxt8ZWzhs7apOs
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\microsoft.windowscommunicationsapps_8wekyb3d8bbwe\microsoft.windowscommunicationsapps_17.6965.40901.0_x64__8wekyb3d8bbwe\ActivationStore\ActivationStore.dat
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\microsoft.windowscommunicationsapps_8wekyb3d8bbwe\Settings\settings.dat
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2BBA.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2BBA.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2BBA.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d328d1.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d328d1.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\2BBA.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d328d1.TMP
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002662.log
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002660.log
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002663.ldb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002662.log
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002662.log
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_H9PVjmQAcUaJTPW
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002663.ldb
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002663.bak
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002663.bak
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002663.ldb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\MANIFEST-000001
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002660.log
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002664.ldb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002664.ldb
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002664.bak
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002664.bak
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002664.ldb
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002665.ldb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002665.ldb
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002665.bak
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002665.bak
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002665.ldb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\MANIFEST-000001
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002654.ldb
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002654.bak
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002655.ldb
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002655.bak
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002657.ldb
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002657.bak
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002659.ldb
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002659.bak
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002661.ldb
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002661.bak
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002663.ldb
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\IndexedDB\https_drive.google.com_0.indexeddb.leveldb\002663.bak
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_drive.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_drive.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_drive.google.com_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_www.google.co.kr_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_www.google.co.kr_0.localstorage-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Local Storage\https_www.google.co.kr_0.localstorage-journal
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7D26.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7D26.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7D26.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d37a3c.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d37a3c.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7D26.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d37a3c.TMP
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_TivBZOkWmKxLL50
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_TivBZOkWmKxLL50
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\QuotaManager-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_H9PVjmQAcUaJTPW
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\QuotaManager-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\QuotaManager-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\TalkUserDB.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\TalkUserDB.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\TalkUserDB.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\TalkUserDB.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\TalkUserDB.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\TalkUserDB.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_itFcvFvKBkFgKWS
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_itFcvFvKBkFgKWS
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\History-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_139685720960129.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7E2C.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7E2C.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7E2C.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d47b41.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d47b41.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\7E2C.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Preferences~RF5d47b41.TMP
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Windows\Prefetch\AgRobust.db
+[MODIFIED] C:\Windows\Prefetch\AgRobust.db
+[MODIFIED] C:\Windows\Prefetch\AgGlGlobalHistory.db
+[MODIFIED] C:\Windows\Prefetch\AgGlGlobalHistory.db
+[MODIFIED] C:\Windows\Prefetch\AgGlFaultHistory.db
+[MODIFIED] C:\Windows\Prefetch\AgGlFaultHistory.db
+[MODIFIED] C:\Windows\Prefetch\AgGlFgAppHistory.db
+[MODIFIED] C:\Windows\Prefetch\AgGlFgAppHistory.db
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\DownloadedScenarios\WINDOWS.DIAGNOSTICS.xml.new
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\DownloadedScenarios\WINDOWS.DIAGNOSTICS.xml.new
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\03c64315-0452-4ee7-bf62-1ece46c41f07_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\03c64315-0452-4ee7-bf62-1ece46c41f07_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\084c17b6-bc57-45ad-b172-3071389209a5_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\084c17b6-bc57-45ad-b172-3071389209a5_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\4d913a00-4b79-4321-a77e-f67257c51058_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\4d913a00-4b79-4321-a77e-f67257c51058_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\6bc3e4e0-daa5-49f0-a40c-99656168ce78_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\6bc3e4e0-daa5-49f0-a40c-99656168ce78_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\c1f980d0-1f88-4c28-9576-4a05991e3569_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\c1f980d0-1f88-4c28-9576-4a05991e3569_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\03c64315-0452-4ee7-bf62-1ece46c41f07_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\03c64315-0452-4ee7-bf62-1ece46c41f07_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\03c64315-0452-4ee7-bf62-1ece46c41f07_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\03c64315-0452-4ee7-bf62-1ece46c41f07_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\084c17b6-bc57-45ad-b172-3071389209a5_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\084c17b6-bc57-45ad-b172-3071389209a5_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\084c17b6-bc57-45ad-b172-3071389209a5_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\084c17b6-bc57-45ad-b172-3071389209a5_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\4d913a00-4b79-4321-a77e-f67257c51058_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\4d913a00-4b79-4321-a77e-f67257c51058_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\4d913a00-4b79-4321-a77e-f67257c51058_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\4d913a00-4b79-4321-a77e-f67257c51058_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\6bc3e4e0-daa5-49f0-a40c-99656168ce78_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\6bc3e4e0-daa5-49f0-a40c-99656168ce78_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\6bc3e4e0-daa5-49f0-a40c-99656168ce78_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\6bc3e4e0-daa5-49f0-a40c-99656168ce78_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\c1f980d0-1f88-4c28-9576-4a05991e3569_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\c1f980d0-1f88-4c28-9576-4a05991e3569_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\c1f980d0-1f88-4c28-9576-4a05991e3569_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\c1f980d0-1f88-4c28-9576-4a05991e3569_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\03c64315-0452-4ee7-bf62-1ece46c41f07_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\03c64315-0452-4ee7-bf62-1ece46c41f07_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\03c64315-0452-4ee7-bf62-1ece46c41f07_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\03c64315-0452-4ee7-bf62-1ece46c41f07_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\084c17b6-bc57-45ad-b172-3071389209a5_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\084c17b6-bc57-45ad-b172-3071389209a5_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\084c17b6-bc57-45ad-b172-3071389209a5_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\084c17b6-bc57-45ad-b172-3071389209a5_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\4d913a00-4b79-4321-a77e-f67257c51058_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\4d913a00-4b79-4321-a77e-f67257c51058_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\4d913a00-4b79-4321-a77e-f67257c51058_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\4d913a00-4b79-4321-a77e-f67257c51058_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\6bc3e4e0-daa5-49f0-a40c-99656168ce78_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\6bc3e4e0-daa5-49f0-a40c-99656168ce78_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\6bc3e4e0-daa5-49f0-a40c-99656168ce78_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\6bc3e4e0-daa5-49f0-a40c-99656168ce78_withdraw.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\c1f980d0-1f88-4c28-9576-4a05991e3569_show.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\c1f980d0-1f88-4c28-9576-4a05991e3569_show.xml
+[ADDED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\c1f980d0-1f88-4c28-9576-4a05991e3569_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\SoftLanding\c1f980d0-1f88-4c28-9576-4a05991e3569_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\03c64315-0452-4ee7-bf62-1ece46c41f07_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\03c64315-0452-4ee7-bf62-1ece46c41f07_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\084c17b6-bc57-45ad-b172-3071389209a5_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\084c17b6-bc57-45ad-b172-3071389209a5_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\4d913a00-4b79-4321-a77e-f67257c51058_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\4d913a00-4b79-4321-a77e-f67257c51058_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\6bc3e4e0-daa5-49f0-a40c-99656168ce78_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\6bc3e4e0-daa5-49f0-a40c-99656168ce78_withdraw.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\c1f980d0-1f88-4c28-9576-4a05991e3569_show.xml
+[REMOVED] C:\ProgramData\Microsoft\Diagnosis\SoftLandingStage\c1f980d0-1f88-4c28-9576-4a05991e3569_withdraw.xml
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\parse.dat
+[MODIFIED] C:\ProgramData\Microsoft\Diagnosis\parse.dat
+[MODIFIED] C:\Windows\Prefetch\DLLHOST.EXE-25FB84C5.pf
+[MODIFIED] C:\Windows\Prefetch\DLLHOST.EXE-25FB84C5.pf
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\5E5C.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\5E5C.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\5E5C.tmp
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State~RF5d55b70.TMP
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State~RF5d55b70.TMP
+[RENAMED (OLD)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\5E5C.tmp[RENAMED (NEW)] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Local State~RF5d55b70.TMP
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_VsOQtHPNfTgEVGb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_VsOQtHPNfTgEVGb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_jjueO5AN6POIyD1
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_jjueO5AN6POIyD1
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[ADDED] C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{69041BBC-DD52-461D-B41A-53AF0B06D5BC}\{92E5E729-0354-4EC5-A151-B72C2AC6AFC2}.xml
+[MODIFIED] C:\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces\{69041BBC-DD52-461D-B41A-53AF0B06D5BC}\{92E5E729-0354-4EC5-A151-B72C2AC6AFC2}.xml
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\databases\chrome-extension_pnjaodmkngahhkoihejjehlcdlnohgmp_0\4-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\databases\chrome-extension_pnjaodmkngahhkoihejjehlcdlnohgmp_0\4-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\databases\chrome-extension_pnjaodmkngahhkoihejjehlcdlnohgmp_0\4-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\databases\chrome-extension_pnjaodmkngahhkoihejjehlcdlnohgmp_0\4-journal
+[ADDED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\databases\chrome-extension_pnjaodmkngahhkoihejjehlcdlnohgmp_0\4-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\databases\chrome-extension_pnjaodmkngahhkoihejjehlcdlnohgmp_0\4-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\databases\chrome-extension_pnjaodmkngahhkoihejjehlcdlnohgmp_0\4-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\talk_user_prf.edb-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_Vice1EbVC1Ct8nc
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_Vice1EbVC1Ct8nc
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\VisualStudio\10.0\Design_2k13twzz.1b4.winprf
+[MODIFIED] C:\Users\kosta\AppData\Roaming\Microsoft\VisualStudio\10.0\Design_2k13twzz.1b4.winprf
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Windows\Temp\His1114.tmp
+[MODIFIED] C:\Windows\Temp\His1114.tmp
+[REMOVED] C:\Windows\Temp\His1114.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Microsoft\Windows\UPPS\UPPS.bin
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\Microsoft.Windows.Photos_8wekyb3d8bbwe\LocalState\PhotosAppTracing_BGTask.last.etl
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\Microsoft.Windows.Photos_8wekyb3d8bbwe\LocalState\PhotosAppTracing_BGTask.last.etl
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\Microsoft.Windows.Photos_8wekyb3d8bbwe\LocalState\PhotosAppTracing_BGTask.last.etl
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\Microsoft.Windows.Photos_8wekyb3d8bbwe\LocalState\PhotosAppTracing_BGTask.etl
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\Microsoft.Windows.Photos_8wekyb3d8bbwe\LocalState\PhotosAppTracing_BGTask.etl
+[MODIFIED] C:\Users\kosta\AppData\Local\Packages\Microsoft.Windows.Photos_8wekyb3d8bbwe\LocalState\PhotosAppTracing_BGTask.etl
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_0.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_1.jpg
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_2.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[MODIFIED] C:\Windows\ServiceProfiles\LocalService\AppData\Local\Microsoft\Dlna\DeviceIcons\1c03a180-00b0-1000-8823-001377cf6a94_3.png
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_NEDR3hkPPkkc4fb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_NEDR3hkPPkkc4fb
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[ADDED] C:\Users\kosta\AppData\Local\Microsoft\Windows Live\Bici\wlexpid_00.sqm
+[MODIFIED] C:\Users\kosta\AppData\Local\Microsoft\Windows Live\Bici\wlexpid_00.sqm
+[MODIFIED] C:\Users\kosta\AppData\Local\Microsoft\Windows Live\Bici\wlexpid_00.sqm
+[REMOVED] C:\Users\kosta\AppData\Local\Microsoft\Windows Live\Bici\wlexpid_00.sqm
+[ADDED] C:\Windows\Temp\HisA0D2.tmp
+[MODIFIED] C:\Windows\Temp\HisA0D2.tmp
+[REMOVED] C:\Windows\Temp\HisA0D2.tmp
+[MODIFIED] C:\Users\kosta\AppData\Local\Microsoft\Windows\UPPS\UPPS.bin
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Google\Chrome\User Data\Default\Cookies-journal
+[MODIFIED] C:\Windows\Prefetch\AUDIODG.EXE-AB22E9A6.pf
+[MODIFIED] C:\Windows\Prefetch\AUDIODG.EXE-AB22E9A6.pf
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatLogs_147919083295881.edb
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Temp\etilqs_cRcV1oHAi5WzdvM
+[REMOVED] C:\Users\kosta\AppData\Local\Temp\etilqs_cRcV1oHAi5WzdvM
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[ADDED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[MODIFIED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal
+[REMOVED] C:\Users\kosta\AppData\Local\Kakao\KakaoTalk\users\60b592061dd4f10801427dc9f57a47cfa32ecd00\chat_data\chatListInfo.edb-journal

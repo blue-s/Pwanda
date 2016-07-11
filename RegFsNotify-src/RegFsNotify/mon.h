@@ -1,8 +1,19 @@
-﻿#pragma once
+﻿/*
+ * 변경 사항 :
+ * [1] 파일만 정보를 확인할 수 있도록 수정
+ * [2] 현재 사용자가 Admin인지, 현재 프로세스가 어떠한 권한으로 실행되었는지 확인
+ */
+
+#pragma once
 
 #include <windows.h>
 #include <tchar.h>
-#include <stdio.h>	// 테스트를 위한 추가
+#include <stdio.h>	// [1] 테스트를 위한 추가
+
+// [2] 테스트를 위한 추가
+#include <locale.h>	
+#include <shlobj.h>					// for IsUserAnAdmin() function
+#pragma comment(lib, "shell32.lib")	// for IsUserAnAdmin() function
 
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
 
