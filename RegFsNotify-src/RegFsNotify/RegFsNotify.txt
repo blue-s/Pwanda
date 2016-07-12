@@ -1,17 +1,29 @@
+-----------------File.cpp--------------------[resultBuffer] (null)
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 [Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
 [Path] "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
 [search] OneDrive
-[result] OneDrive\OneDrive.exe" /background
+[result] OneDrive.exe" /background
+[resultBuffer] OneDrive.exe" /background
+-----------------[i=0] extractProcessName--------------OneDrive.exe" /background
 [Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
 [Path] C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
 [search] OneDrive
+-----------------[i=1] extractProcessName--------------\MagicLineNP.exe
 [Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
 [Path] "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
 [search] OneDrive
+-----------------[i=2] extractProcessName--------------.exe" -bystartup
 [Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
 [Path] "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
 [search] OneDrive
+-----------------[i=3] extractProcessName--------------exe" -autorun
 [Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 [Path] C:\Windows\System32\StikyNot.exe
 [search] OneDrive
+-----------------[i=4] extractProcessName--------------exe" -autorun
+exe" -autorun
+exe" -autorun
+exe" -autorun
+exe" -autorun
+exe" -autorun

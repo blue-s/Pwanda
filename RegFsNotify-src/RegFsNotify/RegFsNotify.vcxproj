@@ -89,12 +89,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="extractProcessName.cpp" />
     <ClCompile Include="file.cpp" />
+    <ClCompile Include="mon.cpp" />
     <ClCompile Include="reg.cpp" />
     <ClCompile Include="RegFsNotify.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mon.h" />
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

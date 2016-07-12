@@ -64,12 +64,14 @@ void QueryKey(HKEY hKey){
 	TCHAR  achData[MAX_VALUE_NAME];
 	DWORD cchData = MAX_VALUE_NAME;
 
-	//
+	/////////////////////////////////////////////////////////////////
 	TCHAR path[MAX_VALUE_NAME] = _T("");
 	TCHAR search[MAX_VALUE_NAME] = _T("OneDrive");
-	TCHAR * result=_T("");
+	TCHAR *result = _T("");
+	//TCHAR *resultBuffer = _T("");
 	
-	TCHAR * FileName=_T("");
+
+	LPSTR lpresult = "";
 
 
 	retCode = RegQueryInfoKey(
@@ -139,30 +141,21 @@ void QueryKey(HKEY hKey){
 				
 				//2. strstr로 파싱하기 
 				//Output(FOREGROUND_BLUE, _T("[search] %s\n"), (char *)search);
-
 				//Output(FOREGROUND_GREEN, _T("[result] %s\n"), _tcsstr(path,search));
-
-				//_tprintf(_T("---------------------> %s \n"), _tcsstr(path,search));
-
+				
 				
 				if(result = _tcsstr(path,search)){
-
-					Output(FOREGROUND_GREEN, _T("[result] %s\n"), result);
-
-					FileName = result+9;
-
-					_tprintf(_T("-------------------------------------------------------------------------> [FileName] %s \n"), FileName);
-
-					//Output(FOREGROUND_BLUE, _T("[result] %s\n"), src);
-					//_tprintf(_T("No search"));
-					//Output(FOREGROUND_BLUE, _T("[Src] %s\n"), src);
-					
+					Output(FOREGROUND_GREEN, _T("[result] %s\n"), result+9);
+					resultBuffer = result+9;
+					Output(FOREGROUND_GREEN, _T("[resultBuffer] %s\n"), resultBuffer);
 				}
-				
-				
 
 			}
 			//achValue: Value 값 / achData: 해당 Value의 Data 값 
+
+			// extractProcessName.cpp 로 가기
+			ExtractProcess(resultBuffer);
+		
 
 
 		} // end for
@@ -173,6 +166,10 @@ void QueryKey(HKEY hKey){
 		printf("No value under this key/subkey...\n");  
 
 	_tprintf(_T("------------------------------------------------------------------------\n"));
+
+	
+	
+		ListPrint();
 
 }
 
