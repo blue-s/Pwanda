@@ -14,14 +14,23 @@
 
 #define REG_CHANGE_FLAGS REG_NOTIFY_CHANGE_NAME |\
 	REG_NOTIFY_CHANGE_LAST_SET
+
+void Output(USHORT Color, LPTSTR format, ... );
 void Output_Roaming(USHORT Color, LPTSTR format, ... );
 void Output_Prefetch(USHORT Color, LPTSTR format, ... );
 void StartFileMonitor(void);
 void StartRegistryMonitor(void);
 
+// + Wan
+void ExtractProcess(TCHAR *);
+void ListPrint(void);
+
 extern HANDLE  g_hStopEvent;
 extern HANDLE  g_hFile;
 extern HANDLE  g_hRegWatch[2];
+
+// + Wan
+extern TCHAR * resultBuffer;
 
 // whitelisted filenames or paths
 //화이트리스트

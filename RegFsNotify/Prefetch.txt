@@ -1,9 +1,12 @@
-[PRFETCH] ------> dkdkdkdkdkdkdkdkddk.txt 
-[RENAMED (OLD)] C:\Windows\Prefetch\dkdkdkdkdkdkdkdkddk.txt 
-[PRFETCH] ------> fdsfasfaasfa.txt 
+[PRFETCH] ------> CMD.EXE-6D6290C5.pf 
+[MODIFIED] C:\Windows\Prefetch\CMD.EXE-6D6290C5.pf 
+[PRFETCH] ------> CMD.EXE-6D6290C5.pf 
+[MODIFIED] C:\Windows\Prefetch\CMD.EXE-6D6290C5.pf 
+[PRFETCH] ------> REGFSNOTIFY.EXE-195EBEAC.pf 
+[MODIFIED] C:\Windows\Prefetch\REGFSNOTIFY.EXE-195EBEAC.pf 
+[PRFETCH] ------> REGFSNOTIFY.EXE-195EBEAC.pf 
+[MODIFIED] C:\Windows\Prefetch\REGFSNOTIFY.EXE-195EBEAC.pf 
+[PRFETCH] ------> 새 텍스트 문서.t
+[ADDED] C:\Windows\Prefetch\새 텍스트 문서.[PRFETCH] ------> 새 텍스트 문서.t[RENAMED (OLD)] C:\Windows\Prefetch\새 텍스트 문서.t[PRFETCH] ------> teststatwetwtewt.txt 
 
-[RENAMED (NEW)] C:\Windows\Prefetch\fdsfasfaasfa.txt 
-[PRFETCH] ------> GOOGLEUPDATE.EXE-0E1E7B82.pf 
-[MODIFIED] C:\Windows\Prefetch\GOOGLEUPDATE.EXE-0E1E7B82.pf 
-[PRFETCH] ------> GOOGLEUPDATE.EXE-0E1E7B82.pf 
-[MODIFIED] C:\Windows\Prefetch\GOOGLEUPDATE.EXE-0E1E7B82.pf 
+[RENAMED (NEW)] C:\Windows\Prefetch\teststatwetwtewt.txt 

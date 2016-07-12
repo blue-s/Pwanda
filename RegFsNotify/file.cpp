@@ -50,19 +50,20 @@ void ProcessChange(int idx)
 			_tprintf(_T("--------- %s --------- \n"), szFile);
 			_tprintf(_T("---------------------------------------------------- \n"));
 
-			//	szfile = C:\Windows\Prefetch\dfsfasfafsfas.txt
-			//	s1 = Prefetch
-			//	prefetch_file_name -> Prefetch\dfsfasfafsfas.txt
-			//	prefetch_file_name + 9
-			//	dfsfasfafsfas.txt
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
+			// ---------------------- Roaming ---------------------- 
 			if (RoamingWhitelisted(szFile)) { 
 				
 				roaming_file_name = _tcsstr(szFile, s1);
 				Output_Roaming(FOREGROUND_BLUE, _T("[ROAMING] ------> %s \n"), roaming_file_name+8);
+				
+				//버퍼 생성
 
+				//ExtractProcess(resultBuffer);
 
+				//*********ADDED*********
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
@@ -89,11 +90,16 @@ void ProcessChange(int idx)
 			
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-				//파일경로를 (char)로 변환시킴
+				// ---------------------- Prefetch ---------------------- 
 
 				prefetch_file_name = _tcsstr(szFile, s2);
 				Output_Prefetch(FOREGROUND_BLUE, _T("[PRFETCH] ------> %s \n"), prefetch_file_name+9);
 
+				//버퍼 생성
+
+				//ExtractProcess(resultBuffer);
+
+				//*********ADDED*********
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
