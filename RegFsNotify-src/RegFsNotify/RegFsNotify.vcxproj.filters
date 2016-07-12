@@ -24,10 +24,38 @@
     <ClCompile Include="RegFsNotify.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="mon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="extractProcessName.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="code1.txt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="yeonju.txt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="origin.txt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="getData.txt">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RegFsNotify.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

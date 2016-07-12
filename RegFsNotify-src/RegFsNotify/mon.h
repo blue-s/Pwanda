@@ -1,15 +1,11 @@
-ï»¿#pragma once
+#pragma once
 
 #include <windows.h>
 #include <tchar.h>
 
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
-/*
-#ifndef _NTDEF_
-typedef __success(return >= 0) LONG NTSTATUS;
-typedef NTSTATUS *PNTSTATUS;
-#endif
-*/
+// NTSTATUS: Ä¿³ÎAPI ÇÔ¼ö È£Ãâ ÈÄ ¹ÝÈ¯ (È®½ÇÇÏÁö ¾ÊÀ½)
+// ¼º°ø »óÅÂ ¸®ÅÏ 
 
 #define FILE_CHANGE_FLAGS FILE_NOTIFY_CHANGE_FILE_NAME |\
 					 FILE_NOTIFY_CHANGE_DIR_NAME |\
@@ -17,30 +13,41 @@ typedef NTSTATUS *PNTSTATUS;
 					 FILE_NOTIFY_CHANGE_SIZE |\
 					 FILE_NOTIFY_CHANGE_CREATION |\
 					 FILE_NOTIFY_CHANGE_SECURITY
+// * À§ valueµéÀº ¸ðµÎ '¾Ë¸²'À» À§ÇÑ ÇÃ·¡±×µé 
+// 1. ÆÄÀÏ ÀÌ¸§ º¯°æ | ÆÄÀÏÀÌ »ý¼º | »èÁ¦ 
+// 2. µð·ºÅÍ¸® »ý¼º | »èÁ¦ 
+// 3. µð·ºÅÍ¸®ÀÇ ÆÄÀÏ ¼Ó¼º º¯°æ
+// 4. µð·ºÅÍ¸®¿¡ ÀÖ´Â ÆÄÀÏ Å©±â º¯°æ
+// 5. µð·ºÅÍ¸®¿¡ ÀÖ´Â ÆÄÀÏ »ý¼º ½Ã°£ º¯°æ Q: »ý¼º ½Ã°£ÀÌ ¾î¶»°Ô º¯°æµÇ´Ï? Á¶ÀÛ¹Û¿¡´Â. 
+// 6. µð·ºÅÍ¸®ÀÇ º¸¾È µð½ºÅ©¸³ÅÍ°¡ º¯°æ 
+// °°Àº ÆÄÀÏ º¯È­¸¦ FILE_CHANGE_FLAGS·Î ´ëÇ¥ÇØ¼­ »ç¿ëÇÏ°Ú´Ù
 
 #define REG_CHANGE_FLAGS REG_NOTIFY_CHANGE_NAME |\
 					 REG_NOTIFY_CHANGE_LAST_SET
+// * REGISTRYµµ ¸¶Âù°¡Áö·Î ÆÄÀÏ Ã³·³ º¯È­ ÇÃ·¡±×¸¦ defineÇØÁà¼­ '¾Ë¸²'À» Á¦°øÇÑ´Ù 
+// 1. ¼­ºêÅ°°¡ Ãß°¡ | »èÁ¦
+// 2. °ª(value) Ãß°¡ | »èÁ¦ | ¼öÁ¤ 
 
 void Output(USHORT Color, LPTSTR format, ... );
+// RegFsNotify.cpp¿¡ À§Ä¡ 
 void StartFileMonitor(void);
 void StartRegistryMonitor(void);
+void ExtractProcess(TCHAR *);
+void ListPrint(void);
 
 extern HANDLE  g_hStopEvent;
 extern HANDLE  g_hFile;
 extern HANDLE  g_hRegWatch[2];
+extern TCHAR * resultBuffer;
+
 
 // whitelisted filenames or paths
-// whiteliste : í™”ì´í‹°ë¦¬ìŠ¤íŠ¸ëž€ 'ì•ˆì „'ì´ ì¦ëª…ëœ ê²ƒë§Œì„ í—ˆìš©í•˜ëŠ” ê²ƒì´ë‹¤.
+// LPTSTR = LPSTR = char * 
+// whitelisted : Çã¿ëµÈ ¸ñ·Ï -> ÀÌ ¹®ÀÚ¿­ ¹è¿­À» ¾îµð´Ù °¡Á®°¡¼­ ¾²´ÂÁö ¾Ë¾Æ¾ß°ÚÁö 
 static LPTSTR g_szAllow[] = {
 	_T("WINDOWS\\system32\\config\\"),
-			// ìœˆë„ìš° NT ê¸°ë°˜ì˜ ìš´ì˜ ì²´ì œëŠ”
-			// ìžë™ìœ¼ë¡œ ê° í•˜ì´ë¸Œì˜ ë°±ì—…ë³¸ (.BAK)ì„ %Windir%\System32\config í´ë”ì— ë§Œë“ ë‹¤.
 	_T("\\ntuser.dat.LOG"),
-			// %UserProfile%\Ntuser.dat â€“ HKEY_USERS\<ì‚¬ìš©ìž SID> (HKEY_CURRENT_USERë¡œ ì—°ê²°)
 	_T("UsrClass.dat.LOG"),
-			// %UserProfile%\Local Settings\Application Data\Microsoft\Windows\Usrclass.dat
-			// (ê²½ë¡œëŠ” ìš´ì˜ ì²´ì œì˜ ì–¸ì–´ì— ë”°ë¼ ì§€ì—­í™”ë˜ì–´ ìžˆë‹¤)
-			// HKEY_USERS\<User SID>_Classes (HKEY_CURRENT_USER\Software\Classes)
 	_T("RegFsNotify.txt"),
 	_T("_restore"),
 	_T("CatRoot2"),
@@ -48,18 +55,17 @@ static LPTSTR g_szAllow[] = {
 	_T("\\Microsoft\\WBEM"),
 };
 
-// return true if szFile is in the g_szAllow list
-// í•¨ìˆ˜ : _tcsstr(ê²€ìƒ‰ëŒ€ìƒ, ê²€ìƒ‰ì–´) = wcsstr()
-// ë°˜í™˜ : ì„±ê³µí•œ ê²½ìš° ì£¼ì†Œê°’ì„ ë°˜í™˜ / ê²€ìƒ‰ëœ ë¶€ë¶„ë¶€í„° ëê¹Œì§€ ë¬¸ìžì—´ ë°˜í™˜
-// szFileì—ì„œ g_szAllow(í™”ì´íŠ¸ë¦¬ìŠ¤íŠ¸)ë¥¼ ê²€ìƒ‰í•œ ê²°ê³¼ ë°˜í™˜ê°’ì´ NULLì´ ì•„ë‹ê²½ìš°
-// szFileì— í™”ì´íŠ¸ë¦¬ìŠ¤íŠ¸ì˜ ë‹¨ì–´ì™€ ë™ì¼í•œ ë‹¨ì–´ê°€ ì¡´ìž¬í•˜ëŠ” ê²ƒìœ¼ë¡œ íŒë‹¨í•˜ì—¬ TRUEë¥¼ ë°˜í™˜
-// ê²€ìƒ‰ ê²°ê³¼ê°€ ì—†ì„ ê²½ìš° FALSEë¥¼ ë°˜í™˜
+// return true if szFile is in the g_szAllow list/
 static BOOL IsWhitelisted(LPTSTR szFile)
 {
+	// g_szAllow ¹è¿­ Å©±â¸¸Å­ µ¹¸®´Âµ¥ 
 	for(int i=0; i<sizeof(g_szAllow)/sizeof(LPTSTR); i++)
 	{
 		if (_tcsstr(szFile, g_szAllow[i]) != NULL) 
+			// _tcsstr(°Ë»ö ´ë»ó, °Ë»ö¾î)/
 			return TRUE;
 	}
 	return FALSE;
 }
+// szFile¿¡ g_szAllow ¹è¿­ °ªµé°ú µ¿ÀÏÇÑ ´Ü¾î°¡ ÀÖ´ÂÁö Ã¼Å©ÇÏ¿© ÀÖÀ¸¸é TRUE¸¦ ¹ÝÈ¯ 
+// ¾øÀ¸¸é FALSE¸¦ ¹ÝÈ¯ 
