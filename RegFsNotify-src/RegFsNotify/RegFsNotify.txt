@@ -1,44 +1,90 @@
-Monitoring HKEY 80000002\SOFTWARE
-Monitoring HKEY 80000001\SOFTWARE
-[info.Name] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows NT\CurrentVersion 
-[szName] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows NT\CurrentVersion 
-[Subkey] Winlogon 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon 
-[cValues] 0 
-[info.Name] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
-[szName] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
-[Subkey] Run 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
-[cValues] 0 
-[info.Name] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
-[szName] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
-[Subkey] Run 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
-[cValues] 0 
-[info.Name] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
-[szName] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion 
-[Subkey] Run 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run 
-[cValues] 0 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 [Value 1] OneDrive 
 [Value 2] MagicLine4NP 
 [Value 3] KakaoTalk 
 [Value 4] DAEMON Tools Lite 
 [Value 5] RESTART_STICKY_NOTES 
-[Value 6] test 
-[info.Name] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run0-4A66-81A1-3CBE29274458} 
-[szName] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run0-4A66-81A1-3CBE29274458} 
-[Subkey] 새 키 #1 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run0-4A66-81A1-3CBE29274458}\새 키 #1 
-[cValues] 6 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 [Value 1] OneDrive 
 [Value 2] MagicLine4NP 
 [Value 3] KakaoTalk 
 [Value 4] DAEMON Tools Lite 
 [Value 5] RESTART_STICKY_NOTES 
-[Value 6] test 
-[info.Name] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run0-4A66-81A1-3CBE29274458} 
-[szName] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run0-4A66-81A1-3CBE29274458} 
-[Subkey] ttttt 
-[REGISTRY] \REGISTRY\USER\S-1-5-21-630330553-1717357570-1005771704-1001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run0-4A66-81A1-3CBE29274458}\ttttt 
-[cValues] 6 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive 
+[Value 2] MagicLine4NP 
+[Value 3] KakaoTalk 
+[Value 4] DAEMON Tools Lite 
+[Value 5] RESTART_STICKY_NOTES 
