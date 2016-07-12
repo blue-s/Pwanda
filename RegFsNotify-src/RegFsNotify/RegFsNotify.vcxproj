@@ -90,9 +90,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="checkState.cpp" />
     <ClCompile Include="file.cpp" />
     <ClCompile Include="reg.cpp" />
     <ClCompile Include="RegFsNotify.cpp" />
+    <ClCompile Include="setUser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mon.h" />

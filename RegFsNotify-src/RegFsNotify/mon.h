@@ -1,7 +1,8 @@
 ﻿/*
  * 변경 사항 :
  * [1] 파일만 정보를 확인할 수 있도록 수정
- * [2] 현재 사용자가 Admin인지, 현재 프로세스가 어떠한 권한으로 실행되었는지 확인
+ * [2] 현재 사용자가 Admin인지, 현재 프로세스가 어떠한 권한으로 실행되었는지 확인 : checkState.cpp
+ * [3] 권한 상승 : setUser.cpp
  */
 
 #pragma once
@@ -14,6 +15,14 @@
 #include <locale.h>	
 #include <shlobj.h>					// for IsUserAnAdmin() function
 #pragma comment(lib, "shell32.lib")	// for IsUserAnAdmin() function
+void checkState();			// 점검 함수 추가
+
+// [3] 테스트를 위한 추가
+#include "tlhelp32.h"
+#define DEF_PROC_NAME	(L"explorer.exe")
+#define DEF_DLL_NAME	(L"myhack.dll")
+int setUser();				// 사용자 권한 함수 추가
+
 
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
 
