@@ -61,6 +61,9 @@ void QueryKey(HKEY hKey){
 	DWORD i, retCode;
 	TCHAR  achValue[MAX_VALUE_NAME];
 	DWORD cchValue = MAX_VALUE_NAME;
+	
+	TCHAR  achData[MAX_VALUE_NAME];
+	DWORD cchData = MAX_VALUE_NAME;
 
 	retCode = RegQueryInfoKey(
 		hKey,						
@@ -106,18 +109,21 @@ void QueryKey(HKEY hKey){
 		{
 			cchValue = MAX_VALUE_NAME; 
 			achValue[0] = '\0';
+			cchData = MAX_VALUE_NAME; 
+			achData[0] = '\0';
+
 			retCode = RegEnumValue(
 				hKey,					
 				i,                      
-				achValue,	// 값 이름 저장 배열 
-				&cchValue,				
+				achValue,	//값 이름 저장 배열 
+				&cchValue,	//				
 				NULL,					
 				NULL,					
-				NULL,					
-				NULL);					
+				(LPBYTE)achData,					
+				&cchData);					
 
 			if(retCode == ERROR_SUCCESS)
-			{ Output(FOREGROUND_RED, _T("[Value %d] %s \n"), i+1, achValue); }
+			{ Output(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); }
 		}
 		printf("Number of values: %d\n", cValues);
 	}

@@ -1,90 +1,92 @@
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-[Value 1] OneDrive 
-[Value 2] MagicLine4NP 
-[Value 3] KakaoTalk 
-[Value 4] DAEMON Tools Lite 
-[Value 5] RESTART_STICKY_NOTES 
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] MagicLine4NP = C:\Program Files (x86)\DreamSecurity\MagicLine4NP\MagicLineNP.exe
+[Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 5] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] OneDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
