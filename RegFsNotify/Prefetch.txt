@@ -1,0 +1,9 @@
+[PRFETCH] ------> dkdkdkdkdkdkdkdkddk.txt 
+[RENAMED (OLD)] C:\Windows\Prefetch\dkdkdkdkdkdkdkdkddk.txt 
+[PRFETCH] ------> fdsfasfaasfa.txt 
+
+[RENAMED (NEW)] C:\Windows\Prefetch\fdsfasfaasfa.txt 
+[PRFETCH] ------> GOOGLEUPDATE.EXE-0E1E7B82.pf 
+[MODIFIED] C:\Windows\Prefetch\GOOGLEUPDATE.EXE-0E1E7B82.pf 
+[PRFETCH] ------> GOOGLEUPDATE.EXE-0E1E7B82.pf 
+[MODIFIED] C:\Windows\Prefetch\GOOGLEUPDATE.EXE-0E1E7B82.pf 
