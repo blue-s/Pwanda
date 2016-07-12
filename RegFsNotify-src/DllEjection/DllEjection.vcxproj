@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EjectionDll.cpp" />
+    <ClCompile Include="getSID.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{32C71236-C6BB-48A6-BCF0-81767B60A759}</ProjectGuid>
