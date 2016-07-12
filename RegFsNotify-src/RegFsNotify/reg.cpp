@@ -13,6 +13,24 @@
 
 ULARGE_INTEGER g_tmStart;
 
+//#if defined(MIDL_PASS)
+//typedef struct _ULARGE_INTEGER {
+//#else // MIDL_PASS
+//typedef union _ULARGE_INTEGER {
+//    struct {
+//        DWORD LowPart;
+//        DWORD HighPart;
+//    } DUMMYSTRUCTNAME;
+//    struct {
+//        DWORD LowPart;
+//        DWORD HighPart;
+//    } u;
+//#endif //MIDL_PASS
+//    ULONGLONG QuadPart;
+//} ULARGE_INTEGER;
+//
+//typedef ULARGE_INTEGER *PULARGE_INTEGER;
+
 #define MAX_KEY_LENGTH 255
 #define MAX_VALUE_NAME 16383
 
@@ -58,24 +76,6 @@ void GetKeyName(HKEY hKey, LPWSTR szName)
 	//	ULONG NameLength;
 	//	WCHAR Name[4096];
 	//} KEY_NAME_INFORMATION, *PKEY_NAME_INFORMATION;
-
-	//TCHAR   achValue[MAX_VALUE_NAME];
-	//DWORD    cchValue = MAX_VALUE_NAME;
-	//DWORD    i=0, ret; 
-	//memset(achValue, 0, sizeof(achValue));
-	//ret = RegEnumValue(
-	//	hKey,              // Handle to an open key
-	//	i,                      // Index of value
-	//	achValue,       // Value name 
-	//	&cchValue,		// Buffer for value name
-	//	NULL,            // Reserved
-	//	NULL,            // Value type
-	//	NULL,           // Value data
-	//	NULL);          // Buffer for value data
-
-	//if(ret == ERROR_SUCCESS){ 
-	//	printf("(%d) Value Name: %s.\n", i+1, achValue); 
-	//}
 
 	KEY_NAME_INFORMATION info;
 	DWORD dwLen;
@@ -162,6 +162,25 @@ void GetRegistryChanges(HKEY hKey)
 			//시간비교
 			if (tmWrite.QuadPart > g_tmStart.QuadPart)
 			{
+				for(j=0, ret=ERROR_SUCCESS; j<cValues; j++)
+				{
+					cchValue = MAX_VALUE_NAME; 
+					achValue[0] = '\0';
+
+					ret = RegEnumValue( //지정한 키가 가지고 있는 모든 값의 이름들
+						hKey,             
+						j,                
+						achValue,       //값의 이름
+						&cchValue,		//achValue의 크기
+						NULL, NULL, NULL, NULL);
+
+					if(ret == ERROR_SUCCESS)
+					{
+						Output(FOREGROUND_RED, _T("[Value %d] %s \n"), j+1, achValue);
+					}
+					printf("[cValues Count] %d\n", cValues);
+				}
+
 				//szName 초기화
 				memset(szName, 0, sizeof(szName));
 
@@ -178,28 +197,30 @@ void GetRegistryChanges(HKEY hKey)
 
 					Output(FOREGROUND_GREEN, _T("[cValues] %d \n"), cValues);
 
+					//------------------------------------추가된 코드------------------------------------
 					//if(cValues) //서브키내에 값이 존재하면
 					//{
-						for(j=0, ret=ERROR_SUCCESS; j<cValues; j++)
-						{
-							cchValue = MAX_VALUE_NAME; 
-							achValue[0] = '\0';
+						//for(j=0, ret=ERROR_SUCCESS; j<cValues; j++)
+						//{
+						//	cchValue = MAX_VALUE_NAME; 
+						//	achValue[0] = '\0';
 
-							ret = RegEnumValue( //지정한 키가 가지고 있는 모든 값의 이름들
-								hKey,             
-								j,                
-								achValue,       //값의 이름
-								&cchValue,		//achValue의 크기
-								NULL, NULL, NULL, NULL);
+						//	ret = RegEnumValue( //지정한 키가 가지고 있는 모든 값의 이름들
+						//		hKey,             
+						//		j,                
+						//		achValue,       //값의 이름
+						//		&cchValue,		//achValue의 크기
+						//		NULL, NULL, NULL, NULL);
 
-							if(ret == ERROR_SUCCESS)
-							{
-								Output(FOREGROUND_RED, _T("[Value %d] %s \n"), j+1, achValue);
-							}
-							printf("[cValues Count] %d\n", cValues);
-						}
+						//	if(ret == ERROR_SUCCESS)
+						//	{
+						//		Output(FOREGROUND_RED, _T("[Value %d] %s \n"), j+1, achValue);
+						//	}
+						//	printf("[cValues Count] %d\n", cValues);
+						//}
 					//}
 					//else{ _tprintf(_T("Value Failed!! \n")); }
+					//------------------------------------추가된 코드------------------------------------
 				}
 			}
 
@@ -228,8 +249,8 @@ void UpdateTime(void)
 	SYSTEMTIME st;
 	FILETIME   ft;
 
-	GetSystemTime(&st);
-	SystemTimeToFileTime(&st, &ft);
+	GetSystemTime(&st); //UTC 표준 시간을 반환
+	SystemTimeToFileTime(&st, &ft); //파일 시간을 시스템 시간으로 변환
 
 	g_tmStart.HighPart = ft.dwHighDateTime;
 	g_tmStart.LowPart  = ft.dwLowDateTime;	
@@ -278,7 +299,7 @@ DWORD WatchKey(PREGMON p)
 	//특정 스레드가 종료할 때까지 대기
 	while(WaitForSingleObject(g_hStopEvent, 1) != WAIT_OBJECT_0)
 	{
-		UpdateTime();
+		UpdateTime(); // -> UpdateTime() 
 
 		//변경 알림을 받을 수 있도록 등록 -> 나중에 
 		ret = RegNotifyChangeKeyValue(hKey, 
