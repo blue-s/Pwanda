@@ -6,15 +6,14 @@
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
 
 #define FILE_CHANGE_FLAGS FILE_NOTIFY_CHANGE_FILE_NAME |\
-					 FILE_NOTIFY_CHANGE_DIR_NAME |\
-					 FILE_NOTIFY_CHANGE_ATTRIBUTES |\
-					 FILE_NOTIFY_CHANGE_SIZE |\
-					 FILE_NOTIFY_CHANGE_CREATION |\
-					 FILE_NOTIFY_CHANGE_SECURITY
+	FILE_NOTIFY_CHANGE_DIR_NAME |\
+	FILE_NOTIFY_CHANGE_ATTRIBUTES |\
+	FILE_NOTIFY_CHANGE_SIZE |\
+	FILE_NOTIFY_CHANGE_CREATION |\
+	FILE_NOTIFY_CHANGE_SECURITY
 
 #define REG_CHANGE_FLAGS REG_NOTIFY_CHANGE_NAME |\
-					 REG_NOTIFY_CHANGE_LAST_SET
-
+	REG_NOTIFY_CHANGE_LAST_SET
 void Output_Roaming(USHORT Color, LPTSTR format, ... );
 void Output_Prefetch(USHORT Color, LPTSTR format, ... );
 void StartFileMonitor(void);
@@ -29,7 +28,7 @@ extern HANDLE  g_hRegWatch[2];
 static LPTSTR Roaming_szAllow[] = {       //asdf_szAllow -->Roaming_szAllow[] 
 	_T("Roaming\\"),
 	_T("AppData\Roaming\\"),
-	
+
 };
 
 static LPTSTR Prefetch_szAllow[] = {      //qwer_szAllow --> Prefetch_szAllow[]

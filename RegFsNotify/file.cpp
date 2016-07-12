@@ -1,16 +1,28 @@
 #include "mon.h"
+#include <stdio.h>
 
-// maximum number of drives to monitor 
 #define MAX_DRIVES 24
+#define MAX_VALUE_NAME 16383
 
-// global variables for change notifications
 HANDLE  g_ChangeHandles[MAX_DRIVES];
 HANDLE  g_DirHandles[MAX_DRIVES];
 LPTSTR  g_szDrives[MAX_DRIVES];
 DWORD   g_idx = 0;
 
+//변경한 부분
+TCHAR * roaming_file_name=_T(""); //로밍부분 파싱해서 얻은 파일 명
+TCHAR * prefetch_file_name=_T(""); //프리패치에서 파싱해서 얻은 파일 명
 
-//asdf에 대한 프로세스 변화감지.
+TCHAR s1[MAX_VALUE_NAME]=_T("Roaming");
+TCHAR s2[MAX_VALUE_NAME]=_T("Prefetch");
+
+DWORD Ridx=0; //로밍부분 인덱스 초기화
+DWORD Pidx=0; //프리패치 인덱스 초기화
+
+void parsing(DWORD flag, TCHAR * filename);
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 void ProcessChange(int idx)
 {
 	BYTE buf[32 * 1024];
@@ -18,16 +30,15 @@ void ProcessChange(int idx)
 	PFILE_NOTIFY_INFORMATION pNotify;
 	int offset = 0;
 	TCHAR szFile[MAX_PATH*2];
-
 	memset(buf, 0, sizeof(buf));
 
-	// find out what type of change triggered the notification
 	if (ReadDirectoryChangesW(g_DirHandles[idx], buf, 
 		sizeof(buf), TRUE, 
 		FILE_CHANGE_FLAGS, &cb, NULL, NULL))
 	{
-		// parse the array of file information structs
-	do {
+
+		do {
+
 			pNotify = (PFILE_NOTIFY_INFORMATION) &buf[offset];
 			offset += pNotify->NextEntryOffset;
 
@@ -36,86 +47,82 @@ void ProcessChange(int idx)
 			memcpy(szFile, pNotify->FileName, 
 				pNotify->FileNameLength);
 
-		/*	
-			if (!(asdfWhitelisted(szFile))) {    
-				continue;
-			}
-		    //위와 같은 경우에
-			//목록에 있으면 출력, 없으면 출력안하고 다음 값으로 넘어감.
-			// 반환값이 참일 경우는 화이트리스트와 일치를 한다는 뜻.
-			// 화이트 리스트와 일치하면, 참인데 앞에 "!" 있어서 거짓으로 됨. 그래서 출력,
-			// 일치하지 않으면, 출력을 안함.
+			_tprintf(_T("--------- %s --------- \n"), szFile);
+			_tprintf(_T("---------------------------------------------------- \n"));
+
+			//	szfile = C:\Windows\Prefetch\dfsfasfafsfas.txt
+			//	s1 = Prefetch
+			//	prefetch_file_name -> Prefetch\dfsfasfafsfas.txt
+			//	prefetch_file_name + 9
+			//	dfsfasfafsfas.txt
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
-			if (asdfWhitelisted(szFile)) {    
-				continue;
-			}
-		*/  //위와 같은 경우에
-			//화이트 리스트에 있는것은 건너뛰고 나머지를 출력한다는 뜻임.
-			// 따라서 참 부분에 switch 부분을 가지고 와서 출력을 시키고, 나머지 부분을 continue로 바꿔야함.
-		
-			if (RoamingWhitelisted(szFile)) {    
-					switch (pNotify->Action)
+			if (RoamingWhitelisted(szFile)) { 
+				
+				roaming_file_name = _tcsstr(szFile, s1);
+				Output_Roaming(FOREGROUND_BLUE, _T("[ROAMING] ------> %s \n"), roaming_file_name+8);
+
+
+				switch (pNotify->Action)
 				{
-					case FILE_ACTION_ADDED:
-						Output_Roaming(FOREGROUND_GREEN, 
-							_T("[ADDED] %s%s\n"), g_szDrives[idx], szFile);
+				case FILE_ACTION_ADDED:
+					Output_Roaming(FOREGROUND_GREEN, _T("[ADDED] %s%s \n"), g_szDrives[idx], szFile);
 					break;
-					case FILE_ACTION_REMOVED: 
-						Output_Roaming(FOREGROUND_RED, 
-							_T("[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
-						break;
-					case FILE_ACTION_MODIFIED: 
-						Output_Roaming(0, _T("[MODIFIED] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break;
-					case FILE_ACTION_RENAMED_OLD_NAME:
-						Output_Roaming(0, _T("[RENAMED (OLD)] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break; 
-					case FILE_ACTION_RENAMED_NEW_NAME:
-						Output_Roaming(0,_T("[RENAMED (NEW)] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break;
-					default:
-						Output_Roaming(0,_T("[??] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break;
-				}; //end of switch
+				case FILE_ACTION_REMOVED: 
+					Output_Roaming(FOREGROUND_RED, _T("\n [REMOVED] %s%s \n"), g_szDrives[idx], szFile);
+					break;
+				case FILE_ACTION_MODIFIED: 
+					Output_Roaming(0, _T("[MODIFIED] %s%s \n"),g_szDrives[idx], szFile);
+					break;
+				case FILE_ACTION_RENAMED_OLD_NAME:
+					Output_Roaming(0, _T("\n[RENAMED (OLD)] %s%s \n"), g_szDrives[idx], szFile);
+					break; 
+				case FILE_ACTION_RENAMED_NEW_NAME:
+					Output_Roaming(0, _T("\n[RENAMED (NEW)] %s%s \n"), g_szDrives[idx], szFile);
+					break;
+				default:
+					Output_Roaming(0,_T("[??] %s%s \n"), 
+						g_szDrives[idx], szFile);
+					break;
+				}; 
 			}else if(PrefetchWhitelisted(szFile)){
-					switch (pNotify->Action)
+			
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+				//파일경로를 (char)로 변환시킴
+
+				prefetch_file_name = _tcsstr(szFile, s2);
+				Output_Prefetch(FOREGROUND_BLUE, _T("[PRFETCH] ------> %s \n"), prefetch_file_name+9);
+
+				switch (pNotify->Action)
 				{
-					case FILE_ACTION_ADDED:
-						Output_Prefetch(FOREGROUND_GREEN, 
-							_T("[ADDED] %s%s\n"), g_szDrives[idx], szFile);
+				case FILE_ACTION_ADDED:
+					Output_Prefetch(FOREGROUND_GREEN, _T("\n[ADDED] %s%s\n"), g_szDrives[idx], szFile);
 					break;
-					case FILE_ACTION_REMOVED: 
-						Output_Prefetch(FOREGROUND_RED, 
-							_T("[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
-						break;
-					case FILE_ACTION_MODIFIED: 
-						Output_Prefetch(0, _T("[MODIFIED] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break;
-					case FILE_ACTION_RENAMED_OLD_NAME:
-						Output_Prefetch(0, _T("[RENAMED (OLD)] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break; 
-					case FILE_ACTION_RENAMED_NEW_NAME:
-						Output_Prefetch(0,_T("[RENAMED (NEW)] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break;
-					default:
-						Output_Prefetch(0,_T("[??] %s%s\n"), 
-							g_szDrives[idx], szFile);
-						break;
-				}; //end of switch
+				case FILE_ACTION_REMOVED: 
+					Output_Prefetch(FOREGROUND_RED, _T("\n[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
+					break;
+				case FILE_ACTION_MODIFIED: 
+					Output_Prefetch(0, _T("[MODIFIED] %s%s \n"), g_szDrives[idx], szFile);
+					break;
+				case FILE_ACTION_RENAMED_OLD_NAME:
+					Output_Prefetch(0, _T("[RENAMED (OLD)] %s%s \n"), g_szDrives[idx], szFile);
+					break; 
+				case FILE_ACTION_RENAMED_NEW_NAME:
+					Output_Prefetch(0,_T("\n[RENAMED (NEW)] %s%s \n"), g_szDrives[idx], szFile);
+					break;
+				default:
+					Output_Prefetch(0,_T("[??] %s%s \n"), g_szDrives[idx], szFile);
+					break;
+				}; 
 			}else{
 				continue;
-			}
-						
+			}	
 		} while (pNotify->NextEntryOffset != 0);
 	}
 }    
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void StartFileMonitor(void)
 {
@@ -136,13 +143,12 @@ void StartFileMonitor(void)
 	{
 		ddType = GetDriveType(pStart);
 
-		// only monitor local and removable (i.e. USB) drives
 		if ((ddType == DRIVE_FIXED || ddType == DRIVE_REMOVABLE) && 
 			_tcscmp(pStart, _T("A:\\")) != 0)
 		{
 			hChange = FindFirstChangeNotification(pStart,
-									TRUE, /* watch subtree */
-								    FILE_CHANGE_FLAGS);
+				TRUE,
+				FILE_CHANGE_FLAGS);
 
 			if (hChange == INVALID_HANDLE_VALUE)
 				continue;
@@ -152,7 +158,7 @@ void StartFileMonitor(void)
 				FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE,
 				NULL, 
 				OPEN_EXISTING, 
-				FILE_FLAG_BACKUP_SEMANTICS, /* opens a directory */
+				FILE_FLAG_BACKUP_SEMANTICS,
 				NULL);
 
 			if (hDir == INVALID_HANDLE_VALUE) {
@@ -162,7 +168,6 @@ void StartFileMonitor(void)
 
 			_tprintf(_T("Monitoring %s\n"), pStart);
 
-			// save the handles and drive letter 
 			g_szDrives[g_idx]      = _tcsdup(pStart);
 			g_DirHandles[g_idx]    = hDir;
 			g_ChangeHandles[g_idx] = hChange;
@@ -171,8 +176,7 @@ void StartFileMonitor(void)
 
 		pStart += wcslen(pStart) + 1;
 	}
- 
-	// wait for a notification to occur
+
 	while(WaitForSingleObject(g_hStopEvent, 1) != WAIT_OBJECT_0) 
 	{
 		dwWaitStatus = WaitForMultipleObjects(
@@ -182,7 +186,6 @@ void StartFileMonitor(void)
 
 		bOK = FALSE;
 
-		// if the wait suceeded, for which handle did it succeed?
 		for(int i=0; i < g_idx; i++)
 		{
 			if (dwWaitStatus == WAIT_OBJECT_0 + i) 
@@ -198,7 +201,6 @@ void StartFileMonitor(void)
 			}
 		}
 
-		// the wait failed or timed out
 		if (!bOK) break;
 	}
 	_tprintf(_T("Got stop event...\n"));
