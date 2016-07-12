@@ -21,6 +21,7 @@
  HANDLE g_hStopEvent;
  HANDLE g_hRegWatch[2];
 
+
 USHORT GetConsoleTextAttribute(HANDLE hConsole)
 {
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
@@ -115,6 +116,7 @@ void _tmain(int argc, TCHAR *argv[])
 	WaitForMultipleObjects(2, (const HANDLE*)&hThread, TRUE, INFINITE);
 	TerminateThread(g_hRegWatch[0], 0);
 	TerminateThread(g_hRegWatch[1], 0);
+
 
 	CloseHandle(g_hStopEvent);
 	CloseHandle(g_hFile);

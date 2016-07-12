@@ -1,12 +1,12 @@
-﻿빌드 시작: 2016-07-12 오후 12:54:23
+﻿빌드 시작: 2016-07-12 오후 4:16:39
      1>2 노드의 "C:\Users\kosta\Documents\Pwanda\RegFsNotify-src\RegFsNotify\RegFsNotify.vcxproj" 프로젝트(build 대상)입니다.
      1>InitializeBuildStatus:
          "AlwaysCreate"이(가) 지정되었기 때문에 "Debug\RegFsNotify.unsuccessfulbuild"을(를) 만들고 있습니다.
        ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt reg.cpp
          reg.cpp
-     1>c:\users\kosta\documents\pwanda\regfsnotify-src\regfsnotify\reg.cpp(141): warning C4101: 'hEvent' :참조되지 않은 지역 변수입니다.
-     1>c:\users\kosta\documents\pwanda\regfsnotify-src\regfsnotify\reg.cpp(186): warning C4129: 'M' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+     1>c:\users\kosta\documents\pwanda\regfsnotify-src\regfsnotify\reg.cpp(183): warning C4101: 'hEvent' :참조되지 않은 지역 변수입니다.
+     1>c:\users\kosta\documents\pwanda\regfsnotify-src\regfsnotify\reg.cpp(228): warning C4129: 'M' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
        ManifestResourceCompile:
          모든 출력이 최신 상태입니다.
        Link:

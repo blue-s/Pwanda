@@ -14,6 +14,7 @@ Software\Microsoft\Windows\CurrentVersion\Run 			→ 확실히 건드림
 //권한 상승 -> 프로세스의 PE 헤더 정보를 적용하여 API를 이용해 권한 부여
 
 -----------------------------------------------------------------------------------------
+[160711]
 
 Software인 서브키를 Software\Microsoft\Windows\CurrentVersion\Run 로 변경 -> X
 
@@ -35,13 +36,19 @@ Software인 서브키를 Software\Microsoft\Windows\CurrentVersion\Run 로 변경 -> X
 	2) RegQueryValueEx 함수를 추가하여 서브키 내의 값 이름과 데이터 불러오기 -> X
 
 -----------------------------------------------------------------------------------------
+[160712]
 
 예제 파일을 숙지하고 내일(160712) 다시 한번 도전
 -> 경로를 \Run 으로 고정하고, \Run의 하위키와 값을 계속하여 재귀적으로 호출 -> O
 
 -> RegQueryValueEx() 로 값의 데이터까지 출력시키기 -> RegEnumValue() 에서 NULL로 지정되어 있던 매개변수를 이용하여 데이터까지 출력 -> O
 
+-> 문자열 파싱(strstr 함수 이용)
+http://fornangman.tistory.com/26
 
+	"C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background	
+	-> _tcsstr() : OneDrive 으로 비교 -> O
+	-> OneDrive.exe" /background 만 출력 -> O
 
 
 

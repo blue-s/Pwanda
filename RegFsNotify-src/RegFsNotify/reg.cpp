@@ -1,14 +1,13 @@
 #include "mon.h"
 #include <stdio.h>
-
-///////////////////////////////////////////////////////
+#include <string.h>
 
 ULARGE_INTEGER g_tmStart;
 
 #define MAX_KEY_LENGTH 255
 #define MAX_VALUE_NAME 16383
 
-///////////////////////////////////////////////////////
+char *src="";
 
 typedef struct REGMON { 
 	HKEY   hMainKey;
@@ -45,7 +44,7 @@ ZWQUERYKEY ZwQueryKey;
 
 //[3]
 void QueryKey(HKEY hKey){
-	
+
 	TCHAR    achKey[MAX_KEY_LENGTH];	
 	DWORD    cbName;					
 	TCHAR    achClass[MAX_PATH] = _T("");	
@@ -61,9 +60,17 @@ void QueryKey(HKEY hKey){
 	DWORD i, retCode;
 	TCHAR  achValue[MAX_VALUE_NAME];
 	DWORD cchValue = MAX_VALUE_NAME;
-	
+
 	TCHAR  achData[MAX_VALUE_NAME];
 	DWORD cchData = MAX_VALUE_NAME;
+
+	//
+	TCHAR path[MAX_VALUE_NAME] = _T("");
+	TCHAR search[MAX_VALUE_NAME] = _T("OneDrive");
+	TCHAR * result=_T("");
+	
+	TCHAR * FileName=_T("");
+
 
 	retCode = RegQueryInfoKey(
 		hKey,						
@@ -96,7 +103,7 @@ void QueryKey(HKEY hKey){
 				&ftLastWriteTime		
 				);
 			if(retCode == ERROR_SUCCESS)  
-			{ printf("(%d) %s\n", i+1, achKey); }
+			{ Output(FOREGROUND_GREEN, _T("[%d] %s\n"), i+1, achKey); }
 		}
 		printf("Number of subkeys: %d\n\n", cSubKeys);
 	}
@@ -119,12 +126,47 @@ void QueryKey(HKEY hKey){
 				&cchValue,	//				
 				NULL,					
 				NULL,					
-				(LPBYTE)achData,					
+				(LPBYTE)achData,	// 포인터 				
 				&cchData);					
 
 			if(retCode == ERROR_SUCCESS)
-			{ Output(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); }
-		}
+			{ Output(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); 
+
+				//1. 경로 값 넣어주기
+				memcpy(path, achData, MAX_VALUE_NAME);
+				Output(FOREGROUND_GREEN, _T("[Path] %s\n"), path);
+				Output(FOREGROUND_BLUE, _T("[search] %s\n"), search);
+				
+				//2. strstr로 파싱하기 
+				//Output(FOREGROUND_BLUE, _T("[search] %s\n"), (char *)search);
+
+				//Output(FOREGROUND_GREEN, _T("[result] %s\n"), _tcsstr(path,search));
+
+				//_tprintf(_T("---------------------> %s \n"), _tcsstr(path,search));
+
+				
+				if(result = _tcsstr(path,search)){
+
+					Output(FOREGROUND_GREEN, _T("[result] %s\n"), result);
+
+					FileName = result+9;
+
+					_tprintf(_T("-------------------------------------------------------------------------> [FileName] %s \n"), FileName);
+
+					//Output(FOREGROUND_BLUE, _T("[result] %s\n"), src);
+					//_tprintf(_T("No search"));
+					//Output(FOREGROUND_BLUE, _T("[Src] %s\n"), src);
+					
+				}
+				
+				
+
+			}
+			//achValue: Value 값 / achData: 해당 Value의 Data 값 
+
+
+		} // end for
+
 		printf("Number of values: %d\n", cValues);
 	}
 	else
@@ -168,8 +210,8 @@ DWORD WatchKey(PREGMON p)
 
 	QueryKey(hKey); // -> [3] QueryKey()
 
-	return WatchKey(p);
-	//return 0;
+	//return WatchKey(p);
+	return 0;
 }
 
 

@@ -96,6 +96,7 @@ void StartFileMonitor(void)
 	LPTSTR  pStart = NULL;
 	HANDLE  hChange, hDir;
 
+
 	// get a list of logical drives
 	memset(pszList, 0, sizeof(pszList));
 	GetLogicalDriveStrings(sizeof(pszList), pszList);

@@ -23,6 +23,8 @@ extern HANDLE  g_hStopEvent;
 extern HANDLE  g_hFile;
 extern HANDLE  g_hRegWatch[2];
 
+extern TCHAR * FileName;
+
 // whitelisted filenames or paths
 static LPTSTR g_szAllow[] = {
 	_T("WINDOWS\\system32\\config\\"),
