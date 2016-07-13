@@ -1,3 +1,0 @@
-Monitoring HKEY 80000002\Software
-Monitoring HKEY 80000001\Software
-[REGISTRY] \Count
