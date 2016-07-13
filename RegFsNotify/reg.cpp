@@ -154,7 +154,7 @@ void QueryKey(HKEY hKey){
 			//achValue: Value 값 / achData: 해당 Value의 Data 값 
 
 			// extractProcessName.cpp 로 가기
-			ExtractProcess(resultBuffer);
+			ExtractProcess(1, resultBuffer);
 		
 
 
@@ -166,10 +166,6 @@ void QueryKey(HKEY hKey){
 		printf("No value under this key/subkey...\n");  
 
 	_tprintf(_T("------------------------------------------------------------------------\n"));
-
-	
-	
-		ListPrint();
 
 }
 

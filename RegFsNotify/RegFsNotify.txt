@@ -4,25 +4,21 @@ Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 [search] OneDrive
 [result] OneDrive.exe" /background
 [resultBuffer] OneDrive.exe" /background
------------------[i=0] extractProcessName--------------OneDrive.exe" /background
+-----------------[i=0] reg -------------->>>>>>> OneDrive.exe" /background
 [Value 2] NaverAgent = "C:\Program Files (x86)\naver\NaverAgent\NaverAgent.exe" /autorun
 [Path] "C:\Program Files (x86)\naver\NaverAgent\NaverAgent.exe" /autorun
 [search] OneDrive
------------------[i=1] extractProcessName--------------nt.exe" /autorun
+-----------------[i=1] reg -------------->>>>>>> nt.exe" /autorun
 [Value 3] KakaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
 [Path] "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
 [search] OneDrive
------------------[i=2] extractProcessName--------------.exe" -bystartup
+-----------------[i=2] reg -------------->>>>>>> .exe" -bystartup
 [Value 4] RESTART_STICKY_NOTES = C:\Windows\System32\StikyNot.exe
 [Path] C:\Windows\System32\StikyNot.exe
 [search] OneDrive
------------------[i=3] extractProcessName--------------.exe" -bystartup
+-----------------[i=3] reg -------------->>>>>>> .exe" -bystartup
 [Value 5] DAEMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
 [Path] "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
 [search] OneDrive
------------------[i=4] extractProcessName--------------exe" -autorun
-exe" -autorun
-exe" -autorun
-exe" -autorun
-exe" -autorun
-exe" -autorun
+-----------------[i=4] reg -------------->>>>>>> exe" -autorun
+-----------------[j=0] roaming -------------->>>>>>> gitignore_global.txt

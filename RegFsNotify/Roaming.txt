@@ -1,0 +1,1 @@
+ROAMING [0] ------> gitignore_global.txt 

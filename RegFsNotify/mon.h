@@ -4,7 +4,7 @@
 #include <tchar.h>
 
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
-
+#define MAX_VALUE_NAME 16383
 #define FILE_CHANGE_FLAGS FILE_NOTIFY_CHANGE_FILE_NAME |\
 	FILE_NOTIFY_CHANGE_DIR_NAME |\
 	FILE_NOTIFY_CHANGE_ATTRIBUTES |\
@@ -22,7 +22,7 @@ void StartFileMonitor(void);
 void StartRegistryMonitor(void);
 
 // + Wan
-void ExtractProcess(TCHAR *);
+void ExtractProcess(DWORD, TCHAR *);
 void ListPrint(void);
 
 extern HANDLE  g_hStopEvent;
@@ -31,6 +31,11 @@ extern HANDLE  g_hRegWatch[2];
 
 // + Wan
 extern TCHAR * resultBuffer;
+
+// + Su
+extern TCHAR * roamingBuffer;
+extern TCHAR * prefetchBuffer;
+
 
 // whitelisted filenames or paths
 //화이트리스트
