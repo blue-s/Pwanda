@@ -1,0 +1,57 @@
+- 악성코드 유행성 판단을 레지스트리에서 분석
+
+- 네가지의 조건 중 한가지를 테스트 (레지스트리 자동 실행 등록)
+-> Run에 등록된 프로세스 목록을 출력해오기 (목표 : 화요일)
+
+- 남은 세가지 조건들은 레지스트리 전용툴을 이용해 다시 한번 확인하기
+-> 확인하지 못함
+
+[ Reg 의심 부분 ]
+Software\Microsoft\Windows\CurrentVersion\SET 			→ SET 디렉토리가 생김
+SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System 	→ 계속 건드리긴함 
+Software\Microsoft\Windows\CurrentVersion\Run 			→ 확실히 건드림
+
+//권한 상승 -> 프로세스의 PE 헤더 정보를 적용하여 API를 이용해 권한 부여
+
+-----------------------------------------------------------------------------------------
+[160711]
+
+Software인 서브키를 Software\Microsoft\Windows\CurrentVersion\Run 로 변경 -> X
+
+	1) RegEnumValue 함수를 추가하여 서브키 내의 값 이름을 불러오기
+	-> 문자열 값을 추가할 땐 값들이 보이지 않음 
+	-> 키를 생성하면 값들이 제대로 보임
+		-> RegEnumValue 함수가 실행되는 위치 때문???
+			-> 레지스트리가 변경되었는지 감지하는 
+				tmWrite.HighPart = ftWrite.dwHighDateTime
+				tmWrite.LowPart  = ftWrite.dwLowDateTime;
+				tmWrite.QuadPart > g_tmStart.QuadPart
+			부분이 서브키를 열거하는 RegEnumKeyEx 함수의 매개변수 &ftWrite에서 비롯됨
+	
+		-> 레지스트리의 서브키의 마지막 작성 시간을 저장하는 FILETIEM 구조체 변수의 주소를 전달
+		-> 서브키의 시간의 변경을 키 생성에선 감지하고, 값 생성에선 감지하지 않음?
+		
+		-> RegEnumValue 함수를 레지스트리 변경 시간을 감지하고 나서 사용 / GetKeyName() 갔다오고 가장 마지막에 사용 -> 둘다 X
+
+	2) RegQueryValueEx 함수를 추가하여 서브키 내의 값 이름과 데이터 불러오기 -> X
+-----------------------------------------------------------------------------------------
+[160712]
+
+예제 파일을 숙지하고 내일(160712) 다시 한번 도전
+-> 경로를 \Run 으로 고정하고, \Run의 하위키와 값을 계속하여 재귀적으로 호출 -> O
+
+-> RegQueryValueEx() 로 값의 데이터까지 출력시키기 -> RegEnumValue() 에서 NULL로 지정되어 있던 매개변수를 이용하여 데이터까지 출력 -> O
+
+-> 문자열 파싱(strstr 함수 이용)
+http://fornangman.tistory.com/26
+
+	"C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background	
+	-> _tcsstr() : OneDrive 으로 비교 -> O
+	-> OneDrive.exe" /background 만 출력 -> O
+-----------------------------------------------------------------------------------------
+[160713]
+
+재귀함수로 호출해왔던 감지 방식을 본래 계획하였던 레지스트리 키 변경 시 감지하는 것으로 변경 완료
+-> ExtractProcessName.cpp 로 넘기고 출력하는 부분에서 오류 발생
+
+
