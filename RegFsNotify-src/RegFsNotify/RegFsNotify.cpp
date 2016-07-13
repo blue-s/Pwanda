@@ -89,6 +89,7 @@ void _tmain(int argc, TCHAR *argv[])
 {
 	checkState();	// [2] 테스트 함수
 	setUser();		// [3] 테스트 함수
+	checkState();	// [2] 테스트 함수
 
 	g_hStopEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 
