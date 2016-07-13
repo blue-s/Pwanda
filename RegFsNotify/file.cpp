@@ -47,22 +47,24 @@ void ProcessChange(int idx)
 			memcpy(szFile, pNotify->FileName, 
 				pNotify->FileNameLength);
 
-			_tprintf(_T("--------- %s --------- \n"), szFile);
-			_tprintf(_T("---------------------------------------------------- \n"));
+			//_tprintf(_T("--------- %s --------- \n"), szFile);
+			//_tprintf(_T("---------------------------------------------------- \n"));
 
-			//	szfile = C:\Windows\Prefetch\dfsfasfafsfas.txt
-			//	s1 = Prefetch
-			//	prefetch_file_name -> Prefetch\dfsfasfafsfas.txt
-			//	prefetch_file_name + 9
-			//	dfsfasfafsfas.txt
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 			
+			// ---------------------- Roaming ---------------------- 
 			if (RoamingWhitelisted(szFile)) { 
 				
 				roaming_file_name = _tcsstr(szFile, s1);
-				Output_Roaming(FOREGROUND_BLUE, _T("[ROAMING] ------> %s \n"), roaming_file_name+8);
+				//Output_Roaming(FOREGROUND_BLUE, _T("[ROAMING] ------> %s \n"), roaming_file_name+8);
+				
+				//버퍼 생성
 
+				//ExtractProcess(resultBuffer);
 
+				//*********ADDED*********
+				/*
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
@@ -85,15 +87,22 @@ void ProcessChange(int idx)
 						g_szDrives[idx], szFile);
 					break;
 				}; 
+				*/
 			}else if(PrefetchWhitelisted(szFile)){
 			
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-				//파일경로를 (char)로 변환시킴
+				// ---------------------- Prefetch ---------------------- 
 
 				prefetch_file_name = _tcsstr(szFile, s2);
-				Output_Prefetch(FOREGROUND_BLUE, _T("[PRFETCH] ------> %s \n"), prefetch_file_name+9);
+				//Output_Prefetch(FOREGROUND_BLUE, _T("[PRFETCH] ------> %s \n"), prefetch_file_name+9);
 
+				//버퍼 생성
+
+				//ExtractProcess(resultBuffer);
+
+				//*********ADDED*********
+				/*
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
@@ -115,6 +124,7 @@ void ProcessChange(int idx)
 					Output_Prefetch(0,_T("[??] %s%s \n"), g_szDrives[idx], szFile);
 					break;
 				}; 
+				*/
 			}else{
 				continue;
 			}	
@@ -130,7 +140,7 @@ void StartFileMonitor(void)
 	BOOL  bOK = FALSE;
 	TCHAR   pszList[1024];
 	DWORD   ddType;
-	LPTSTR  pStart = NULL;
+	LPTSTR  pStart = NULL; // char *
 	HANDLE  hChange, hDir;
 
 	// get a list of logical drives
@@ -138,7 +148,7 @@ void StartFileMonitor(void)
 	GetLogicalDriveStrings(sizeof(pszList), pszList);
 
 	// parse the list of null-terminated drive strings
-	pStart = pszList;
+	pStart = pszList;// 시작점이 프로세스가 담길 배열을 가리킴 
 	while(_tcslen(pStart)) 
 	{
 		ddType = GetDriveType(pStart);
@@ -168,7 +178,9 @@ void StartFileMonitor(void)
 
 			_tprintf(_T("Monitoring %s\n"), pStart);
 
-			g_szDrives[g_idx]      = _tcsdup(pStart);
+			g_szDrives[g_idx]      = _tcsdup(pStart); 
+			// 복사할 문자열 크기에 맞는 메모리를 확보한 후 문자열을 복사한 후, 
+			// 확보한 메모리의 포인터를 반환해 줍니다
 			g_DirHandles[g_idx]    = hDir;
 			g_ChangeHandles[g_idx] = hChange;
 			g_idx++;

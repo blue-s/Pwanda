@@ -1,0 +1,322 @@
+
+#include "mon.h"
+#include <stdio.h>
+
+// global variable for time keeping 
+ULARGE_INTEGER g_tmStart;
+// 시간 저장 변수 
+
+//lagre_integer의 Unsigned 형
+/*
+공용체는 부호가 있는 64비트 정수형 데이터를 저장하기 위해 선언된 사용자 정의
+
+    데이터 형입니다. 64비트 정수를 사용할수 있도록 정의한 이유는 microsecond(1/1000000초)까지 
+
+    측정하여 좀더 정확한 시간값을 저장하기 위함입니다.
+*/
+
+#define MAX_KEY_LENGTH 255
+#define MAX_VALUE_NAME 16383
+
+// associate HKEYs with key names
+// 키 이름으로 HKEYs 할당
+
+typedef struct REGMON { 
+	HKEY   hMainKey; // 예측 : 메인 레지스트리 핸들 
+	LPTSTR szSubkey; // 예측 : 서브키 이름 
+} REGMON, *PREGMON; // 이걸 PREGMON 이라고 하겠다 
+
+//////////////////////////////////////////////////
+// these are for calling ZwQueryKey which we use to 
+// resolve a key name from a given HKEY 
+// 주어진 HKEY 에서 키 이름을 해결?하는..resolve 뜻 애매함... 아무튼 이름을 알아내는 ZwQueryKey를 호출한다
+
+// 키 이름 정보를 담고 있는 구조체 
+typedef struct _KEY_NAME_INFORMATION {
+  ULONG NameLength;
+  WCHAR Name[4096];// 나중에 쓰일 변수 , 키 이름 값이라고 생각 
+} KEY_NAME_INFORMATION, *PKEY_NAME_INFORMATION;
+// 
+
+typedef enum _KEY_INFORMATION_CLASS {
+// typedef enum : 숫자로 작성된 상수를 효과적으로 대체하기 위해 사용되는 여러 방법 중 하나
+// 갯수의 많고 적음이나 숫자의 크고 작음보다는 구분하기 위한 인덱스 혹은 태그 정도의 의미로 사용할 때
+// enum을 많이 사용한다 
+	// 열거 타입 레지스트리 키에 대해 제공되는 정보의 종류
+  KeyBasicInformation            = 0,
+  KeyNodeInformation             = 1,
+  KeyFullInformation             = 2,
+  KeyNameInformation             = 3,
+  KeyCachedInformation           = 4,
+  KeyFlagsInformation            = 5, // 시스템 사용을 위해 예약 
+  KeyVirtualizationInformation   = 6,
+  KeyHandleTagsInformation       = 7, // 시스템 사용을 위해 에약
+  MaxKeyInfoClass                = 8  // 열거타입의 최대값 
+} KEY_INFORMATION_CLASS;
+
+typedef NTSTATUS (WINAPI *ZWQUERYKEY)(
+	HANDLE,  // KeyHandle: 레지스트리 키 정보를 얻기 위한 핸들 
+	KEY_INFORMATION_CLASS, // KeyInformationClass : KeyInformation 버퍼에 반환되는 
+	// 인포메이션 타입을 결정하는 KEY_INFORMATION_CLASS value를 지정하다, 명확하게 말하다 
+	PVOID, // KeyInformation :
+	ULONG, // Length : KeyInformation 버퍼의 크기를 바이트 단위로 지정 
+	PULONG); // ResultLength : 요청된 키 정보의 크기(바이트)를 받는 변수의 포인터 
+
+ZWQUERYKEY ZwQueryKey; // 레지스트리 키 클래스와 레지스트리의 서브 키들에 대한 사이즈나 갯수에 대한 정보를 주는 게(?) Zwquerykey 다 
+/*
+The ZwQueryKey routine provides information about the class of a registry key, 
+and the number and sizes of its subkeys.
+*/
+
+// 키밑에 하위키가 생길 때 szName get하러 오는 곳 
+void GetKeyName(HKEY hKey, LPWSTR szName)
+{
+	KEY_NAME_INFORMATION info; // 키 길이하고 키 네임 정보를 담고 있던 구조체를 info로 선언 
+	DWORD dwLen; // 길이 
+	NTSTATUS n; // 커널 모드의 반환값이라고 한다. 커널단에 API를 호출하면 반환되는 값이라고 일단 이해했음 
+	memset(&info, 0, sizeof(info));
+	//레지스트리 키의 클래스, 하위키 개수와 크기에 대한 정보 제공
+
+	// 지정된 레지스트리 키의 서브키들에 대한 정보가 있으면 
+	if (ZwQueryKey != NULL) {
+		n = ZwQueryKey(hKey, KeyNameInformation,
+		    &info, sizeof(info), &dwLen); // n이 또 커널모드 반환값, 핸들같은 존재니까 여기에 반환값을 받아놓고 
+		
+		// 위의 수행이 성공이고 키 이름길이가 알맞으면 (0보다 크고 맥시멈보다 작음)
+		if (n == STATUS_SUCCESS &&
+			info.NameLength > 0 &&
+			info.NameLength < MAX_KEY_LENGTH) 
+		{ 
+			// strcpy (src2, src1) --> src1의 내용을 scr2에 복사한다 
+			wcscpy(szName, info.Name);
+			// info.Name인 키 이름값을 szName에 복사한다 
+			szName[info.NameLength-1] = L'\x00';
+			// szName[이름길이-1]에 뒤에 값을 넣음 ---> 여기는 이해가 안감!  
+		}
+	}
+}
+//////////////////////////////////////////////////
+
+void GetRegistryChanges(HKEY hKey) 
+{ 
+    TCHAR    szKey[MAX_KEY_LENGTH];  // 예측: 생성되어 붙을 키 
+    DWORD    cbName;  // 왜 int 지? string이어야 하는거 아닌가 , 아니면 name 개수라는 건가 ? ////////////////////////////              
+    DWORD    cSubKeys=0;		// 하위 키 갯수 
+    FILETIME ftWrite;      // 파일을 쓴 시간/
+    DWORD    i, ret; 
+	HKEY     hNewKey; // 새로운 키 핸들
+	ULARGE_INTEGER tmWrite;
+	TCHAR    szName[MAX_KEY_LENGTH]; // 예측: 원래 있던 키 
+	/*
+	예) cSubKey = "Software\VfpRegTest"
+	예) cValue = "TestREG_MULTI_SZ"
+	*/
+ 
+    // get the number of subkeys 
+	// RegQueryInfoKey : 레지스트리가 가진 데이터 개수 / 하위키 이름 / 하위키 갯수 
+    ret = RegQueryInfoKey(
+        hKey,                   
+        NULL, NULL, NULL,               
+        &cSubKeys, // 서브키들 개수              
+        NULL, NULL, NULL, NULL, 
+		NULL, NULL, NULL);      
+	// ret 에는 서브키들 개수 알아내는 함수 반환 핸들 값이 들어가겠지 ?
+    
+    // for each subkey, see if it changed based on its
+    // last write timestamp
+	// 서브키 조회 
+    for (i=0; i<cSubKeys; i++) 
+    { 
+        cbName = MAX_KEY_LENGTH; // 255 로 초기화 
+
+		// RegEnumKeyEx: 지정한 키의 서브키들 조회 
+        ret = RegEnumKeyEx(
+					hKey, i, szKey, &cbName, 
+					NULL, NULL, NULL, &ftWrite); 
+		// hKey : 서브키를 조회할 대상 키 
+		// i : 예측: 몇 번째 서브키 이름을 가져올 것인가. 0부터 시작해서 1씩 더해진 값
+		// szKey : 하위에 생성될 키 이름 (CHAR형)
+		// cbName : 여기서는 255
+		// &ftWrite : 파일 타임 시간 
+
+
+		// 서브키 갯수를 알아내면 
+        if (ret == ERROR_SUCCESS) 
+        {
+			tmWrite.HighPart = ftWrite.dwHighDateTime;
+			tmWrite.LowPart  = ftWrite.dwLowDateTime;
+			// 시간 변경 
+			// tm 는 terminated를 말하는 것 같음 , 쓰기가 끝나는 시간
+
+            // it changed if the last write is greater than 
+            // our start time
+			// 마지막 쓰기가 시작 시간보다 크면 변경된 것이라고 보고  
+			if (tmWrite.QuadPart > g_tmStart.QuadPart)
+			{
+				memset(szName, 0, sizeof(szName)); // 원래 있던 키 사이즈를 다시 set한다 
+				GetKeyName(hKey, szName); // 원래 있던 키 이름을 가져오러 감 
+
+				// 다시 돌아와서 
+
+				// 문자열 이어 붙이기 
+				_tcscat(szName, _T("\\"));
+				_tcscat(szName, szKey);
+				
+				if (!IsWhitelisted(szName)) { 
+					Output(FOREGROUND_BLUE, _T("[REGISTRY] %s\n"), szName);
+				}
+			}// 변경된게 아니면 
+
+			//레지스트리 키 열기 
+			ret = RegOpenKeyEx(hKey, szKey, 0, KEY_READ, &hNewKey); // hNewKey 
+
+			// 레지스트리 키 열기 성공하면 
+			if (ret == ERROR_SUCCESS) 
+			{ 
+				// 재귀 
+				GetRegistryChanges(hNewKey); // 다시 또 레지스트리를 변경하러 간다 
+				RegCloseKey(hNewKey); // 변경이 끝나면 key값을 닫아준다 
+			
+			} // 레지스트리 키를 
+		} // 서브키 갯수를 알아내면 
+    } // 서브키 갯수만큼 for문 돌림 종료 
+}
+/////////////////----------------------------------------------end of GetRegistryChanges
+// call this once after each change to update the start time
+// otherwise we'll print duplicates over and over
+void UpdateTime(void)
+{
+	SYSTEMTIME st;
+	FILETIME   ft;
+
+	GetSystemTime(&st); // 이거 랜섬웨어 분석할 때 봤던 API들이다
+	// UTC 표준 시간
+	SystemTimeToFileTime(&st, &ft);
+	// 파일 타임을 업데이트해줘야 하니까 
+	// 파일 타임을 실시간 시스템 시간으로 업데이트 해줌 
+
+	g_tmStart.HighPart = ft.dwHighDateTime;
+	g_tmStart.LowPart  = ft.dwLowDateTime;	
+}
+
+
+// main thread for monitoring keys 
+// 키를 모니터링하는 메인 스레드 
+// g_hRegWatch[0], g_hRegWatch[1] 을 통해 쓰레드를 생성하는데 인자값으로 WatchKey() 가 들어간다 
+
+// 쓰레드가 작동할 함수 이름 
+// == 여기서 쓰레드가 작동 시작한다 ----------------------------------------- 메인키 정해준 경로로 쓰레드 Start 
+DWORD WatchKey(PREGMON p)
+{
+	HANDLE hEvent; // 예측 : 아마 이벤트 발생 처리하는 핸들
+	HKEY   hKey; // 예측 : 레지스트리 키 
+	LONG   ret; // 레지스트리 키 열기, 생성, 변경 등의 결과를 나타내는 핸들 값 !!!!! --> 이 핸들값으로 어떤 변화에 있어서 SUCCES 와 ERROR를 구분한다 
+
+	Output(0, _T("Monitoring HKEY %x\\%s\n"), 
+		p->hMainKey, p->szSubkey);
+	// 그래서 처음에 Monitoring HKEY hMainKey\\szSubkey 값이 나오는 것 
+
+	ret = RegOpenKeyEx(
+		p->hMainKey, // 처음에 p에서 정해준 메인 키 
+		p->szSubkey, // 역시 p에게 정해준 서브키 
+		0, 
+		KEY_READ | KEY_NOTIFY, 
+		// KEY_READ (0x20019) 읽기와 관련된 모든 권한
+		// KEY_NOTIFY (0x0010) 레지스트리 키의 notifications를 change 요구할 수 있는 권한 
+		&hKey); // hKey로 레지스트리 키를 연다 
+
+	// 키 열기가 실패하면 return -1 
+	if (ret != ERROR_SUCCESS)
+	{
+		return -1;
+	}
+
+	// create an event that will get signaled by the system
+	// when a change is made to the monitored key
+	// 모니터링되고 있는 키에 변화가 생기면 
+	// 시스템 신호가 잡히는 어떤 이벤트가 발생한다 
+
+	// 이벤트 발생 
+	hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
+	
+	// 이벤트가 없으면 
+	if (hEvent == NULL)
+	{
+		return -1;
+	}
+
+    // this event gets signaled if a user enters CTRL+C to stop
+	while(WaitForSingleObject(g_hStopEvent, 1) != WAIT_OBJECT_0)
+		// WaitFOrSingleObject : 스레드 종료 기다리기 
+		// WAIT_OBJECT_0 : 성공 
+		// WAIT_FAILED : 실패 
+		// 스레드 종료 기다리기가 실패하면 == 스레드 종료가 되지 않으면 
+	{
+		UpdateTime();
+		// 파일 변경 시간을 시스템 시간으로 바꿔주고 
+		
+		// register to receive change notification 
+		ret = RegNotifyChangeKeyValue(hKey, 
+									  TRUE, 
+									  REG_CHANGE_FLAGS, 
+									  hEvent, 
+									  TRUE);
+		if (ret != ERROR_SUCCESS)
+		{
+			break;
+		}
+		// 변경이 실패하거나 
+		if (WaitForSingleObject(hEvent, INFINITE) == WAIT_FAILED)
+		{
+			break;
+		}
+		// 변경이 무한정 기다려야되면 빠져나오고 그게 아니라면 
+
+		GetRegistryChanges(hKey);
+		// 키 값을 변경하러 간다 
+	}
+
+	Output(0, _T("Closing HKEY %x\\%s\n"), 
+		p->hMainKey, p->szSubkey);
+
+	RegCloseKey(hKey);
+	CloseHandle(hEvent);
+	return 0;
+}
+
+
+// 시작 !
+void StartRegistryMonitor(void)
+{
+	HMODULE hNtdll = GetModuleHandle(_T("ntdll.dll")); // ntdll 모듈을 가져오고 
+	ZwQueryKey = (ZWQUERYKEY)GetProcAddress(hNtdll, "NtQueryKey"); // GetProcAddress 인자 검색 
+
+	// 시작할 때 
+	PREGMON p[2];
+	p[0] = new REGMON;
+	p[1] = new REGMON;
+	// 내용값: hMainKey 메인 레지스트리 핸들, szSubKey 서브키 이름 
+
+	p[0]->hMainKey = HKEY_LOCAL_MACHINE;
+	p[0]->szSubkey = _T("Software");
+	// p=PREGMON=REGMON 구조체에 변수가 hMainKey 와 szSubKey 두 개 있으니까 값들을 넣어준다.
+	// hMainKey는 처음에 탐색할 레지스트리 메인 키 
+	// szSubKey는 하위키인데 내가 따로 문자열을 조작할 수 있음 
+	
+	// one thread for HKLM\\Software
+	g_hRegWatch[0] = CreateThread(NULL, 0, 
+	    (LPTHREAD_START_ROUTINE)WatchKey, p[0], 0, NULL);
+	// 위에서 값을 세팅해준 p[0] 구조체를 인자로해서  g_hRegWatch[0] 쓰레드를 하나 만든다 
+	// CreateThread 인자 6개 
+	// CreateThread 쓰레드도 커널에 의해 생성되는 리소스이므로 커널 오브젝트가 생성될 것이고
+	// 함수호출이 끝나면 커널 오브젝트를 의미하는 핸들이 리턴될 것
+	// g_hRegWatch[0] ==> 핸들 
+
+
+	p[1]->hMainKey = HKEY_CURRENT_USER;
+	p[1]->szSubkey = _T("Software");
+	
+	// one thread for HKCU\\Software
+	g_hRegWatch[1] = CreateThread(NULL, 0, 
+	    (LPTHREAD_START_ROUTINE)WatchKey, p[1], 0, NULL);
+}

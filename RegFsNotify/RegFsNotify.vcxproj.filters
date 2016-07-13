@@ -24,10 +24,17 @@
     <ClCompile Include="RegFsNotify.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="extractProcessName.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mon.cpp">
+=======
     <ClCompile Include="mon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="extractProcessName.cpp">
+>>>>>>> 850b0a4be9d6be872267e932235188ef9b3ff5da
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -57,5 +64,19 @@
     <ResourceCompile Include="RegFsNotify.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="변화탐지코드.txt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="origin.txt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="freeborad.txt">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="..\..\..\Desktop\yeonju.txt">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

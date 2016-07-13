@@ -109,6 +109,12 @@
   <ItemGroup>
     <ResourceCompile Include="RegFsNotify.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Desktop\yeonju.txt" />
+    <None Include="freeborad.txt" />
+    <None Include="origin.txt" />
+    <None Include="변화탐지코드.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
