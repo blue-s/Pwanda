@@ -21,4 +21,3 @@ Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
 [Path] "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
 [search] OneDrive
 -----------------[i=4] reg -------------->>>>>>> exe" -autorun
------------------[j=0] roaming -------------->>>>>>> gitignore_global.txt

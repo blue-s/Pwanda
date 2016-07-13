@@ -24,6 +24,8 @@ void StartRegistryMonitor(void);
 // + Wan
 void ExtractProcess(DWORD, TCHAR *);
 void ListPrint(void);
+//+Su
+void compare(void);
 
 extern HANDLE  g_hStopEvent;
 extern HANDLE  g_hFile;

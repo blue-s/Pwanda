@@ -6,8 +6,9 @@
 static TCHAR *list[1000];
 static TCHAR *roaming[1000];
 static TCHAR *prefetch[1000];
-
+static TCHAR *RPresult[100];  //로밍하고,프리패치비교 결과가 같을때 여기에 저장
 static int i, j, k;
+
 
 void ListPrint(){
 	Output(FOREGROUND_BLUE, _T("%s\n"),list[0]);
@@ -19,8 +20,26 @@ void ListPrint(){
 	Output(FOREGROUND_BLUE, _T("%s\n"),list[6]);
 }
 
+
+//로밍,프리패치 비교
+void compare(void){  //로밍이 데이터가 별로 없기때문에 로밍을 기준으로 프리패치를 비교할 예정
+	for(int r=0; r<j; r++){  //로밍이 데이터 기준
+		printf("%d : %S\n", r, roaming[r]);
+		for(int p=0; p<k; p++){ //프리패치
+			//printf("%d : %S, %d : %S\n",r, roaming[r], p, prefetch[p]);
+			//printf("%d\n", _tcsicmp(roaming[r], prefetch[p]));
+		
+			if(_tcsicmp(roaming[r],prefetch[p])==0){
+
+				RPresult[r]=roaming[r];
+				Output(0, _T("####################### result ####################### %s\n"), RPresult[r]);
+			}
+		}
+	}
+}
+
 void ExtractProcess(DWORD flag, TCHAR *p){
-	
+
 	if(flag == 1)
 	{
 		list[i]=p;
@@ -40,16 +59,8 @@ void ExtractProcess(DWORD flag, TCHAR *p){
 		k++;
 	}
 
-
-
-
-	/*
-	for(int j=0; j<10; j++){
-		Output(FOREGROUND_BLUE, _T("--------index [%d] -  extractProcessName--------------[%s]\n"), j,list[j]);
-	}
-	*/
-
 }
+
 
 
 // File.cpp가 Reg.cpp보다 먼저 끝나기 때문에 의심 프로세스 추출에 NULL값이 자꾸 들어가는 것

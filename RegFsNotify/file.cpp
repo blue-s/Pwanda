@@ -35,67 +35,60 @@ void ProcessChange(int idx)
 	TCHAR szFile[MAX_PATH*2];
 	memset(buf, 0, sizeof(buf));
 
-	if (ReadDirectoryChangesW(g_DirHandles[idx], buf, 
-		sizeof(buf), TRUE, 
+	if (ReadDirectoryChangesW(g_DirHandles[idx], buf, sizeof(buf), TRUE, 
 		FILE_CHANGE_FLAGS, &cb, NULL, NULL))
 	{
-
 		do {
-
 			pNotify = (PFILE_NOTIFY_INFORMATION) &buf[offset];
 			offset += pNotify->NextEntryOffset;
 
 			memset(szFile, 0, sizeof(szFile));
+			memcpy(szFile, pNotify->FileName, pNotify->FileNameLength);
 
-			memcpy(szFile, pNotify->FileName, 
-				pNotify->FileNameLength);
-			
-			
-			
 			if (RoamingWhitelisted(szFile)) { 
-				
+
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
-									roaming_file_name = _tcsstr(szFile, s1)+8;
+					roaming_file_name = _tcsstr(szFile, s1)+8;
 
-				//원래 파일명 보존을 위해 변수에 복사
-				Rname = _tcsstr(roaming_file_name, str1); //(abc.txt, .)
+					//원래 파일명 보존을 위해 변수에 복사
+					Rname = _tcsstr(roaming_file_name, str1); //(abc.txt, .)
 
-				//확장자만 추출
-				_tprintf(_T("+++++++++++++++++++ %s ++++++++++++++++++++[File Name] \n"), Rname);
+					//확장자만 추출
+					_tprintf(_T("+++++++++++++++++++ %s ++++++++++++++++++++[File Name] \n"), Rname);
 
-				//확장자가 txt가 맞다면 배열에 넣었었던 파일명을 출력 
-				if(_tcsicmp(Rname, str2) == 0)
-				{
+					//확장자가 txt가 맞다면 배열에 넣었었던 파일명을 출력 
+					if(_tcsicmp(Rname, str2) == 0)
+					{
 
-					Output_Roaming(FOREGROUND_RED, _T("ROAMING [%d] ------> %s \n"), Ridx, roaming_file_name);
+						Output_Roaming(FOREGROUND_RED, _T("ROAMING [%d] ------> %s \n"), Ridx, roaming_file_name);
 
-					roamingBuffer = roaming_file_name;
+						roamingBuffer = roaming_file_name;
 
-					ExtractProcess(2, roamingBuffer);
+						ExtractProcess(2, roamingBuffer);
 
-					Ridx++;
+						Ridx++;
 
-					_tprintf(_T("-------------------------------[SUCCESS]--------------------------------- \n"));
-				}
+						_tprintf(_T("-------------------------------[SUCCESS]--------------------------------- \n"));
+					}
 
-				else
-				{
-					_tprintf(_T("--------------------------------[NOT]----------------------------------- \n"));
-				}
+					else
+					{
+						_tprintf(_T("--------------------------------[NOT]----------------------------------- \n"));
+					}
 					//Output_Roaming(FOREGROUND_GREEN, _T("[ADDED] %s%s \n"), g_szDrives[idx], szFile);
 					break;
-				/*case FILE_ACTION_REMOVED: 
+					/*case FILE_ACTION_REMOVED: 
 					Output_Roaming(FOREGROUND_RED, _T("\n [REMOVED] %s%s \n"), g_szDrives[idx], szFile);
 					break;
-				case FILE_ACTION_MODIFIED: 
+					case FILE_ACTION_MODIFIED: 
 					Output_Roaming(0, _T("[MODIFIED] %s%s \n"),g_szDrives[idx], szFile);
 					break;*/
-				/*case FILE_ACTION_RENAMED_OLD_NAME:
+					/*case FILE_ACTION_RENAMED_OLD_NAME:
 					Output_Roaming(0, _T("\n[RENAMED (OLD)] %s%s \n"), g_szDrives[idx], szFile);
 					break; 
-				case FILE_ACTION_RENAMED_NEW_NAME:
+					case FILE_ACTION_RENAMED_NEW_NAME:
 					Output_Roaming(0, _T("\n[RENAMED (NEW)] %s%s \n"), g_szDrives[idx], szFile);
 					break;*/
 				default:
@@ -103,8 +96,9 @@ void ProcessChange(int idx)
 					//	g_szDrives[idx], szFile);
 					break;
 				}; 
+				compare();
 			}else if(PrefetchWhitelisted(szFile)){
-			
+
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
@@ -119,29 +113,31 @@ void ProcessChange(int idx)
 					Pidx++;
 					//Output_Prefetch(FOREGROUND_GREEN, _T("\n[ADDED] %s%s\n"), g_szDrives[idx], szFile);
 					break;
-				/*case FILE_ACTION_REMOVED: 
+					/*case FILE_ACTION_REMOVED: 
 					Output_Prefetch(FOREGROUND_RED, _T("\n[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
 					break;
-				case FILE_ACTION_MODIFIED: 
+					case FILE_ACTION_MODIFIED: 
 					Output_Prefetch(0, _T("[MODIFIED] %s%s \n"), g_szDrives[idx], szFile);
 					break;*/
-				/*case FILE_ACTION_RENAMED_OLD_NAME:
+					/*case FILE_ACTION_RENAMED_OLD_NAME:
 					Output_Prefetch(0, _T("[RENAMED (OLD)] %s%s \n"), g_szDrives[idx], szFile);
 					break; 
-				case FILE_ACTION_RENAMED_NEW_NAME:
+					case FILE_ACTION_RENAMED_NEW_NAME:
 					Output_Prefetch(0,_T("\n[RENAMED (NEW)] %s%s \n"), g_szDrives[idx], szFile);
 					break;*/
 				default:
 					//Output_Prefetch(0,_T("[??] %s%s \n"), g_szDrives[idx], szFile);
 					break;
 				}; 
+				compare();
 			}else{
 				continue;
 			}	
+			
 		} while (pNotify->NextEntryOffset != 0);
+
+		
 	}
-
-
 }    
 
 void StartFileMonitor(void)
