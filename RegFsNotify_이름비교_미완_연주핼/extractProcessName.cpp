@@ -88,7 +88,7 @@ void ExtractProcess(DWORD flag, TCHAR *fileName){
 	case 3:
 		Output_Console(FOREGROUND_BLUE, _T("-----------------Registry> Run -------------->>>>>>> %s\n"), fileName);
 		runList[runNum] = new TCHAR [100];
-		_tcsncpy(prefetchList[runNum], buffer, 100);
+		_tcsncpy(runList[runNum], buffer, 100);
 		runNum += 1;
 		break;
 	default:

@@ -27,6 +27,12 @@
     <ClCompile Include="extractProcessName.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="checkState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mon.h">

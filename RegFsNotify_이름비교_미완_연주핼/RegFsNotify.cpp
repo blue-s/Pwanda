@@ -102,6 +102,11 @@ BOOL CtrlHandler(DWORD fdwCtrlType)
 
 void _tmain(int argc, TCHAR *argv[])
 {
+	checkState();	// [2] 테스트 함수
+	setUser();		// [3] 테스트 함수
+
+	_tprintf(_T("\n"));
+
 	g_hStopEvent = CreateEvent(NULL, FALSE, FALSE, NULL);
 	SetConsoleCtrlHandler((PHANDLER_ROUTINE)CtrlHandler, TRUE);
 

@@ -57,17 +57,17 @@ void QueryKey(HKEY hKey){
 	FILETIME ftWrite;
 	ULARGE_INTEGER tmWrite;
 
-	DWORD i, retCode;
-	HKEY     hNewKey;
-	TCHAR  achValue[MAX_VALUE_NAME];
-	DWORD cchValue = MAX_VALUE_NAME;
+	DWORD	i, retCode;
+	HKEY	hNewKey;
+	TCHAR	achValue[MAX_VALUE_NAME];
+	DWORD	cchValue = MAX_VALUE_NAME;
 
-	TCHAR  achData[MAX_VALUE_NAME];
-	DWORD cchData = MAX_VALUE_NAME;
+	TCHAR	achData[MAX_VALUE_NAME];
+	DWORD	cchData = MAX_VALUE_NAME;
 
-	TCHAR path[MAX_VALUE_NAME] = _T("");
-	TCHAR search[MAX_VALUE_NAME] = _T("test"); // path에서 검색할 키워드 // 실제 TEST에서는 Roaming으로 변경 
-	TCHAR *result = _T(""); // 파싱한 문자열을 받는 버퍼 
+	TCHAR	path[MAX_VALUE_NAME] = _T("");
+	TCHAR	search[MAX_VALUE_NAME] = _T("Roaming"); 
+	TCHAR*	result = _T("");
 
 	LPSTR lpresult = "";
 
@@ -95,14 +95,13 @@ void QueryKey(HKEY hKey){
 		// 가장 최근 쓰기 시간이 start보다 크면 변경된 것 
 		if (tmWrite.QuadPart > g_tmStart.QuadPart)
 		{
-			// 지정된 레지스트리 키의 값들(Values) 수만큼 
+			// 지정된 레지스트리 키의 값들(Values) 수만큼
 			for(i=0; i<cValues; i++) 
 			{
-				cchValue = MAX_VALUE_NAME; // Values 최대 크기 
+				cchValue = MAX_VALUE_NAME;	// Values 최대 크기 
 				achValue[0] = '\0';			// 값 초기화 
-				cchData = MAX_VALUE_NAME;  // Data 최대 크기 
+				cchData = MAX_VALUE_NAME;	// Data 최대 크기 
 				achData[0] = '\0';			// 데이터 초기화 
-
 
 				// 지정된 레지스트리 키가 가지는 값 열거하는 함수 
 				retCode = RegEnumValue(
@@ -113,44 +112,36 @@ void QueryKey(HKEY hKey){
 					NULL,					
 					NULL,					
 					(LPBYTE)achData,	 				
-					&cchData);					
-
+					&cchData
+					);					
 
 				// 레지스트리 키의 Value 와 Data 값 출력 
 				if(retCode == ERROR_SUCCESS)
-				{ Output_Console(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); 
+				{ 
+					Output_Console(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); 
 
-				// achData에 랜섬웨어 프로세스 경로가 나와있어서 path에 복사 
-				memcpy(path, achData, MAX_VALUE_NAME);	
+					// achData에 랜섬웨어 프로세스 경로가 나와있으므로 path에 복사 
+					memcpy(path, achData, MAX_VALUE_NAME);	
 
-				// path 문자열에서 search 문자열이 있는지 검색 
-				if(result = _tcsstr(path,search)){
-					resultBuffer = result+5;
-					ExtractProcess(1, resultBuffer);
-				}
-
+					// path 문자열에서 search 문자열이 있는지 검색 
+					if(result = _tcsstr(path, search)){
+						resultBuffer = result+8;
+						ExtractProcess(3, resultBuffer);
+					}
 				}
 
 				printf("Number of values: %d\n", cValues);
-
 				_tprintf(_T("------------------------------------------------------------------------\n"));
-
-				//ExtractProcess(1, resultBuffer);
-				//ListPrint();
 			}
-
 		} // end for
 
-		retCode = RegOpenKeyEx(
-			hKey, achKey, 0, KEY_ALL_ACCESS, &hNewKey);
+		retCode = RegOpenKeyEx( hKey, achKey, 0, KEY_ALL_ACCESS, &hNewKey);
 
-		if (retCode == ERROR_SUCCESS) 
+		if(retCode == ERROR_SUCCESS) 
 		{ 
-			//QueryKey(hNewKey);
 			RegCloseKey(hNewKey);
 		}
 	}
-
 }
 
 //[3] 시간 업데이트
@@ -164,7 +155,6 @@ void UpdateTime(void)
 
 	g_tmStart.HighPart = ft.dwHighDateTime;
 	g_tmStart.LowPart  = ft.dwLowDateTime;
-
 }
 
 //[2] 스레드 실행
@@ -174,8 +164,7 @@ DWORD WatchKey(PREGMON p)
 	HKEY   hKey;
 	LONG   ret;
 
-	Output_Console(0, _T("Monitoring HKEY %x\\%s\n"), 
-		p->hMainKey, p->szSubkey); 
+	Output_Console(0, _T("Monitoring HKEY %x\\%s\n"), p->hMainKey, p->szSubkey); 
 
 	// 레지스트리 키 생성 (현재 내가 지정한 경로의 핸들을 가져온다)
 	ret = RegOpenKeyEx(
@@ -183,37 +172,30 @@ DWORD WatchKey(PREGMON p)
 		p->szSubkey, 
 		0,
 		KEY_ALL_ACCESS,
-		&hKey);
+		&hKey
+		);
 
-	if (ret != ERROR_SUCCESS)
-	{
-		return -1;
-	}
-
-	else
-		printf("RegOpenKeyEx() is OK.\n");
+	if (ret != ERROR_SUCCESS)	return -1;
 
 	hEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
 
-	if (hEvent == NULL)
-	{
-		return -1;
-	}
+	if (hEvent == NULL)			return -1;
 
 	// WAIT_OBJECT_0: 성공 
 	// 스레드 종료가 되지 않으면 
 	while(WaitForSingleObject(g_hStopEvent, 1) != WAIT_OBJECT_0)
 	{
-		UpdateTime();
-		// 파일 변경 시간을 시스템 시간으로 체인지
+		// 파일 변경 시간을 시스템 시간으로 변경
+		UpdateTime();	
 
 		ret = RegNotifyChangeKeyValue(hKey, 
 			TRUE, 
 			REG_CHANGE_FLAGS, 
 			hEvent, 
-			TRUE);
+			TRUE
+			);
 
-		// 변경이 실패하거나 
+		// 변경 실패한 경우 
 		if (ret != ERROR_SUCCESS)
 		{
 			_tprintf(_T("Registry Open Failed!! \n"));
@@ -221,12 +203,9 @@ DWORD WatchKey(PREGMON p)
 		}
 
 		// 변경을 무한정 기다려야 하면 빠져나온다 
-		if (WaitForSingleObject(hEvent, INFINITE) == WAIT_FAILED)
-		{
-			break;
-		}
+		if (WaitForSingleObject(hEvent, INFINITE) == WAIT_FAILED)	break;
 
-		QueryKey(hKey); // [4] 키 값과 Data를 받으러 간다 // while을 통해 무한으로 실행한다
+		QueryKey(hKey); // [4] 키 값과 Data를 받음
 	}
 
 	RegCloseKey(hKey);
@@ -247,7 +226,5 @@ void StartRegistryMonitor(void)
 	p[0]->szSubkey = _T("SOFTWARE\\\Microsoft\\Windows\\CurrentVersion\\Run");
 	// Run(자동 실행 등록) 경로 설정 
 
-	g_hRegWatch[0] = CreateThread(NULL, 0, 
-		(LPTHREAD_START_ROUTINE)WatchKey, p[0], 0, NULL); // -> [2] WatchKey
-
+	g_hRegWatch[0] = CreateThread(NULL, 0, (LPTHREAD_START_ROUTINE)WatchKey, p[0], 0, NULL);
 }

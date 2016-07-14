@@ -16,7 +16,7 @@ TCHAR * buffer_extension;		// 확장자 저장하는 임시 변수
 const TCHAR * checkRoam =_T("Roaming");
 const TCHAR * findPre =_T("Prefetch");
 const TCHAR * checkPoint = _T(".");
-const TCHAR * checkText = _T(".txt");
+const TCHAR * checkEXE = _T(".exe");
 
 
 void ProcessChange(int idx)
@@ -59,7 +59,7 @@ void ProcessChange(int idx)
 					printf("[파일 확장자: %S]\n", buffer_extension);
 
 					//확장자가 txt가 아닌 경우 
-					if(_tcsicmp(buffer_extension, checkText) != 0)
+					if(_tcsicmp(buffer_extension, checkEXE) != 0)
 					{
 						printf("텍스트 파일이 아닙니다.\n\n", buffer_extension);
 						continue;
