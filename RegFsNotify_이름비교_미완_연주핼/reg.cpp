@@ -40,7 +40,7 @@ ZWQUERYKEY ZwQueryKey;
 
 //[4] 레지스트리 변화를 탐지하고 키 값과 데이터를 가져온다 
 void QueryKey(HKEY hKey){
-	
+
 	TCHAR    achKey[MAX_KEY_LENGTH];	
 	DWORD    cbName;					
 	TCHAR    achClass[MAX_PATH] = _T("");	
@@ -83,7 +83,8 @@ void QueryKey(HKEY hKey){
 		&cchMaxValue,				
 		&cbMaxValueData,				
 		&cbSecurityDescriptor,			
-		&ftWrite);				
+		&ftWrite
+		);				
 
 	if(retCode == ERROR_SUCCESS)  
 	{ 
@@ -116,23 +117,15 @@ void QueryKey(HKEY hKey){
 
 				// 레지스트리 키의 Value 와 Data 값 출력 
 				if(retCode == ERROR_SUCCESS)
-				{ Output(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); 
-			
+				{ Output_Console(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); 
+
 				// achData에 랜섬웨어 프로세스 경로가 나와있어서 path에 복사 
 				memcpy(path, achData, MAX_VALUE_NAME);	
-				//Output(FOREGROUND_GREEN, _T("[Path] %s\n"), path);
-				//Output(FOREGROUND_BLUE, _T("[search] %s\n"), search);
 
-
-				// path = "C:\Users\kosta\Appdata\Local\Microsoft\OneDrive\OneDrive.exe" /background
 				// path 문자열에서 search 문자열이 있는지 검색 
 				if(result = _tcsstr(path,search)){
-					// result = OneDrive\OneDrive.exe" /background
-					//Output(FOREGROUND_GREEN, _T("[result] %s\n"), result+9);
-					// resultBuffer = OneDrive.exe" /background
 					resultBuffer = result+5;
 					ExtractProcess(1, resultBuffer);
-					//Output(FOREGROUND_GREEN, _T("[resultBuffer] %s\n"), resultBuffer);
 				}
 
 				}
@@ -140,7 +133,7 @@ void QueryKey(HKEY hKey){
 				printf("Number of values: %d\n", cValues);
 
 				_tprintf(_T("------------------------------------------------------------------------\n"));
-				
+
 				//ExtractProcess(1, resultBuffer);
 				//ListPrint();
 			}
@@ -180,7 +173,7 @@ DWORD WatchKey(PREGMON p)
 	HKEY   hKey;
 	LONG   ret;
 
-	Output(0, _T("Monitoring HKEY %x\\%s\n"), 
+	Output_Console(0, _T("Monitoring HKEY %x\\%s\n"), 
 		p->hMainKey, p->szSubkey); 
 
 	// 레지스트리 키 생성 (현재 내가 지정한 경로의 핸들을 가져온다)

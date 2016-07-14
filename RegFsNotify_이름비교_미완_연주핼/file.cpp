@@ -5,29 +5,22 @@
 #define MAX_DRIVES 24
 #define MAX_VALUE_NAME 16383
 
+// 변수 선언
 HANDLE  g_ChangeHandles[MAX_DRIVES];
 HANDLE  g_DirHandles[MAX_DRIVES];
 LPTSTR  g_szDrives[MAX_DRIVES];
 DWORD   g_idx = 0;
 
 
-//변경한 부분
-TCHAR * Rname; //확장자 판단하기 위해 원본 파일명을 복사해 담아두는 변수
+TCHAR * Rname;					//확장자 판단하기 위해 원본 파일명을 복사해 담아두는 변수
+TCHAR * file_name;
+TCHAR * roaming_file_name;		//로밍부분 파싱해서 얻은 파일 명
+TCHAR * prefetch_file_name;		//프리패치에서 파싱해서 얻은 파일 명
 
-TCHAR * roaming_file_name; //로밍부분 파싱해서 얻은 파일 명
-TCHAR * prefetch_file_name; //프리패치에서 파싱해서 얻은 파일 명
-
-TCHAR * s1=_T("Roaming");
-TCHAR * s2=_T("Prefetch");
-
-DWORD Ridx=0; //로밍부분 인덱스 초기화
-DWORD Pidx=0; //프리패치 인덱스 초기화
-
-//확장자 판단
-const TCHAR * str1 = _T(".");
-const TCHAR * str2 = _T(".txt");
-
-//static int count = 0;
+TCHAR * findRoam =_T("Roaming");
+TCHAR * findPre =_T("Prefetch");
+const TCHAR * checkPoint = _T(".");
+const TCHAR * checkText = _T(".txt");
 
 
 void ProcessChange(int idx)
@@ -37,105 +30,74 @@ void ProcessChange(int idx)
 	PFILE_NOTIFY_INFORMATION pNotify;
 	int offset = 0;
 	TCHAR szFile[MAX_PATH*2];
+	int flag = -1;		// 화이트 리스트에 속하는지 여부 확인 플래그
+
 	memset(buf, 0, sizeof(buf));
-
-
 
 	if (ReadDirectoryChangesW(g_DirHandles[idx], buf, sizeof(buf), TRUE, FILE_CHANGE_FLAGS, &cb, NULL, NULL))
 	{
 		do {
-			//printf("count= %d\n", count);
-
 			pNotify = (PFILE_NOTIFY_INFORMATION) &buf[offset];
 			offset += pNotify->NextEntryOffset;
 
 			memset(szFile, 0, sizeof(szFile));
 			memcpy(szFile, pNotify->FileName, pNotify->FileNameLength);
 
-			if (RoamingWhitelisted(szFile)) { 
-
-				
-
+			// 플래그에 따른 파일명 추출 및 비교
+			flag = Whitelisted(szFile);
+			if(flag == 1)
+			{
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
-				
-					roaming_file_name = _tcsstr(szFile, s1)+8;
+					roaming_file_name = _tcsstr(szFile, findRoam)+8;
 
 					//원래 파일명 보존을 위해 변수에 복사
-					Rname = _tcsstr(roaming_file_name, str1); //(abc.txt, .)
+					Rname = _tcsstr(roaming_file_name, checkPoint); //(abc.txt, .)
 
 					//확장자만 추출
 					_tprintf(_T("+++++++++++++++++++ %s ++++++++++++++++++++[File Name] \n"), Rname);
 
 					//확장자가 txt가 맞다면 배열에 넣었었던 파일명을 출력 
-					if(_tcsicmp(Rname, str2) == 0)
+					if(_tcsicmp(Rname, checkText) == 0)
 					{
-						Output_Roaming(FOREGROUND_RED, _T("ROAMING [%d] ------> %s \n"), Ridx, roaming_file_name);
+						Output_Console(FOREGROUND_RED, _T("ROAMING [%d] ------> %s \n"), 0, roaming_file_name);
 						roamingBuffer = roaming_file_name;
 
-						Output_Roaming(FOREGROUND_BLUE, _T("roamingBuffer [%d] ------> %s \n"), Ridx, roamingBuffer);
+						Output_Console(FOREGROUND_BLUE, _T("roamingBuffer [%d] ------> %s \n"), 0, roamingBuffer);
 
 						ExtractProcess(2, roamingBuffer);
-						Ridx++;
 						_tprintf(_T("-------------------------------[SUCCESS]--------------------------------- \n"));
 					}
 					else
 					{
 						_tprintf(_T("--------------------------------[NOT]----------------------------------- \n"));
 					}
-					Output_Roaming(FOREGROUND_GREEN, _T("[ADDED] %s%s \n"), g_szDrives[idx], szFile);
+					Output_Console(FOREGROUND_GREEN, _T("[ADDED] %s%s \n"), g_szDrives[idx], szFile);
 
 
 					break;
-					/*case FILE_ACTION_REMOVED: 
-					Output_Roaming(FOREGROUND_RED, _T("\n [REMOVED] %s%s \n"), g_szDrives[idx], szFile);
-					break;
-					case FILE_ACTION_MODIFIED: 
-					Output_Roaming(0, _T("[MODIFIED] %s%s \n"),g_szDrives[idx], szFile);
-					break;*/
-					/*case FILE_ACTION_RENAMED_OLD_NAME:
-					Output_Roaming(0, _T("\n[RENAMED (OLD)] %s%s \n"), g_szDrives[idx], szFile);
-					break; 
-					case FILE_ACTION_RENAMED_NEW_NAME:
-					Output_Roaming(0, _T("\n[RENAMED (NEW)] %s%s \n"), g_szDrives[idx], szFile);
-					break;*/
 				default:
-					//Output_Roaming(0,_T("[??] %s%s \n"), 
-					//	g_szDrives[idx], szFile);
 					break;
 				}; 
-			}else if(PrefetchWhitelisted(szFile)){
-
+			}
+			else if(flag == 2)
+			{
 				switch (pNotify->Action)
 				{
 				case FILE_ACTION_ADDED:
-					prefetch_file_name = _tcsstr(szFile, s2)+9;
-					Output_Prefetch(FOREGROUND_BLUE, _T("PREFETCH [%d] ------> %s \n"), Pidx, prefetch_file_name);
+					prefetch_file_name = _tcsstr(szFile, findPre)+9;
+					Output_Console(FOREGROUND_BLUE, _T("PREFETCH [%d] ------> %s \n"), 0, prefetch_file_name);
 					prefetchBuffer = prefetch_file_name;
 					ExtractProcess(3, prefetchBuffer);
-					Pidx++;
-					//Output_Prefetch(FOREGROUND_GREEN, _T("\n[ADDED] %s%s\n"), g_szDrives[idx], szFile);
 					break;
-					/*case FILE_ACTION_REMOVED: 
-					Output_Prefetch(FOREGROUND_RED, _T("\n[REMOVED] %s%s\n"), g_szDrives[idx], szFile);
-					break;
-					case FILE_ACTION_MODIFIED: 
-					Output_Prefetch(0, _T("[MODIFIED] %s%s \n"), g_szDrives[idx], szFile);
-					break;*/
-					/*case FILE_ACTION_RENAMED_OLD_NAME:
-					Output_Prefetch(0, _T("[RENAMED (OLD)] %s%s \n"), g_szDrives[idx], szFile);
-					break; 
-					case FILE_ACTION_RENAMED_NEW_NAME:
-					Output_Prefetch(0,_T("\n[RENAMED (NEW)] %s%s \n"), g_szDrives[idx], szFile);
-					break;*/
 				default:
-					//Output_Prefetch(0,_T("[??] %s%s \n"), g_szDrives[idx], szFile);
 					break;
 				}; 
-			}else{
+			}
+			else {
 				continue;
-			}	
+			}
 		} while (pNotify->NextEntryOffset != 0);
 	}
 }    

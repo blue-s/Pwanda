@@ -1,8 +1,11 @@
 #pragma once
 
+// 헤더파일 선언
 #include <windows.h>
 #include <tchar.h>
 
+
+// 변수 선언
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
 #define MAX_VALUE_NAME 16383
 #define FILE_CHANGE_FLAGS FILE_NOTIFY_CHANGE_FILE_NAME |\
@@ -15,9 +18,18 @@
 #define REG_CHANGE_FLAGS REG_NOTIFY_CHANGE_NAME |\
 	REG_NOTIFY_CHANGE_LAST_SET
 
-void Output(USHORT Color, LPTSTR format, ... );
-void Output_Roaming(USHORT Color, LPTSTR format, ... );
-void Output_Prefetch(USHORT Color, LPTSTR format, ... );
+extern HANDLE  g_hStopEvent;	// 이벤트 다루는 핸들
+extern HANDLE  g_hFile;			// 파일 다루는 핸들
+extern HANDLE  g_hRegWatch[2];
+
+extern TCHAR * resultBuffer;
+extern TCHAR * roamingBuffer;
+extern TCHAR * prefetchBuffer;
+
+
+// 함수 선언
+void Output_Console(USHORT Color, LPTSTR format, ... );
+void Output_File(LPTSTR format, ...);
 void StartFileMonitor(void);
 void StartRegistryMonitor(void);
 
@@ -27,49 +39,40 @@ void ListPrint(void);
 //+Su
 void compare(void);
 
-extern HANDLE  g_hStopEvent;
-extern HANDLE  g_hFile;
-extern HANDLE  g_hRegWatch[2];
-
-// + Wan
-extern TCHAR * resultBuffer;
-
-// + Su
-extern TCHAR * roamingBuffer;
-extern TCHAR * prefetchBuffer;
 
 
-// whitelisted filenames or paths
-//화이트리스트
-static LPTSTR Roaming_szAllow[] = {       //asdf_szAllow -->Roaming_szAllow[] 
+
+
+
+// ******************* 화이트리스트 *************************
+
+// 화이트 리스트 목록
+static LPTSTR Roaming_szAllow[] = { 
 	_T("Roaming\\"),
 	_T("AppData\Roaming\\"),
 
 };
-
-static LPTSTR Prefetch_szAllow[] = {      //qwer_szAllow --> Prefetch_szAllow[]
+static LPTSTR Prefetch_szAllow[] = {  
 	_T("Windows\Prefetch\\"),
 	_T("Prefetch\\"),
 };
 
-// return true if szFile is in the g_szAllow list
-
-static BOOL RoamingWhitelisted(LPTSTR szFile)              
+// 화이트리스트에 속하는지 여부 확인 함수
+// return 1 : Roaming
+// return 2 : Prefetch
+// return -1 : nothing
+static int Whitelisted(LPTSTR szFile)              
 {
 	for(int i=0; i<sizeof(Roaming_szAllow)/sizeof(LPTSTR); i++)
 	{
-		if (_tcsstr(szFile, Roaming_szAllow[i]) != NULL) //화이트 리스트와 일치하면 값이 있어서, NULL이 아니니까 참
-			return TRUE;							// 일치하지 않으면, NULL이니까 거짓.
+		if (_tcsstr(szFile, Roaming_szAllow[i]) != NULL)
+			return 1;
 	}
-	return FALSE;
-}
 
-static BOOL PrefetchWhitelisted(LPTSTR szFile)                
-{
 	for(int i=0; i<sizeof(Prefetch_szAllow)/sizeof(LPTSTR); i++)
 	{
 		if (_tcsstr(szFile, Prefetch_szAllow[i]) != NULL) 
-			return TRUE;
+			return 2;
 	}
-	return FALSE;
+	return -1;
 }

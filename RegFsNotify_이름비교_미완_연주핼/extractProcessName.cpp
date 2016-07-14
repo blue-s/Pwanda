@@ -7,15 +7,6 @@ static TCHAR * run;
 static TCHAR * roaming;
 static TCHAR * prefetch;
 static TCHAR * result;  //로밍하고,프리패치비교 결과가 같을때 여기에 저장
-/*
-void ProNamePrint(){
-	Output(FOREGROUND_BLUE, _T("[Run] %s\n"), run);
-	Output(FOREGROUND_BLUE, _T("[Roaming] %s\n"),roaming);
-	Output(FOREGROUND_BLUE, _T("[Prefetch] %s\n"), prefetch);
-}
-*/
-
-// Run에서 가져온 값을 로밍과 프리패치에서 비교 
 
 
 void compare(void){  //로밍이 데이터가 별로 없기때문에 로밍을 기준으로 프리패치를 비교할 예정
@@ -63,25 +54,24 @@ void compare(void){  //로밍이 데이터가 별로 없기때문에 로밍을 기준으로 프리패치�
 
 }
 
-void ExtractProcess(DWORD flag, TCHAR *p){
+void ExtractProcess(DWORD flag, TCHAR *fileName){
+	// flag : (1) Roaming, (2) Prefetch, (3) Run
 
-	if(flag == 1)
+	switch(flag)
 	{
-		run=p;
-		Output(FOREGROUND_BLUE, _T("-----------------Registry> Run -------------->>>>>>> %s\n"), run);
+	case 1:
+		Output_Console(FOREGROUND_BLUE, _T("-----------------File> roaming -------------->>>>>>> %s\n"), fileName);
+		break;
+	case 2:
+		Output_Console(FOREGROUND_BLUE, _T("-----------------File> prefetch -------------->>>>>>> %s\n"), fileName);
+		break;
+	case 3:
+		Output_Console(FOREGROUND_BLUE, _T("-----------------Registry> Run -------------->>>>>>> %s\n"), fileName);
+		break;
+	default:
+		printf("Error!\n");
+		break;
 	}
-	else if(flag == 2)
-	{
-		roaming=p;
-		Output(FOREGROUND_BLUE, _T("-----------------File> roaming -------------->>>>>>> %s\n"), roaming);
-	}
-	else if(flag == 3)
-	{
-		prefetch=p;
-		Output(FOREGROUND_BLUE, _T("-----------------File> prefetch -------------->>>>>>> %s\n"), prefetch);
-	}
-	else
-		printf("Error!!");
 
 	//compare();
 	//ProNamePrint();
