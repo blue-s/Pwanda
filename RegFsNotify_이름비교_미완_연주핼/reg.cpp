@@ -2,10 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 
-ULARGE_INTEGER g_tmStart;
-
 #define MAX_KEY_LENGTH 255
 #define MAX_VALUE_NAME 16383
+
+TCHAR * resultBuffer;
+ULARGE_INTEGER g_tmStart;
 
 typedef struct REGMON { 
 	HKEY   hMainKey;

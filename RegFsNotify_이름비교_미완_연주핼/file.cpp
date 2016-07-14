@@ -1,24 +1,20 @@
 #include "mon.h"
-#include <stdio.h>
-#include <string.h>
 
+// 변수 선언
 #define MAX_DRIVES 24
 #define MAX_VALUE_NAME 16383
 
-// 변수 선언
 HANDLE  g_ChangeHandles[MAX_DRIVES];
 HANDLE  g_DirHandles[MAX_DRIVES];
 LPTSTR  g_szDrives[MAX_DRIVES];
 DWORD   g_idx = 0;
 
+TCHAR * file_name;				// 파일명
+TCHAR * buffer_file_name;		// 파일명 저장하는 임시 변수
+TCHAR * buffer_extension;		// 확장자 저장하는 임시 변수
 
-TCHAR * Rname;					//확장자 판단하기 위해 원본 파일명을 복사해 담아두는 변수
-TCHAR * file_name;
-TCHAR * roaming_file_name;		//로밍부분 파싱해서 얻은 파일 명
-TCHAR * prefetch_file_name;		//프리패치에서 파싱해서 얻은 파일 명
-
-TCHAR * findRoam =_T("Roaming");
-TCHAR * findPre =_T("Prefetch");
+const TCHAR * checkRoam =_T("Roaming");
+const TCHAR * findPre =_T("Prefetch");
 const TCHAR * checkPoint = _T(".");
 const TCHAR * checkText = _T(".txt");
 
@@ -26,10 +22,10 @@ const TCHAR * checkText = _T(".txt");
 void ProcessChange(int idx)
 {
 	BYTE buf[MAX_VALUE_NAME];
-	DWORD cb = 0;
-	PFILE_NOTIFY_INFORMATION pNotify;
-	int offset = 0;
 	TCHAR szFile[MAX_PATH*2];
+	PFILE_NOTIFY_INFORMATION pNotify;
+	DWORD cb = 0;
+	int offset = 0;
 	int flag = -1;		// 화이트 리스트에 속하는지 여부 확인 플래그
 
 	memset(buf, 0, sizeof(buf));
@@ -44,60 +40,47 @@ void ProcessChange(int idx)
 			memcpy(szFile, pNotify->FileName, pNotify->FileNameLength);
 
 			// 플래그에 따른 파일명 추출 및 비교
+			// 1: Roaming, 2: Prefetch, -1: Nothing
 			flag = Whitelisted(szFile);
-			if(flag == 1)
+
+			// 화이트리스트에 속하지 않는 경우
+			if(flag < 0){	continue; }			
+			
+			// 화이트리스트에 속하는경우
+			switch (pNotify->Action)
 			{
-				switch (pNotify->Action)
+			case FILE_ACTION_ADDED:
+				// Roaming에 해당하는 경우, 파일 명만 추출
+				if(flag == 1)
 				{
-				case FILE_ACTION_ADDED:
-					roaming_file_name = _tcsstr(szFile, findRoam)+8;
+					buffer_file_name = _tcsstr(szFile, checkRoam) + 8;
+					buffer_extension = _tcsstr(buffer_file_name, checkPoint);
 
-					//원래 파일명 보존을 위해 변수에 복사
-					Rname = _tcsstr(roaming_file_name, checkPoint); //(abc.txt, .)
+					printf("[파일 확장자: %S]\n", buffer_extension);
 
-					//확장자만 추출
-					_tprintf(_T("+++++++++++++++++++ %s ++++++++++++++++++++[File Name] \n"), Rname);
-
-					//확장자가 txt가 맞다면 배열에 넣었었던 파일명을 출력 
-					if(_tcsicmp(Rname, checkText) == 0)
+					//확장자가 txt가 아닌 경우 
+					if(_tcsicmp(buffer_extension, checkText) != 0)
 					{
-						Output_Console(FOREGROUND_RED, _T("ROAMING [%d] ------> %s \n"), 0, roaming_file_name);
-						roamingBuffer = roaming_file_name;
-
-						Output_Console(FOREGROUND_BLUE, _T("roamingBuffer [%d] ------> %s \n"), 0, roamingBuffer);
-
-						ExtractProcess(2, roamingBuffer);
-						_tprintf(_T("-------------------------------[SUCCESS]--------------------------------- \n"));
+						printf("텍스트 파일이 아닙니다.\n\n", buffer_extension);
+						continue;
 					}
-					else
-					{
-						_tprintf(_T("--------------------------------[NOT]----------------------------------- \n"));
-					}
-					Output_Console(FOREGROUND_GREEN, _T("[ADDED] %s%s \n"), g_szDrives[idx], szFile);
-
-
-					break;
-				default:
-					break;
-				}; 
-			}
-			else if(flag == 2)
-			{
-				switch (pNotify->Action)
+				}
+				else if(flag == 2)
 				{
-				case FILE_ACTION_ADDED:
-					prefetch_file_name = _tcsstr(szFile, findPre)+9;
-					Output_Console(FOREGROUND_BLUE, _T("PREFETCH [%d] ------> %s \n"), 0, prefetch_file_name);
-					prefetchBuffer = prefetch_file_name;
-					ExtractProcess(3, prefetchBuffer);
-					break;
-				default:
-					break;
-				}; 
+					buffer_file_name = _tcsstr(szFile, findPre) + 9;
+				}
+
+				ExtractProcess(flag, buffer_file_name);					
+				Output_Console(FOREGROUND_GREEN, _T("[ADDED] %s%s \n"), g_szDrives[idx], szFile);
+				_tprintf(_T("-------------------------------[SUCCESS]--------------------------------- \n\n"));
+				break;
+
+			default:
+				break;
 			}
-			else {
-				continue;
-			}
+
+			// 모든 활동이 끝난 뒤 flag 리셋
+			flag = -1;
 		} while (pNotify->NextEntryOffset != 0);
 	}
 }    
@@ -119,8 +102,7 @@ void StartFileMonitor(void)
 	{
 		ddType = GetDriveType(pStart);
 
-		if ((ddType == DRIVE_FIXED || ddType == DRIVE_REMOVABLE) && 
-			_tcscmp(pStart, _T("A:\\")) != 0)
+		if ((ddType == DRIVE_FIXED || ddType == DRIVE_REMOVABLE) && _tcscmp(pStart, _T("A:\\")) != 0)
 		{
 			hChange = FindFirstChangeNotification(pStart,
 				TRUE,
@@ -155,10 +137,7 @@ void StartFileMonitor(void)
 
 	while(WaitForSingleObject(g_hStopEvent, 1) != WAIT_OBJECT_0) 
 	{
-		dwWaitStatus = WaitForMultipleObjects(
-			g_idx, 
-			g_ChangeHandles, 
-			FALSE, INFINITE); 
+		dwWaitStatus = WaitForMultipleObjects( g_idx, g_ChangeHandles, FALSE, INFINITE); 
 
 		bOK = FALSE;
 

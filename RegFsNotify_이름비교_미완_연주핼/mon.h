@@ -3,9 +3,10 @@
 // 헤더파일 선언
 #include <windows.h>
 #include <tchar.h>
+#include <stdio.h>
+#include <string.h>
 
 
-// 변수 선언
 #define STATUS_SUCCESS ((NTSTATUS)0x00000000L)
 #define MAX_VALUE_NAME 16383
 #define FILE_CHANGE_FLAGS FILE_NOTIFY_CHANGE_FILE_NAME |\
@@ -18,26 +19,27 @@
 #define REG_CHANGE_FLAGS REG_NOTIFY_CHANGE_NAME |\
 	REG_NOTIFY_CHANGE_LAST_SET
 
+
+// RegFsNotify.cpp
 extern HANDLE  g_hStopEvent;	// 이벤트 다루는 핸들
 extern HANDLE  g_hFile;			// 파일 다루는 핸들
 extern HANDLE  g_hRegWatch[2];
 
-extern TCHAR * resultBuffer;
-extern TCHAR * roamingBuffer;
-extern TCHAR * prefetchBuffer;
-
-
-// 함수 선언
 void Output_Console(USHORT Color, LPTSTR format, ... );
 void Output_File(LPTSTR format, ...);
 void StartFileMonitor(void);
 void StartRegistryMonitor(void);
 
-// + Wan
-void ExtractProcess(DWORD, TCHAR *);
+// reg.cpp
+extern TCHAR * resultBuffer;
+
+// extractProcessName.cpp
+//extern TCHAR * roamingList[100];
+//extern TCHAR * prefetchBuffer;
+
 void ListPrint(void);
-//+Su
 void compare(void);
+void ExtractProcess(DWORD, TCHAR *);
 
 
 
@@ -60,7 +62,7 @@ static LPTSTR Prefetch_szAllow[] = {
 // 화이트리스트에 속하는지 여부 확인 함수
 // return 1 : Roaming
 // return 2 : Prefetch
-// return -1 : nothing
+// return -1 : Nothing
 static int Whitelisted(LPTSTR szFile)              
 {
 	for(int i=0; i<sizeof(Roaming_szAllow)/sizeof(LPTSTR); i++)

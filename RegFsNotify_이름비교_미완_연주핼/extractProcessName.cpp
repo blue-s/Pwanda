@@ -1,62 +1,67 @@
 #include "mon.h"
 
-#include <stdio.h>
-#include <string.h>
+TCHAR * roamingList[100];\
 
-static TCHAR * run;
-static TCHAR * roaming;
-static TCHAR * prefetch;
-static TCHAR * result;  //로밍하고,프리패치비교 결과가 같을때 여기에 저장
+int roamingNum = 0;
 
+//static TCHAR * run;
+//static TCHAR * roaming;
+//static TCHAR * prefetch;
+//static TCHAR * result;  //로밍하고,프리패치비교 결과가 같을때 여기에 저장
+
+
+void ListPrint(void){
+	printf("Raming List :\n");
+	for(int i=0; i<roamingNum; i++)
+	{
+		printf("%d : %S\n", i+1, roamingList[i]);
+	}
+}
 
 void compare(void){  //로밍이 데이터가 별로 없기때문에 로밍을 기준으로 프리패치를 비교할 예정
 
-	DWORD res1, res2;
+	//DWORD res1, res2;
 
-	if(run!=NULL || roaming!=NULL || prefetch!=NULL){
-		if(roaming!=NULL){
-			res1 = _tcsicmp(run, roaming); //res == 0 같은것
-			if(res1 == 0 && prefetch!=NULL){
-				res2 = _tcsicmp(prefetch, roaming); //res == 0 같은것
-				if(res2 == 0){
-					printf("RESULT: %s\n", roaming);
-				
-				}
-			}
-		}
+	//if(run!=NULL || roaming!=NULL || prefetch!=NULL){
+	//	if(roaming!=NULL){
+	//		res1 = _tcsicmp(run, roaming); //res == 0 같은것
+	//		if(res1 == 0 && prefetch!=NULL){
+	//			res2 = _tcsicmp(prefetch, roaming); //res == 0 같은것
+	//			if(res2 == 0){
+	//				printf("RESULT: %s\n", roaming);
+	//			
+	//			}
+	//		}
+	//	}
 
-		else if(run!=NULL){
-			res1 = _tcsicmp(run, roaming); //res == 0 같은것
-			if(res1 == 0 && prefetch!=NULL){
-				res2 = _tcsicmp(prefetch, roaming); //res == 0 같은것
-				if(res2 == 0){
-					printf("RESULT: %s\n", roaming);
-				
-				}
-			}
-		}
-		else if(roaming!=NULL){
-			res1 = _tcsicmp(run, roaming); //res == 0 같은것
-			if(res1 == 0 && prefetch!=NULL){
-				res2 = _tcsicmp(prefetch, roaming); //res == 0 같은것
-				if(res2 == 0){
-					printf("RESULT: %s\n", roaming);
-				
-				}
-			}
-		}
-		else {
-			printf("error");
-		}
-
-	}
-
-
+	//	else if(run!=NULL){
+	//		res1 = _tcsicmp(run, roaming); //res == 0 같은것
+	//		if(res1 == 0 && prefetch!=NULL){
+	//			res2 = _tcsicmp(prefetch, roaming); //res == 0 같은것
+	//			if(res2 == 0){
+	//				printf("RESULT: %s\n", roaming);
+	//			
+	//			}
+	//		}
+	//	}
+	//	else if(roaming!=NULL){
+	//		res1 = _tcsicmp(run, roaming); //res == 0 같은것
+	//		if(res1 == 0 && prefetch!=NULL){
+	//			res2 = _tcsicmp(prefetch, roaming); //res == 0 같은것
+	//			if(res2 == 0){
+	//				printf("RESULT: %s\n", roaming);
+	//			
+	//			}
+	//		}
+	//	}
+	//	else {
+	//		printf("error");
+	//	}
+	//}
 }
 
 void ExtractProcess(DWORD flag, TCHAR *fileName){
-	// flag : (1) Roaming, (2) Prefetch, (3) Run
-
+	// flag : (1) Roaming, (2) Prefetch, (3) Run, (-1) Nothing
 	switch(flag)
 	{
 	case 1:

@@ -91,7 +91,6 @@
   <ItemGroup>
     <ClCompile Include="extractProcessName.cpp" />
     <ClCompile Include="file.cpp" />
-    <ClCompile Include="mon.cpp" />
     <ClCompile Include="reg.cpp" />
     <ClCompile Include="RegFsNotify.cpp" />
   </ItemGroup>
