@@ -1,0 +1,30 @@
+﻿빌드 시작: 2016-07-13 오후 9:48:35
+     1>2 노드의 "C:\Users\kosta\Documents\Visual Studio 2010\Projects\RegFsNotify\RegFsNotify.vcxproj" 프로젝트(build 대상)입니다.
+     1>InitializeBuildStatus:
+         "AlwaysCreate"이(가) 지정되었기 때문에 "Release\RegFsNotify.unsuccessfulbuild"을(를) 만들고 있습니다.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt reg.cpp
+         reg.cpp
+     1>c:\users\kosta\documents\visual studio 2010\projects\regfsnotify\mon.h(46): warning C4129: 'R' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+     1>c:\users\kosta\documents\visual studio 2010\projects\regfsnotify\mon.h(51): warning C4129: 'P' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+     1>reg.cpp(45): warning C4101: 'cbName' :참조되지 않은 지역 변수입니다.
+     1>reg.cpp(253): warning C4129: 'M' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kosta\Documents\Visual Studio 2010\Projects\RegFsNotify\Release\RegFsNotify.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\RegFsNotify.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\kosta\Documents\Visual Studio 2010\Projects\RegFsNotify\Release\RegFsNotify.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kosta\Documents\Visual Studio 2010\Projects\RegFsNotify\Release\RegFsNotify.lib" /MACHINE:X86 Release\extractProcessName.obj
+         Release\file.obj
+         Release\mon.obj
+         Release\reg.obj
+         Release\RegFsNotify.obj
+         코드를 생성하고 있습니다.
+         코드를 생성했습니다.
+         RegFsNotify.vcxproj -> C:\Users\kosta\Documents\Visual Studio 2010\Projects\RegFsNotify\Release\RegFsNotify.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\kosta\Documents\Visual Studio 2010\Projects\RegFsNotify\Release\RegFsNotify.exe;#1" /manifest Release\RegFsNotify.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         "Release\RegFsNotify.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "Release\RegFsNotify.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"C:\Users\kosta\Documents\Visual Studio 2010\Projects\RegFsNotify\RegFsNotify.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.71

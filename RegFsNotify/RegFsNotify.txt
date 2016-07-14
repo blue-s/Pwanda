@@ -1,0 +1,9 @@
+Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
+[Value 1] eDrive = "C:\Users\kosta\AppData\Local\Microsoft\OneDrive\OneDrive.exe" /background
+[Value 2] EMON Tools Lite = "C:\Program Files (x86)\DAEMON Tools Lite\DTLite.exe" -autorun
+[Value 3] kaoTalk = "C:\Program Files (x86)\Kakao\KakaoTalk\KakaoTalk.exe" -bystartup
+[Value 4] st = test\asdf.txt
+-----------------Registry> Run -------------->>>>>>> asdf.txt
+[Value 5] °ª #1 = 
+[Value 6] °ª #2 = 
+[Value 7] °ª #3 = 
