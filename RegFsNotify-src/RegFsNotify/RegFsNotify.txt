@@ -1,3 +1,0 @@
-[MODIFIED] C:\Nodejs_project\mongodb\data\diagnostic.data\metrics.interim.temp
-[REMOVED] C:\Nodejs_project\mongodb\data\diagnostic.data\metrics.interim.temp
-[MODIFIED] C:\Nodejs_project\mongodb\data\diagnostic.data\metrics.interim
