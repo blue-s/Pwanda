@@ -66,8 +66,8 @@ void compare(void){  //로밍이 데이터가 별로 없기때문에 로밍을 기준으로 프리패치�
 }
 
 void ExtractProcess(DWORD flag, TCHAR *fileName){
-	TCHAR buffer[100];
-	_tcsncpy(buffer, fileName, 100);
+	TCHAR buffer_filename[BUFSIZ];
+	_tcsncpy(buffer_filename, fileName, BUFSIZ);
 	
 	// Char로 변환
 	// flag : (1) Roaming, (2) Prefetch, (3) Run, (-1) Nothing
@@ -75,20 +75,20 @@ void ExtractProcess(DWORD flag, TCHAR *fileName){
 	{
 	case 1:
 		Output_Console(FOREGROUND_BLUE, _T("-----------------File> roaming -------------->>>>>>> %s\n"), fileName);
-		roamingList[roamingNum] = new TCHAR [100];
-		_tcsncpy(roamingList[roamingNum], buffer, 100);
+		roamingList[roamingNum] = new TCHAR [BUFSIZ];
+		_tcsncpy(roamingList[roamingNum], buffer_filename, BUFSIZ);
 		roamingNum += 1;
 		break;
 	case 2:
 		Output_Console(FOREGROUND_BLUE, _T("-----------------File> prefetch -------------->>>>>>> %s\n"), fileName);
-		prefetchList[prefetchNum] = new TCHAR [100];
-		_tcsncpy(prefetchList[prefetchNum], buffer, 100);
+		prefetchList[prefetchNum] = new TCHAR [BUFSIZ];
+		_tcsncpy(prefetchList[prefetchNum], buffer_filename, BUFSIZ);
 		prefetchNum += 1;
 		break;
 	case 3:
 		Output_Console(FOREGROUND_BLUE, _T("-----------------Registry> Run -------------->>>>>>> %s\n"), fileName);
-		runList[runNum] = new TCHAR [100];
-		_tcsncpy(runList[runNum], buffer, 100);
+		runList[runNum] = new TCHAR [BUFSIZ];
+		_tcsncpy(runList[runNum], buffer_filename, BUFSIZ);
 		runNum += 1;
 		break;
 	default:
@@ -96,6 +96,12 @@ void ExtractProcess(DWORD flag, TCHAR *fileName){
 		break;
 	}
 
+
 	ListPrint();
+	ListProcessInfo();
+
+	if(KillProcess(fileName))
+			Output_Console(FOREGROUND_RED, _T("*** KILL SUCCESS!!!\n\n"));
+
 	//compare();
 }

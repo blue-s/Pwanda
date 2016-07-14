@@ -103,7 +103,10 @@ BOOL CtrlHandler(DWORD fdwCtrlType)
 void _tmain(int argc, TCHAR *argv[])
 {
 	checkState();	// [2] 테스트 함수
-	setUser();		// [3] 테스트 함수
+
+	// Privilege Setting
+	if( !SetPrivilege(SE_DEBUG_NAME, TRUE) )
+        return;
 
 	_tprintf(_T("\n"));
 

@@ -5,6 +5,9 @@
 #include <tchar.h>
 #include <stdio.h>
 #include <string.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <tlhelp32.h>
 
 // [2] 테스트를 위한 추가
 #include <locale.h>	
@@ -56,6 +59,16 @@ void ListPrint(void);
 void compare(void);
 void ExtractProcess(DWORD, TCHAR *);
 
+
+// setUser.cpp
+BOOL SetPrivilege(LPCTSTR lpszPrivilege, BOOL bEnablePrivilege);	// setPrivilege
+
+
+// processControl.cpp
+DWORD FindProcessID(LPCTSTR szProcessName);			// 원하는 프로세스의 PID 가져옴
+void printProcessInformation(PROCESSENTRY32 pe);	// 프로세스 정보 출력
+void ListProcessInfo(void);							// 프로세스 목록 출력
+BOOL KillProcess(TCHAR* TargetProcess);				// 프로세스 죽이기
 
 
 

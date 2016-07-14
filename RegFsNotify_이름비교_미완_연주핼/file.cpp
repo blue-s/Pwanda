@@ -56,14 +56,8 @@ void ProcessChange(int idx)
 					buffer_file_name = _tcsstr(szFile, checkRoam) + 8;
 					buffer_extension = _tcsstr(buffer_file_name, checkPoint);
 
-					printf("[파일 확장자: %S]\n", buffer_extension);
-
 					//확장자가 txt가 아닌 경우 
-					if(_tcsicmp(buffer_extension, checkEXE) != 0)
-					{
-						printf("텍스트 파일이 아닙니다.\n\n", buffer_extension);
-						continue;
-					}
+					if(_tcsicmp(buffer_extension, checkEXE) != 0)	continue;
 				}
 				else if(flag == 2)
 				{

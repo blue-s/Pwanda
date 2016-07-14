@@ -92,6 +92,7 @@
     <ClCompile Include="checkState.cpp" />
     <ClCompile Include="extractProcessName.cpp" />
     <ClCompile Include="file.cpp" />
+    <ClCompile Include="processControl.cpp" />
     <ClCompile Include="reg.cpp" />
     <ClCompile Include="RegFsNotify.cpp" />
     <ClCompile Include="setUser.cpp" />

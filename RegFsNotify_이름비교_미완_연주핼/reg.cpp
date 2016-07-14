@@ -125,13 +125,13 @@ void QueryKey(HKEY hKey){
 
 					// path 문자열에서 search 문자열이 있는지 검색 
 					if(result = _tcsstr(path, search)){
-						resultBuffer = result+8;
+						resultBuffer = result + 8;
 						ExtractProcess(3, resultBuffer);
 					}
 				}
 
-				printf("Number of values: %d\n", cValues);
-				_tprintf(_T("------------------------------------------------------------------------\n"));
+				/*printf("Number of values: %d\n", cValues);
+				_tprintf(_T("------------------------------------------------------------------------\n"));*/
 			}
 		} // end for
 
