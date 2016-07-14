@@ -1,9 +1,5 @@
 #include "mon.h"
 
-TCHAR * roamingList[100];\
-
-int roamingNum = 0;
-
 //static TCHAR * run;
 //static TCHAR * roaming;
 //static TCHAR * prefetch;
@@ -11,10 +7,19 @@ int roamingNum = 0;
 
 
 void ListPrint(void){
-	printf("Raming List :\n");
-	for(int i=0; i<roamingNum; i++)
-	{
-		printf("%d : %S\n", i+1, roamingList[i]);
+	printf("*** Roaming List ***\n");
+	for(int i=0; i<roamingNum; i++){
+		printf("%S\n", roamingList[i]);
+	}
+
+	printf("*** Prefetch List ***\n");
+	for(int i=0; i<prefetchNum; i++){
+		printf("%S\n", prefetchList[i]);
+	}
+
+	printf("*** Run List ***\n");
+	for(int i=0; i<runNum; i++){
+		printf("%S\n", runList[i]);
 	}
 }
 
@@ -61,30 +66,36 @@ void compare(void){  //로밍이 데이터가 별로 없기때문에 로밍을 기준으로 프리패치�
 }
 
 void ExtractProcess(DWORD flag, TCHAR *fileName){
+	TCHAR buffer[100];
+	_tcsncpy(buffer, fileName, 100);
+	
+	// Char로 변환
 	// flag : (1) Roaming, (2) Prefetch, (3) Run, (-1) Nothing
 	switch(flag)
 	{
 	case 1:
 		Output_Console(FOREGROUND_BLUE, _T("-----------------File> roaming -------------->>>>>>> %s\n"), fileName);
+		roamingList[roamingNum] = new TCHAR [100];
+		_tcsncpy(roamingList[roamingNum], buffer, 100);
+		roamingNum += 1;
 		break;
 	case 2:
 		Output_Console(FOREGROUND_BLUE, _T("-----------------File> prefetch -------------->>>>>>> %s\n"), fileName);
+		prefetchList[prefetchNum] = new TCHAR [100];
+		_tcsncpy(prefetchList[prefetchNum], buffer, 100);
+		prefetchNum += 1;
 		break;
 	case 3:
 		Output_Console(FOREGROUND_BLUE, _T("-----------------Registry> Run -------------->>>>>>> %s\n"), fileName);
+		runList[runNum] = new TCHAR [100];
+		_tcsncpy(prefetchList[runNum], buffer, 100);
+		runNum += 1;
 		break;
 	default:
 		printf("Error!\n");
 		break;
 	}
 
+	ListPrint();
 	//compare();
-	//ProNamePrint();
 }
-
-
-
-// File.cpp가 Reg.cpp보다 먼저 끝나기 때문에 의심 프로세스 추출에 NULL값이 자꾸 들어가는 것
-// 그래서 file.cpp 와 reg.cpp가 동작이 끝날 때마다 extractProceeName 파일로 와서 
-// 추출한 프로세스 이름을 쌓여진 배열과 비교해서 공통적인 이름을 뽑아낸다.
-

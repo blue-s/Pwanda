@@ -34,8 +34,12 @@ void StartRegistryMonitor(void);
 extern TCHAR * resultBuffer;
 
 // extractProcessName.cpp
-//extern TCHAR * roamingList[100];
-//extern TCHAR * prefetchBuffer;
+static int roamingNum = 0;
+static int prefetchNum = 0;
+static int runNum = 0;
+static TCHAR* roamingList[100];
+static TCHAR* prefetchList[100];
+static TCHAR* runList[100];
 
 void ListPrint(void);
 void compare(void);
