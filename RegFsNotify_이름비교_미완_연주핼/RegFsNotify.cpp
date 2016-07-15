@@ -114,7 +114,7 @@ void _tmain(int argc, TCHAR *argv[])
 	SetConsoleCtrlHandler((PHANDLER_ROUTINE)CtrlHandler, TRUE);
 
 	// 파일 생성 : 현재 우리는 파일 출력을 할 필요가 없기 때문에 완전한 결과값 하나만 출력하도록 함
-	g_hFile = CreateFile(_T("RegFsNotify.txt"), GENERIC_WRITE, FILE_SHARE_READ, 0, CREATE_ALWAYS, 0, NULL);
+	g_hFile = CreateFile(_T("KillProcessList.txt"), GENERIC_WRITE, FILE_SHARE_READ, 0, CREATE_ALWAYS, 0, NULL);
 
 	// 쓰레드 생성 및 활동
 	HANDLE hThread[2];

@@ -118,7 +118,7 @@ void QueryKey(HKEY hKey){
 				// 레지스트리 키의 Value 와 Data 값 출력 
 				if(retCode == ERROR_SUCCESS)
 				{ 
-					Output_Console(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); 
+					// Output_Console(FOREGROUND_RED, _T("[Value %d] %s = %s\n"), i+1, achValue, achData); 
 
 					// achData에 랜섬웨어 프로세스 경로가 나와있으므로 path에 복사 
 					memcpy(path, achData, MAX_VALUE_NAME);	
@@ -129,9 +129,6 @@ void QueryKey(HKEY hKey){
 						ExtractProcess(3, resultBuffer);
 					}
 				}
-
-				/*printf("Number of values: %d\n", cValues);
-				_tprintf(_T("------------------------------------------------------------------------\n"));*/
 			}
 		} // end for
 

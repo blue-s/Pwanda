@@ -56,7 +56,7 @@ static TCHAR* prefetchList[100];
 static TCHAR* runList[100];
 
 void ListPrint(void);
-void compare(void);
+BOOL compare(void);
 void ExtractProcess(DWORD, TCHAR *);
 
 
