@@ -1,1 +1,0 @@
-Monitoring HKEY 80000001\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
