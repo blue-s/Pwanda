@@ -1,0 +1,45 @@
+﻿빌드 시작: 2016-07-19 오후 5:19:38
+     1>2 노드의 "C:\Users\kosta\Downloads\1차 모니터링 완료_수정 중\RegFsNotify.vcxproj" 프로젝트(build 대상)입니다.
+     1>InitializeBuildStatus:
+         "AlwaysCreate"이(가) 지정되었기 때문에 "Release\RegFsNotify.unsuccessfulbuild"을(를) 만들고 있습니다.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt extractProcessName.cpp
+         extractProcessName.cpp
+     1>c:\users\kosta\downloads\1차 모니터링 완료_수정 중\mon.h(84): warning C4129: 'R' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+     1>c:\users\kosta\downloads\1차 모니터링 완료_수정 중\mon.h(88): warning C4129: 'P' : 문자 이스케이프 시퀀스를 인식할 수 없습니다.
+     1>extractProcessName.cpp(52): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(306) : 'wcsncpy' 선언을 참조하십시오.
+     1>extractProcessName.cpp(53): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(276) : 'wcscat' 선언을 참조하십시오.
+     1>extractProcessName.cpp(62): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(306) : 'wcsncpy' 선언을 참조하십시오.
+     1>extractProcessName.cpp(64): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(306) : 'wcsncpy' 선언을 참조하십시오.
+     1>extractProcessName.cpp(70): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(306) : 'wcsncpy' 선언을 참조하십시오.
+     1>extractProcessName.cpp(72): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(306) : 'wcsncpy' 선언을 참조하십시오.
+     1>extractProcessName.cpp(78): warning C4996: 'wcsncpy': This function or variable may be unsafe. Consider using wcsncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\include\string.h(306) : 'wcsncpy' 선언을 참조하십시오.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\kosta\Downloads\1차 모니터링 완료_수정 중\Release\RegFsNotify.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Release\RegFsNotify.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\kosta\Downloads\1차 모니터링 완료_수정 중\Release\RegFsNotify.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\kosta\Downloads\1차 모니터링 완료_수정 중\Release\RegFsNotify.lib" /MACHINE:X86 Release\checkState.obj
+         Release\extractProcessName.obj
+         Release\file.obj
+         Release\processControl.obj
+         Release\reg.obj
+         Release\regDelete.obj
+         Release\RegFsNotify.obj
+         Release\setUser.obj
+         코드를 생성하고 있습니다.
+         코드를 생성했습니다.
+         RegFsNotify.vcxproj -> C:\Users\kosta\Downloads\1차 모니터링 완료_수정 중\Release\RegFsNotify.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\kosta\Downloads\1차 모니터링 완료_수정 중\Release\RegFsNotify.exe;#1" /manifest Release\RegFsNotify.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         "Release\RegFsNotify.unsuccessfulbuild" 파일을 삭제하고 있습니다.
+         "Release\RegFsNotify.lastbuildstate"에 연결(touching)하고 있습니다.
+     1>"C:\Users\kosta\Downloads\1차 모니터링 완료_수정 중\RegFsNotify.vcxproj" 프로젝트를 빌드했습니다(build 대상).
+
+빌드했습니다.
+
+경과 시간: 00:00:00.93
